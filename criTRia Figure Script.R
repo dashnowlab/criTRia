@@ -222,3 +222,35 @@ sankey <- sankeyNetwork(
   )
 sankey
 saveWidget(sankey,"sankey_plot.html", selfcontained = TRUE)
+
+
+##Heat map
+# Change order of some values
+data$`Categorical Score` = factor(data$`Categorical Score`,
+                               levels = c("Definitive", "Supportive", "Strong", "Moderate", "Limited", "Contradictory"))
+# Order by number of associations scored
+data$Group = factor(data$Group,
+                    levels = names(sort(table(data$Group), decreasing = T))
+)
+
+my_colors <- c(
+  "Definitive" = "#59A14F",
+  "Supportive" = "#8CD17D",
+  "Strong" = "#4E79A7",
+  "Moderate" =  "#A0CBE8",
+  "Limited" =  "#EDC948",
+  "Contradictory" = "#F28E2B"
+)
+
+group_counts = data.frame(Group = names(sort(table(data$Group), decreasing = T)), 
+                          Count = as.numeric(sort(table(data$Group), decreasing = T)))
+
+counts <- group_counts$Count[match(levels(data$Group), group_counts$Group)]
+
+ggplot(data, aes(y = Gene, x = Group)) +
+  geom_tile(aes(fill = `Categorical Score`)) + 
+  scale_fill_manual(values = my_colors) +
+  scale_x_discrete(sec.axis = dup_axis(labels = counts, name = "Count")) +
+  labs(title = "criTRia Vs. GeneCC Scoring", x = "Group", y = "Gene") + 
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5, size = 15, face = "bold"), legend.position = "none", axis.text = element_text(size = 10))
