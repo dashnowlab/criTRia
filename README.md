@@ -1,2 +1,2 @@
 # criTRia
-Code for generating criTRia manuscript images
+criTRia (pronounce criteria) is a formalized scoring framework designed to accurately evaluate TR-disease relationships. criTRia builds on current best-practice scoring procedures developed by the Clinical Genome Resource (ClinGen) while (re)curating based on locus-level (rather than gene-level) classification, introducing TR-specific evidence categories and reweighted scoring. In this repository you will find all data and code used to evaluate success and create the figures for the Mnauscript and SOP, up to date as of 4/22/26.
