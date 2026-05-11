@@ -172,15 +172,15 @@ upset(
 
 ##Sankey Plot
 library(networkD3)
-install.packages("networkD3")
+#install.packages("networkD3")
 library(dplyr)
-install.packages("dplyr")
+#install.packages("dplyr")
 library(htmlwidgets)
-install.packages("htmlwidgets")
+#install.packages("htmlwidgets")
 library(RColorBrewer)
-install.packages("RColorBrewer")
+#install.packages("RColorBrewer")
 library(jsonlite)
-install.packages("jsonlite")
+#install.packages("jsonlite")
 #Link 1: Gene -> Group
 links1 <- aggregate(
   x = list(value = rep(1, nrow(data))),
