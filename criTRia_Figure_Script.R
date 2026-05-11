@@ -9,7 +9,7 @@ library(cowplot)
 theme_set(theme_cowplot()) # Sets the default for subsequent plots 
 
 ##read and prep data
-data <- read_csv(file="criTRia Dataset.csv")
+data <- read_csv(file="criTRia_Dataset.csv")
 #rename("categorical_score" = "Categorical Score") -> data
 
 # Read in the updated STRchive-scored loci
@@ -26,7 +26,7 @@ data %>%
 data$categorical_score <- factor(data$categorical_score,levels = c("Contradictory","Limited","Moderate","Strong","Supportive","Definitive"),ordered = TRUE)
 
 # Save updated data
-write_csv(data, "criTRia Dataset.csv")
+write_csv(data, "criTRia_Dataset.csv")
 
 
 unique(data$categorical_score)
@@ -139,7 +139,7 @@ criTRiaPlot
 ##UpSet Plot
 library(UpSetR)
 library(data.table)
-dt <- fread("criTRia Dataset.csv")
+dt <- fread("criTRia_Dataset.csv")
 # Make sure column names are consistent
 setnames(
   dt, 
