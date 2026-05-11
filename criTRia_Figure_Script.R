@@ -10,7 +10,7 @@ theme_set(theme_cowplot()) # Sets the default for subsequent plots
 
 ##read and prep data
 data <- read_csv(file="criTRia_Dataset.csv")
-data %>% rename("categorical_score" = "Categorical Score") -> data
+data %>% rename("categorical_score" = any_of("Categorical Score")) -> data
 
 # Read in the updated STRchive-scored loci
 read_tsv("criTRia-curations.tsv", col_select = c("Locus_ID", "Source", "classification")) %>%
@@ -205,7 +205,7 @@ ggplot(data, aes(y = Gene, x = Group)) +
   scale_x_discrete(sec.axis = dup_axis(labels = counts, name = "Count")) +
   labs(title = "criTRia Vs. GeneCC Scoring", x = "Group", y = "Gene") + 
   theme_minimal() +
-  theme(plot.title = element_text(hjust = 0.5, size = 15, face = "bold"), legend.position = "none", axis.text = element_text(size = 10))
+  theme(plot.title = element_text(hjust = 0.5, size = 15, face = "bold"), axis.text = element_text(size = 10))
 ggsave('heatmap.pdf', height = 20, width = 12)
 
 
