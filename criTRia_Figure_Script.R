@@ -10,23 +10,26 @@ theme_set(theme_cowplot()) # Sets the default for subsequent plots
 
 ##read and prep data
 data <- read_csv(file="criTRia Dataset.csv")
-data$categorical_score <- factor(data$ScoreCat,levels = c("Contradictory","Limited","Moderate","Strong","Supportive","Definitive"),ordered = TRUE)
+#rename("categorical_score" = "Categorical Score") -> data
 
 # Read in the updated STRchive-scored loci
 read_tsv("criTRia-curations.tsv", col_select = c("Locus_ID", "Source", "classification")) %>%
   filter(Source == "criTRia") %>%
-  rename("Gene" = "Locus_ID", "Group" = "Source", "Categorical Score" = "classification") -> strchive_data
+  rename("Gene" = "Locus_ID", "Group" = "Source", "categorical_score" = "classification") -> strchive_data
 
 # Replace all criTRia scores with updated ones
 data %>%
   filter(Group != "criTRia") %>%
   bind_rows(strchive_data) -> data
 
+# Set factor levels
+data$categorical_score <- factor(data$categorical_score,levels = c("Contradictory","Limited","Moderate","Strong","Supportive","Definitive"),ordered = TRUE)
+
 # Save updated data
 write_csv(data, "criTRia Dataset.csv")
 
 
-unique(data$ScoreCat)
+unique(data$categorical_score)
 data %>% filter(
   Group %in% c(
     "Clingen",
@@ -51,8 +54,8 @@ ggplot(
   aes(
     x=Gene,
     y=Group,
-    color=ScoreCat,
-    size=ScoreCat
+    color=categorical_score,
+    size=categorical_score
     )
   ) +  
   geom_jitter(
@@ -117,7 +120,7 @@ criTRiaVsGeneCC<-ggplot(
 criTRiaVsGeneCC
 
 criTRiaPlot <- ggplot(
-  data = STRtrKit,
+  data = data,
   aes(
     x=categorical_score
     )
@@ -136,7 +139,7 @@ criTRiaPlot
 ##UpSet Plot
 library(UpSetR)
 library(data.table)
-dt <- fread("STRtrKit.csv")
+dt <- fread("criTRia Dataset.csv")
 # Make sure column names are consistent
 setnames(
   dt, 
@@ -188,7 +191,7 @@ links1 <- aggregate(
 #Flow 2: Group -> Score
 links2 <- aggregate(
   x = list(value = rep(1, nrow(data))),
-  by = list(source = data$Group,target = data$ScoreCat),
+  by = list(source = data$Group,target = data$categorical_score),
   FUN = length
   )
 
@@ -240,7 +243,7 @@ saveWidget(sankey,"sankey_plot.html", selfcontained = TRUE)
 
 ##Heat map
 # Change order of some values
-data$`Categorical Score` = factor(data$`Categorical Score`,
+data$categorical_score = factor(data$categorical_score,
                                levels = c("Definitive", "Supportive", "Strong", "Moderate", "Limited", "Contradictory"))
 # Order by number of associations scored
 data$Group = factor(data$Group,
@@ -262,7 +265,7 @@ group_counts = data.frame(Group = names(sort(table(data$Group), decreasing = T))
 counts <- group_counts$Count[match(levels(data$Group), group_counts$Group)]
 
 ggplot(data, aes(y = Gene, x = Group)) +
-  geom_tile(aes(fill = `Categorical Score`)) + 
+  geom_tile(aes(fill = categorical_score)) + 
   scale_fill_manual(values = my_colors) +
   scale_x_discrete(sec.axis = dup_axis(labels = counts, name = "Count")) +
   labs(title = "criTRia Vs. GeneCC Scoring", x = "Group", y = "Gene") + 
