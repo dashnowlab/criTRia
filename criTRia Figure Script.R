@@ -9,8 +9,22 @@ library(cowplot)
 theme_set(theme_cowplot()) # Sets the default for subsequent plots 
 
 ##read and prep data
-data <- read_csv(file="STRtrKit.csv")
+data <- read_csv(file="criTRia Dataset.csv")
 data$categorical_score <- factor(data$ScoreCat,levels = c("Contradictory","Limited","Moderate","Strong","Supportive","Definitive"),ordered = TRUE)
+
+# Read in the updated STRchive-scored loci
+read_tsv("criTRia-curations.tsv", col_select = c("Locus_ID", "Source", "classification")) %>%
+  filter(Source == "criTRia") %>%
+  rename("Gene" = "Locus_ID", "Group" = "Source", "Categorical Score" = "classification") -> strchive_data
+
+# Replace all criTRia scores with updated ones
+data %>%
+  filter(Group != "criTRia") %>%
+  bind_rows(strchive_data) -> data
+
+# Save updated data
+write_csv(data, "criTRia Dataset.csv")
+
 
 unique(data$ScoreCat)
 data %>% filter(
