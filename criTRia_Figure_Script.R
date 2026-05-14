@@ -16,6 +16,12 @@ data %>% rename("categorical_score" = any_of("Categorical Score")) -> data
 read_tsv("criTRia-curations.tsv", col_select = c("Locus_ID", "Source", "classification")) %>%
   filter(Source == "criTRia") %>%
   rename("Gene" = "Locus_ID", "Group" = "Source", "categorical_score" = "classification") -> strchive_data
+# group Refuted and Disputed under Contradictory to simplify plotting
+strchive_data %>% mutate(categorical_score = case_when(
+  categorical_score == "Refuted" ~ "Contradictory",
+  categorical_score == "Disputed" ~ "Contradictory",
+  TRUE ~ categorical_score  # Keep all other values as they are
+)) -> strchive_data
 
 # Replace all criTRia scores with updated ones
 data %>%
@@ -207,75 +213,3 @@ ggplot(data, aes(y = Gene, x = Group)) +
   theme_minimal() +
   theme(plot.title = element_text(hjust = 0.5, size = 15, face = "bold"), axis.text = element_text(size = 10))
 ggsave('heatmap.pdf', height = 20, width = 12)
-
-
-
-##Sankey Plot
-library(networkD3)
-#install.packages("networkD3")
-library(dplyr)
-#install.packages("dplyr")
-library(htmlwidgets)
-#install.packages("htmlwidgets")
-library(RColorBrewer)
-#install.packages("RColorBrewer")
-library(jsonlite)
-#install.packages("jsonlite")
-#Link 1: Gene -> Group
-links1 <- aggregate(
-  x = list(value = rep(1, nrow(data))),
-  by = list(source = data$Gene,target = data$Group),
-  FUN = length
-)
-
-#Flow 2: Group -> Score
-links2 <- aggregate(
-  x = list(value = rep(1, nrow(data))),
-  by = list(source = data$Group,target = data$categorical_score),
-  FUN = length
-)
-
-#Combine them
-links_df <- bind_rows(links1, links2)
-
-#nodes table
-nodes_df <- data.frame(
-  name = unique(c(links_df$source,links_df$target)),
-  stringsAsFactors = FALSE
-)
-
-#Prep the data
-links_df$source_id <- match(links_df$source,nodes_df$name) - 1
-links_df$target_id <- match(links_df$target,nodes_df$name) - 1
-links_df$LinkGroup <- nodes_df$name[
-  links_df$target_id + 1
-]
-nodes_df$NodeGroup <- nodes_df$name
-sources <- unique(links_df$source)
-targets <- unique(links_df$target)
-first_target_nodes <- setdiff(targets,sources)
-first_target_names <- nodes_df$name[first_target_nodes + 1]
-
-#Colors
-unique_groups <- sort(unique(first_target_names))
-palette <- RColorBrewer::brewer.pal(n = min(length(unique_groups), 12), "Set3")
-my_colors <- sprintf(
-  'd3.scaleOrdinal().domain(%s).range(%s)',
-  jsonlite::toJSON(unique_groups),
-  jsonlite::toJSON(palette)
-)
-#Plot
-sankey <- sankeyNetwork(
-  Links = links_df,
-  Nodes = nodes_df,
-  Source = "source_id",
-  Target = "target_id",
-  Value = "value",
-  NodeID = "name",
-  LinkGroup = "LinkGroup",
-  NodeGroup = "NodeGroup",
-  fontSize = 12,
-  nodeWidth = 30
-)
-sankey
-saveWidget(sankey,"sankey_plot.html", selfcontained = TRUE)
