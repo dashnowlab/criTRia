@@ -58,8 +58,6 @@ DRPLA_ATN1,Illumina,Moderate
 DRPLA_ATN1,Labcorp,Strong
 DRPLA_ATN1,Orphanet,Supportive
 DRPLA_ATN1,PanelApp,Strong
-Definitive,Labcorp,NA
-Definitive,Orphanet,NA
 EDM1-PSACH_COMP,ClinGen,Definitive
 EDM1-PSACH_COMP,G2P,Limited
 EDM1-PSACH_COMP,Labcorp,Strong

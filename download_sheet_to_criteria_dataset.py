@@ -175,6 +175,9 @@ def parse_wide_matrix(rows: list[list[str]]) -> list[dict[str, str]]:
     seen = set()
 
     for raw_row in rows[descriptor_idx + 1:]:
+        first_cell = raw_row[0].strip().lower() if raw_row else ""
+        if first_cell.startswith("# scored"):
+            break
         if not any(cell.strip() for cell in raw_row):
             continue
 
