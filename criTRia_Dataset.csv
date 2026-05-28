@@ -253,14 +253,15 @@ SCA31_BEAN1,criTRia,Definitive
 SCA6_CACNA1A,criTRia,Definitive
 JBS_CBL,criTRia,Definitive
 DM2_CNBP,criTRia,Definitive
-EPM_CSNK1E,criTRia,Moderate
+EPM_CSNK1E,criTRia,Limited
 SCA37_DAB1,criTRia,Strong
+FRA12A_DIP2B,criTRia,Moderate
 DMD_DMD,criTRia,Contradictory
 DM1_DMPK,criTRia,Definitive
 RCPS_EIF4A3,criTRia,Definitive
 SCA27B_FGF14,criTRia,Definitive
 FXS_FMR1,criTRia,Definitive
-"FXTAS,POF1_FMR1",criTRia,Strong
+"FXTAS,POF1_FMR1",criTRia,Definitive
 BPES_FOXL2,criTRia,Definitive
 OPDM2_GIPC1,criTRia,Definitive
 HFG_HOXA13-I,criTRia,Limited
@@ -279,7 +280,7 @@ OPML1_NUTM2B_AS1,criTRia,Moderate
 OPMD_PABPN1,criTRia,Definitive
 MRUPAV_PLIN4,criTRia,Moderate
 CPEO_POLG,criTRia,Contradictory
-SCA12_PPP2R2B,criTRia,Definitive
+SCA12_PPP2R2B,criTRia,Moderate
 HSAN-VIII_PRDM12,criTRia,Moderate
 CJD_PRNP,criTRia,Moderate
 FAME8_RAI1,criTRia,Limited
@@ -287,6 +288,7 @@ FAME7_RAPGEF2,criTRia,Limited
 OPDM4_RILPL1,criTRia,Moderate
 CCD_RUNX2,criTRia,Definitive
 FAME1_SAMD12,criTRia,Definitive
+XLID_SOX3,criTRia,Limited
 FAME2_STARD7,criTRia,Strong
 XDP_TAF1,criTRia,Definitive
 SCA17_TBP,criTRia,Definitive
