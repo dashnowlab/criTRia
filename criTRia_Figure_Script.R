@@ -55,7 +55,7 @@ data %>% filter(
         ) -> shared.genes
 
 ##Jitter
-ggplot(
+jitterPlot <- ggplot(
   data = data,
   aes(
     x=Gene,
@@ -68,6 +68,8 @@ ggplot(
     width = 0.2,
     height = 0.2
     )
+jitterPlot
+ggsave("jitter_plot.pdf", plot = jitterPlot, width = 12, height = 8)
 ##Bar
 #criTRia vs GeneCC
 plot_data <- data %>%
@@ -124,6 +126,7 @@ criTRiaVsGeneCC<-ggplot(
     )
   )
 criTRiaVsGeneCC
+ggsave("criTRia_vs_genecc_barplot.pdf", plot = criTRiaVsGeneCC, width = 10, height = 6)
 
 criTRiaPlot <- ggplot(
   data = data,
@@ -141,6 +144,7 @@ criTRiaPlot <- ggplot(
     x = "Categorical Score",
     y = "Number of Genes Scored")
 criTRiaPlot
+ggsave("criTRia_scoring_barplot.pdf", plot = criTRiaPlot, width = 8, height = 6)
 
 ##UpSet Plot
 library(UpSetR)
@@ -205,11 +209,12 @@ group_counts = data.frame(Group = names(sort(table(data$Group), decreasing = T))
 
 counts <- group_counts$Count[match(levels(data$Group), group_counts$Group)]
 
-ggplot(data, aes(y = Gene, x = Group)) +
+heatmapPlot <- ggplot(data, aes(y = Gene, x = Group)) +
   geom_tile(aes(fill = categorical_score)) + 
   scale_fill_manual(values = my_colors) +
   scale_x_discrete(sec.axis = dup_axis(labels = counts, name = "Count")) +
   labs(title = "criTRia Vs. GeneCC Scoring", x = "Group", y = "Gene") + 
   theme_minimal() +
   theme(plot.title = element_text(hjust = 0.5, size = 15, face = "bold"), axis.text = element_text(size = 10))
-ggsave('heatmap.pdf', height = 20, width = 12)
+heatmapPlot
+ggsave('heatmap.pdf', plot = heatmapPlot, height = 20, width = 12)

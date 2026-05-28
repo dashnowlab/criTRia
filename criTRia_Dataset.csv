@@ -236,11 +236,11 @@ XDP_TAF1,Illumina,Definitive
 XDP_TAF1,Labcorp,Strong
 XDP_TAF1,Orphanet,Supportive
 XDP_TAF1,PanelApp,Strong
-XLMR_SOX3,Ambry,Limited
-XLMR_SOX3,ClinGen,Moderate
-XLMR_SOX3,G2P,Definitive
-XLMR_SOX3,Labcorp,Strong
-XLMR_SOX3,Orphanet,Supportive
+XLID_SOX3,Ambry,Limited
+XLID_SOX3,ClinGen,Moderate
+XLID_SOX3,G2P,Definitive
+XLID_SOX3,Labcorp,Strong
+XLID_SOX3,Orphanet,Supportive
 OPDM5_ABCD3,criTRia,Moderate
 FRA2A_AFF3,criTRia,Definitive
 EIEE1_ARX,criTRia,Definitive

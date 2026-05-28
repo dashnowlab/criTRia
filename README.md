@@ -15,16 +15,10 @@ Run from the repository root:
 python3 download_sheet_to_criteria_dataset.py
 ```
 
-Write directly to a specific file (for example, replacing the dataset):
+Merge data and generate figures
 
 ```bash
-python3 download_sheet_to_criteria_dataset.py --output criTRia_Dataset.csv
-```
-
-Use a different Google Sheet URL:
-
-```bash
-python3 download_sheet_to_criteria_dataset.py --sheet-url "<google-sheet-url>"
+Rscript criTRia_Figure_Script.R
 ```
 
 ## Figure source files
