@@ -28,10 +28,10 @@ This repository includes links to editable source files for figures used in the 
 | Figure # | Description | Editable Source Link |
 | :--- | :--- | :--- |
 | **Figure 1** | criTRia scoring framework overview | [https://docs.google.com/spreadsheets/d/1VEuZqvwtQWzVSBc7Aj4FUPQABwyNTCcb8XDNCZ-xoKM/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1VEuZqvwtQWzVSBc7Aj4FUPQABwyNTCcb8XDNCZ-xoKM/edit?usp=sharing) |
-| **Figure 2** | Comparison of criTRia vs Gene Curation Coalition | [https://docs.google.com/spreadsheets/d/1VEuZqvwtQWzVSBc7Aj4FUPQABwyNTCcb8XDNCZ-xoKM/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1VEuZqvwtQWzVSBc7Aj4FUPQABwyNTCcb8XDNCZ-xoKM/edit?usp=sharing) |
-| **Figure 3** | TR-disease association results | [https://github.com/dashnowlab/criTRia/blob/main/criTRia%20Figure%20Script.R](https://github.com/dashnowlab/criTRia/blob/main/criTRia%20Figure%20Script.R) |
+| **Figure 2** | Comparison of criTRia vs Gene Curation Coalition | [https://docs.google.com/spreadsheets/d/1DonSiPVjeQLsB8HoFzn50jFCnWvMPxVZ124SzS0s7r0/edit?gid=0#gid=0](https://docs.google.com/spreadsheets/d/1DonSiPVjeQLsB8HoFzn50jFCnWvMPxVZ124SzS0s7r0/edit?gid=0#gid=0) |
+| **Figure 3** | TR-disease association results | [https://github.com/dashnowlab/criTRia/blob/main/criTRia_Figure_Script.R](https://github.com/dashnowlab/criTRia/blob/main/criTRia_Figure_Script.R) |
 
-## Contact information
+## Repository contributors:
 
 - **Principal Investigator:** Harriet Dashnow
-- **Author:** Macayla Ann Weiner
+- **First Author:** Macayla Ann Weiner
