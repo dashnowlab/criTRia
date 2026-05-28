@@ -109,12 +109,10 @@ FXS_FMR1,Labcorp,Strong
 FXS_FMR1,Myriad,Definitive
 FXS_FMR1,Orphanet,Supportive
 FXS_FMR1,PanelApp,Strong
-FXS_FMR1 (all 3),Labcorp,Strong
-FXS_FMR1 (all 3),Orphanet,Supportive
-FXTAS/POF1_FMR1,Ambry,Strong
-FXTAS/POF1_FMR1,G2P,Definitive
-FXTAS/POF1_FMR1,Labcorp,Strong
-FXTAS/POF1_FMR1,Orphanet,Supportive
+FXTAS_FMR1,Ambry,Strong
+FXTAS_FMR1,G2P,Definitive
+FXTAS_FMR1,Labcorp,Strong
+FXTAS_FMR1,Orphanet,Supportive
 GDPAG_GLS,Ambry,Moderate
 GDPAG_GLS,ClinGen,Definitive
 GDPAG_GLS,Labcorp,Strong
@@ -155,10 +153,13 @@ OPDM2_GIPC1,Orphanet,Supportive
 OPDM2_GIPC1,PanelApp,Limited
 OPDM4_RILPL1,Ambry,Limited
 OPDM5_ABCD3,ClinGen,Limited
-OPMD3_PABPN1,Ambry,Definitive
-OPMD3_PABPN1,Labcorp,Strong
-OPMD3_PABPN1,Orphanet,Supportive
-OPMD3_PABPN1,PanelApp,Strong
+OPMD_PABPN1,Ambry,Definitive
+OPMD_PABPN1,Labcorp,Strong
+OPMD_PABPN1,Orphanet,Supportive
+OPMD_PABPN1,PanelApp,Strong
+POF1_FMR1,Ambry,Strong
+POF1_FMR1,G2P,Definitive
+POF1_FMR1,Labcorp,Strong
 PRTS_ARX,Ambry,Moderate
 PRTS_ARX,ClinGen,Definitive
 PRTS_ARX,G2P,Definitive
@@ -212,6 +213,7 @@ SCA4_ZFHX3,PanelApp,Strong
 SCA51_THAP11,ClinGen,Limited
 SCA6_CACNA1A,Ambry,Strong
 SCA6_CACNA1A,Labcorp,Strong
+SCA6_CACNA1A,Orphanet,Supportive
 SCA6_CACNA1A,PanelApp,Strong
 SCA7_ATXN7,Ambry,Moderate
 SCA7_ATXN7,G2P,Definitive

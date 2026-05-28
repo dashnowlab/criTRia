@@ -299,8 +299,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--output",
-        default="criTRia_Dataset.from_sheet.csv",
-        help="Output CSV path (default: criTRia_Dataset.from_sheet.csv).",
+        default="criTRia_Dataset.csv",
+        help="Output CSV path (default: criTRia_Dataset.csv).",
     )
     return parser.parse_args()
 
