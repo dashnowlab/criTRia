@@ -9,6 +9,8 @@ from urllib.parse import parse_qs, urlparse
 from urllib.request import Request, urlopen
 
 
+CRITRIA_TSV_URL = "https://raw.githubusercontent.com/dashnowlab/STRchive/main/data/criTRia-curations.tsv"
+
 GENE_ALIASES = ["gene", "locusid", "locus_id", "locus", "geneid"]
 GROUP_ALIASES = ["group", "source", "organization", "org", "lab"]
 SCORE_ALIASES = [
@@ -277,10 +279,30 @@ def standardize_rows(csv_text: str) -> list[dict[str, str]]:
     return standardized
 
 
+def parse_criTRia_tsv(tsv_text: str) -> list[dict[str, str]]:
+    reader = csv.DictReader(StringIO(tsv_text), delimiter="\t")
+    rows = []
+    seen = set()
+    for row in reader:
+        gene = (row.get("Gene") or "").strip()
+        disease_id = (row.get("Disease_ID") or "").strip()
+        classification = (row.get("classification") or "").strip()
+        if not gene or not disease_id or not classification:
+            continue
+        combined_gene = f"{disease_id}_{gene}"
+        score = clean_score(classification)
+        key = (combined_gene, score)
+        if key in seen:
+            continue
+        seen.add(key)
+        rows.append({"Gene": combined_gene, "Group": "criTRia", "categorical_score": score})
+    return rows
+
+
 def write_output(rows: list[dict[str, str]], output_path: Path) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with output_path.open("w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=["Gene", "Group", "categorical_score"])
+        writer = csv.DictWriter(f, fieldnames=["Gene", "Group", "categorical_score"], lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -302,6 +324,11 @@ def parse_args() -> argparse.Namespace:
         default="criTRia_Dataset.csv",
         help="Output CSV path (default: criTRia_Dataset.csv).",
     )
+    parser.add_argument(
+        "--criTRia-url",
+        default=CRITRIA_TSV_URL,
+        help="URL for the criTRia-curations TSV (default: STRchive GitHub).",
+    )
     return parser.parse_args()
 
 
@@ -310,8 +337,13 @@ def main() -> int:
 
     try:
         export_url = build_export_url(args.sheet_url)
-        csv_text = download_csv_text(export_url)
-        rows = standardize_rows(csv_text)
+        sheet_rows = standardize_rows(download_csv_text(export_url))
+        sheet_rows = [r for r in sheet_rows if r["Group"] != "criTRia"]
+
+        criTRia_rows = parse_criTRia_tsv(download_csv_text(args.criTRia_url))
+
+        rows = sheet_rows + criTRia_rows
+        rows.sort(key=lambda r: (r["Gene"], r["Group"], r["categorical_score"]))
         write_output(rows, Path(args.output))
     except Exception as exc:
         print(f"Error: {exc}", file=sys.stderr)
