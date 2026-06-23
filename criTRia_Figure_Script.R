@@ -12,27 +12,15 @@ theme_set(theme_cowplot()) # Sets the default for subsequent plots
 data <- read_csv(file="criTRia_Dataset.csv")
 data %>% rename("categorical_score" = any_of("Categorical Score")) -> data
 
-# Read in the updated STRchive-scored loci
-read_tsv("criTRia-curations.tsv", col_select = c("Locus_ID", "Source", "classification")) %>%
-  filter(Source == "criTRia") %>%
-  rename("Gene" = "Locus_ID", "Group" = "Source", "categorical_score" = "classification") -> strchive_data
 # group Refuted and Disputed under Contradictory to simplify plotting
-strchive_data %>% mutate(categorical_score = case_when(
+data %>% mutate(categorical_score = case_when(
   categorical_score == "Refuted" ~ "Contradictory",
   categorical_score == "Disputed" ~ "Contradictory",
-  TRUE ~ categorical_score  # Keep all other values as they are
-)) -> strchive_data
-
-# Replace all criTRia scores with updated ones
-data %>%
-  filter(Group != "criTRia") %>%
-  bind_rows(strchive_data) -> data
+  TRUE ~ categorical_score
+)) -> data
 
 # Set factor levels
 data$categorical_score <- factor(data$categorical_score,levels = c("Contradictory","Limited","Moderate","Strong","Supportive","Definitive"),ordered = TRUE)
-
-# Save updated data
-write_csv(data, "criTRia_Dataset.csv")
 
 
 unique(data$categorical_score)
