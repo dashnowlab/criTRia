@@ -121,6 +121,7 @@ def clean_score(raw_score: str) -> str:
         "supportive": "Supportive",
         "definitive": "Definitive",
         "defintive": "Definitive",
+        "no known": "No Known",
     }
     return score_map.get(score.lower(), score)
 

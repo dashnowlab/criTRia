@@ -20,8 +20,23 @@ data %>% mutate(categorical_score = case_when(
 )) -> data
 
 # Set factor levels
-data$categorical_score <- factor(data$categorical_score,levels = c("Contradictory","Limited","Moderate","Strong","Supportive","Definitive"),ordered = TRUE)
+data$categorical_score <- factor(data$categorical_score,levels = c("Contradictory","Limited","Moderate","Strong","Supportive","Definitive","No Known"),ordered = TRUE)
 
+my_colors <- c(
+  "Definitive" = "#59A14F",
+  "Supportive" = "#8CD17D",
+  "Strong" = "#4E79A7",
+  "Moderate" =  "#A0CBE8",
+  "Limited" =  "#EDC948",
+  "Contradictory" = "#F28E2B",
+  "No Known" = "#D3D3D3"
+)
+
+score_sizes <- c(
+  "Contradictory" = 2, "Limited" = 2.5, "Moderate" = 3,
+  "Strong" = 3.5, "Supportive" = 4, "Definitive" = 4.5,
+  "No Known" = 2
+)
 
 unique(data$categorical_score)
 data %>% filter(
@@ -51,11 +66,13 @@ jitterPlot <- ggplot(
     color=categorical_score,
     size=categorical_score
     )
-  ) +  
+  ) +
   geom_jitter(
     width = 0.2,
     height = 0.2
-    )
+    ) +
+  scale_color_manual(values = my_colors) +
+  scale_size_manual(values = score_sizes)
 jitterPlot
 ggsave("jitter_plot.pdf", plot = jitterPlot, width = 12, height = 8)
 ##Bar
@@ -177,19 +194,10 @@ dev.off()
 ##Heat map
 # Change order of some values
 data$categorical_score = factor(data$categorical_score,
-                               levels = c("Definitive", "Supportive", "Strong", "Moderate", "Limited", "Contradictory"))
+                               levels = c("Definitive", "Supportive", "Strong", "Moderate", "Limited", "Contradictory", "No Known"))
 # Order by number of associations scored
 data$Group = factor(data$Group,
                     levels = names(sort(table(data$Group), decreasing = T))
-)
-
-my_colors <- c(
-  "Definitive" = "#59A14F",
-  "Supportive" = "#8CD17D",
-  "Strong" = "#4E79A7",
-  "Moderate" =  "#A0CBE8",
-  "Limited" =  "#EDC948",
-  "Contradictory" = "#F28E2B"
 )
 
 group_counts = data.frame(Group = names(sort(table(data$Group), decreasing = T)), 
