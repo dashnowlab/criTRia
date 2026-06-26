@@ -77,73 +77,51 @@ jitterPlot
 ggsave("jitter_plot.pdf", plot = jitterPlot, width = 12, height = 8)
 ##Bar
 #criTRia vs GeneCC
+group_totals <- data %>%
+  count(Group, name = "total") %>%
+  arrange(desc(total))
+
 plot_data <- data %>%
   count(categorical_score, Group) %>%
-  complete(
-    categorical_score,
-    Group,
-    fill = list(n = 0)
-  )
-criTRiaVsGeneCC<-ggplot(
+  complete(categorical_score, Group, fill = list(n = 0)) %>%
+  mutate(Group = factor(Group, levels = group_totals$Group))
+
+criTRiaVsGeneCC <- ggplot(
   data = plot_data,
-  aes(
-    x = categorical_score,
-    y = n,
-    fill = Group
-    )
-  )+
-  geom_col(
-    position = position_dodge2(
-      preserve = "single",
-      padding = 0.1
-      ),
-    width = 0.7
-  )+
-  geom_vline(
-    xintercept = seq(1.5, length(unique(plot_data$categorical_score)) - 0.5, by = 1),
-    color = "grey95",
-    linewidth = 0.5
-  )+
-  scale_x_discrete(
-    expand = expansion(
-      mult = c(
-        0.01, 0.01
-        )
-      )
-    )+
+  aes(x = Group, y = n, fill = categorical_score)
+  ) +
+  geom_col(width = 0.7) +
+  scale_fill_manual(values = my_colors, name = "Categorical Score") +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.05))) +
   labs(
-      title = "GeneCC Scoring Vs. criTRia",
-      x = "Categorical Score",
-      y = "Number of Genes Scored"
-    )+
+    title = "GenCC Scoring Vs. criTRia",
+    x = "Scoring Group",
+    y = "Number of Loci Scored"
+  ) +
   theme(
     legend.position = "bottom",
     legend.title = element_text(size = 10),
     legend.text  = element_text(size = 9),
     legend.key.width = unit(0.5, "cm"),
-    legend.key.height = unit(0.4, "cm")
+    legend.key.height = unit(0.4, "cm"),
+    axis.text.x = element_text(angle = 35, hjust = 1)
   ) +
-  guides(
-    fill = guide_legend(
-      nrow = 1,        # from option 3
-      byrow = TRUE,
-      title.position = "left"
-    )
-  )
+  guides(fill = guide_legend(nrow = 1, byrow = TRUE, title.position = "left"))
 criTRiaVsGeneCC
 ggsave("criTRia_vs_genecc_barplot.pdf", plot = criTRiaVsGeneCC, width = 10, height = 6)
 
 criTRiaPlot <- ggplot(
   data = data,
   aes(
-    x=categorical_score
+    x = categorical_score,
+    fill = categorical_score
     )
   )+
   geom_bar(
     position = "dodge",
-    width = 0.4,
-    fill = "#83bbc3"
+    width = 0.4
     )+
+  scale_fill_manual(values = my_colors, guide = "none") +
   labs(
     title = "criTRia Scoring",
     x = "Categorical Score",
@@ -200,17 +178,34 @@ data$Group = factor(data$Group,
                     levels = names(sort(table(data$Group), decreasing = T))
 )
 
-group_counts = data.frame(Group = names(sort(table(data$Group), decreasing = T)), 
+group_counts = data.frame(Group = names(sort(table(data$Group), decreasing = T)),
                           Count = as.numeric(sort(table(data$Group), decreasing = T)))
 
 counts <- group_counts$Count[match(levels(data$Group), group_counts$Group)]
 
+# Sort Gene axis by the gene symbol (part after the last underscore)
+gene_order <- data %>%
+  distinct(Gene) %>%
+  mutate(gene_symbol = sub(".*_", "", Gene)) %>%
+  arrange(desc(gene_symbol)) %>%
+  pull(Gene)
+data$Gene <- factor(data$Gene, levels = gene_order)
+
 heatmapPlot <- ggplot(data, aes(y = Gene, x = Group)) +
-  geom_tile(aes(fill = categorical_score)) + 
-  scale_fill_manual(values = my_colors) +
+  geom_tile(aes(fill = categorical_score)) +
+  scale_fill_manual(values = my_colors, name = "Categorical Score") +
   scale_x_discrete(sec.axis = dup_axis(labels = counts, name = "Count")) +
-  labs(title = "criTRia Vs. GeneCC Scoring", x = "Group", y = "Gene") + 
+  labs(title = "criTRia Vs. GenCC Scoring", x = "Scoring Group", y = "Disease and Gene") +
   theme_minimal() +
-  theme(plot.title = element_text(hjust = 0.5, size = 15, face = "bold"), axis.text = element_text(size = 10))
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 15, face = "bold"),
+    axis.text = element_text(size = 12),
+    legend.position = "inside",
+    legend.position.inside = c(0.92, 0.06),
+    legend.background = element_rect(fill = "white", colour = "grey80"),
+    legend.title = element_text(size = 14),
+    legend.text = element_text(size = 13)
+  )
 heatmapPlot
 ggsave('heatmap.pdf', plot = heatmapPlot, height = 20, width = 12)
+ggsave('heatmap.png', plot = heatmapPlot, height = 20, width = 12)
