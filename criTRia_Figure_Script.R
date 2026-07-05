@@ -3,6 +3,7 @@
 library(tidyverse)
 library(ggplot2)
 library(gt)
+library(ggnewscale)
 
 library(ggplot2) # Need ggplot2 loaded first
 library(cowplot)
@@ -24,9 +25,9 @@ data$categorical_score <- factor(data$categorical_score,levels = c("Contradictor
 
 my_colors <- c(
   "Definitive" = "#59A14F",
-  "Supportive" = "#8CD17D",
   "Strong" = "#4E79A7",
   "Moderate" =  "#A0CBE8",
+  "Supportive" = "#D6EAF8",
   "Limited" =  "#EDC948",
   "Contradictory" = "#F28E2B",
   "No Known" = "#D3D3D3"
@@ -111,7 +112,7 @@ criTRiaVsGeneCC
 ggsave("criTRia_vs_genecc_barplot.pdf", plot = criTRiaVsGeneCC, width = 10, height = 6)
 
 criTRiaPlot <- ggplot(
-  data = data,
+  data = subset(data, Group == "criTRia"),
   aes(
     x = categorical_score,
     fill = categorical_score
@@ -122,12 +123,15 @@ criTRiaPlot <- ggplot(
     width = 0.4
     )+
   scale_fill_manual(values = my_colors, guide = "none") +
+  geom_text(stat = "count", aes(label = after_stat(count)), vjust = -0.5, size = 4) +
   labs(
     title = "criTRia Scoring",
     x = "Categorical Score",
     y = "Number of Genes Scored")
 criTRiaPlot
 ggsave("criTRia_scoring_barplot.pdf", plot = criTRiaPlot, width = 8, height = 6)
+
+table(subset(data, Group == "criTRia")$categorical_score)
 
 ##UpSet Plot
 library(UpSetR)
@@ -172,7 +176,7 @@ dev.off()
 ##Heat map
 # Change order of some values
 data$categorical_score = factor(data$categorical_score,
-                               levels = c("Definitive", "Supportive", "Strong", "Moderate", "Limited", "Contradictory", "No Known"))
+  levels = c("Definitive", "Strong", "Moderate", "Supportive", "Limited", "Contradictory", "No Known"))
 # Order by number of associations scored
 data$Group = factor(data$Group,
                     levels = names(sort(table(data$Group), decreasing = T))
@@ -191,21 +195,124 @@ gene_order <- data %>%
   pull(Gene)
 data$Gene <- factor(data$Gene, levels = gene_order)
 
+# Flag genes where any group clearly warrants diagnostic panel inclusion
+# (Definitive/Strong) while another clearly does not (Limited and below).
+# Moderate is treated as neutral — disagreements at the Moderate/Limited
+# boundary are too close to the clinical threshold to count as a conflict.
+high_evidence <- c("Definitive", "Strong", "Moderate")
+low_evidence  <- c("Limited", "Contradictory", "No Known")
+
+conflict_data <- data %>%
+  group_by(Gene) %>%
+  summarise(
+    has_high = any(categorical_score %in% high_evidence),
+    has_low  = any(categorical_score %in% low_evidence),
+    .groups = "drop"
+  ) %>%
+  mutate(conflict = factor(has_high & has_low, levels = c(TRUE, FALSE), labels = c("Yes", "No")))
+
+n_groups <- nlevels(data$Group)
+n_conflict <- sum(conflict_data$conflict == "Yes")
+data$Group <- factor(data$Group, levels = c(levels(data$Group), "Conflict"))
+
+conflict_col <- conflict_data %>%
+  mutate(
+    Gene  = factor(Gene, levels = levels(data$Gene)),
+    Group = factor("Conflict", levels = levels(data$Group))
+  )
+
 heatmapPlot <- ggplot(data, aes(y = Gene, x = Group)) +
   geom_tile(aes(fill = categorical_score)) +
   scale_fill_manual(values = my_colors, name = "Categorical Score") +
-  scale_x_discrete(sec.axis = dup_axis(labels = counts, name = "Count")) +
+  new_scale_fill() +
+  geom_tile(
+    data = conflict_col,
+    aes(y = Gene, x = Group, fill = conflict)
+  ) +
+  scale_fill_manual(
+    values = c("Yes" = "#E15759", "No" = "#F5F5F5"),
+    name = "Evidence Tier\nConflict"
+  ) +
+  geom_vline(xintercept = n_groups + 0.5, color = "grey50", linewidth = 0.5, linetype = "dashed") +
+  scale_x_discrete(sec.axis = dup_axis(labels = c(counts, n_conflict), name = "Count")) +
   labs(title = "criTRia Vs. GenCC Scoring", x = "Scoring Group", y = "Disease and Gene") +
   theme_minimal() +
   theme(
     plot.title = element_text(hjust = 0.5, size = 15, face = "bold"),
     axis.text = element_text(size = 12),
-    legend.position = "inside",
-    legend.position.inside = c(0.92, 0.06),
-    legend.background = element_rect(fill = "white", colour = "grey80"),
-    legend.title = element_text(size = 14),
-    legend.text = element_text(size = 13)
+    legend.position = "none"
   )
-heatmapPlot
-ggsave('heatmap.pdf', plot = heatmapPlot, height = 20, width = 12)
-ggsave('heatmap.png', plot = heatmapPlot, height = 20, width = 12)
+
+# Tier hierarchy legend: colored dots with Supportive range box (Limited–Definitive)
+tier_legend_tiers <- c("Definitive", "Strong", "Moderate", "Limited", "Contradictory", "No Known")
+tier_legend_df <- data.frame(
+  category = factor(tier_legend_tiers, levels = rev(tier_legend_tiers)),
+  x = 0
+)
+
+tierLegend <- ggplot(tier_legend_df, aes(x = x, y = category)) +
+  annotate("rect",
+           xmin = 0.4, xmax = 1.7,
+           ymin = 2.5, ymax = 6.5,
+           fill = "#D6EAF8", color = NA) +
+  geom_point(aes(color = category), size = 5) +
+  scale_color_manual(values = my_colors[tier_legend_tiers], guide = "none") +
+  annotate("text",
+           x = 0.25, y = 4.5,
+           label = "Supportive",
+           color = "black", size = 3.5, hjust = -.15) +
+  scale_x_continuous(limits = c(-0.5, 2.0)) +
+  labs(title = "Categorical Score") +
+  theme_minimal() +
+  theme(
+    plot.title  = element_text(size = 13, face = "bold", hjust = 10),
+    axis.title  = element_blank(),
+    axis.text.x = element_blank(),
+    axis.ticks  = element_blank(),
+    axis.text.y = element_text(size = 11, face = "bold"),
+    panel.grid  = element_blank()
+  )
+
+combinedHeatmap <- ggdraw() +
+  draw_plot(heatmapPlot,  x = 0,    y = 0,    width = 0.83, height = 1) +
+  draw_plot(tierLegend,   x = 0.83, y = 0.72, width = 0.17, height = 0.15)
+combinedHeatmap
+ggsave('heatmap.pdf', plot = combinedHeatmap, height = 20, width = 16)
+ggsave('heatmap.png', plot = combinedHeatmap, height = 20, width = 16)
+
+
+##Evidence Tier Hierarchy — shows that criTRia's "Supportive" maps broadly
+## across GenCC's Limited, Moderate, Strong, and Definitive categories
+gencc_tiers <- c("Definitive", "Strong", "Moderate", "Limited", "Contradictory", "No Known")
+
+tier_df <- data.frame(
+  category = factor(gencc_tiers, levels = rev(gencc_tiers)),
+  x = 0
+)
+
+# Supportive overlaps Limited (y=3) through Definitive (y=6)
+tierHierarchyPlot <- ggplot(tier_df, aes(x = x, y = category)) +
+  annotate("rect",
+           xmin = -0.5, xmax = 2.0,
+           ymin = 2.5, ymax = 6.5,
+           fill = "#D6EAF8", color = NA) +
+  geom_point(aes(color = category), size = 10) +
+  scale_color_manual(values = my_colors[gencc_tiers], guide = "none") +
+  annotate("text",
+           x = 0.7, y = 4,
+           label = "Supportive\n(Broad Positive Range)",
+           color = "#5B9BD5", size = 4.5, hjust = 0) +
+  scale_x_continuous(limits = c(-0.8, 2.2)) +
+  labs(title = 'Evidence Tier Hierarchy and "Supportive" Range') +
+  theme_minimal() +
+  theme(
+    plot.title   = element_text(hjust = 0.5, size = 14, face = "bold"),
+    axis.title   = element_blank(),
+    axis.text.x  = element_blank(),
+    axis.ticks.x = element_blank(),
+    axis.text.y  = element_text(size = 12),
+    panel.grid   = element_blank()
+  )
+tierHierarchyPlot
+ggsave('tier_hierarchy.pdf', plot = tierHierarchyPlot, width = 6, height = 5)
+ggsave('tier_hierarchy.png', plot = tierHierarchyPlot, width = 6, height = 5)
