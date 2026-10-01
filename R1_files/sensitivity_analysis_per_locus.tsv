@@ -1,0 +1,66 @@
+Locus_ID	Gene	Disease_ID	Original_Score	Publication_Interval_Years	Original_Classification	Score_-1	Class_-1	Shift_-1	Score_-0.5	Class_-0.5	Shift_-0.5	Score_+0.5	Class_+0.5	Shift_+0.5	Score_+1	Class_+1	Shift_+1
+OPDM5_ABCD3	ABCD3	OPDM5	10	NA	Moderate	9	Moderate	No Shift	9.5	Moderate	No Shift	10.5	Moderate	No Shift	11	Moderate	No Shift
+FRA2A_AFF3	AFF3	FRA2A	12	10.59	Definitive	11	Moderate	Definitive -> Moderate	11.5	Moderate	Definitive -> Moderate	12.5	Definitive	No Shift	13	Definitive	No Shift
+EIEE1_ARX	ARX	EIEE1	16.5	13.33	Definitive	15.5	Definitive	No Shift	16	Definitive	No Shift	17	Definitive	No Shift	17.5	Definitive	No Shift
+PRTS_ARX	ARX	PRTS	12	4.75	Definitive	11	Moderate	Definitive -> Moderate	11.5	Moderate	Definitive -> Moderate	12.5	Definitive	No Shift	13	Definitive	No Shift
+DRPLA_ATN1	ATN1	DRPLA	12.5	43.61	Definitive	11.5	Moderate	Definitive -> Moderate	12	Definitive	No Shift	13	Definitive	No Shift	13.5	Definitive	No Shift
+SCA1_ATXN1	ATXN1	SCA1	14.5	36.33	Definitive	13.5	Definitive	No Shift	14	Definitive	No Shift	15	Definitive	No Shift	15.5	Definitive	No Shift
+SCA10_ATXN10	ATXN10	SCA10	14	25.41	Definitive	13	Definitive	No Shift	13.5	Definitive	No Shift	14.5	Definitive	No Shift	15	Definitive	No Shift
+SCA3_ATXN3	ATXN3	SCA3	18	30.41	Definitive	17	Definitive	No Shift	17.5	Definitive	No Shift	18.5	Definitive	No Shift	19	Definitive	No Shift
+SCA7_ATXN7	ATXN7	SCA7	18	22.92	Definitive	17	Definitive	No Shift	17.5	Definitive	No Shift	18.5	Definitive	No Shift	19	Definitive	No Shift
+SCA8_ATXN8OS	ATXN8OS	SCA8	11.5	22.61	Definitive	10.5	Moderate	Definitive -> Moderate	11	Moderate	Definitive -> Moderate	12	Definitive	No Shift	12.5	Definitive	No Shift
+SCA31_BEAN1	BEAN1	SCA31	12	13.33	Definitive	11	Moderate	Definitive -> Moderate	11.5	Moderate	Definitive -> Moderate	12.5	Definitive	No Shift	13	Definitive	No Shift
+SCA6_CACNA1A	CACNA1A	SCA6	18	28.25	Definitive	17	Definitive	No Shift	17.5	Definitive	No Shift	18.5	Definitive	No Shift	19	Definitive	No Shift
+JBS_CBL	CBL	JBS	14.5	5.17	Definitive	13.5	Definitive	No Shift	14	Definitive	No Shift	15	Definitive	No Shift	15.5	Definitive	No Shift
+DM2_CNBP	CNBP	DM2	14.5	15.99	Definitive	13.5	Definitive	No Shift	14	Definitive	No Shift	15	Definitive	No Shift	15.5	Definitive	No Shift
+EPM_CSNK1E	CSNK1E	EPM	4.5	6.67	Limited	3.5	Limited	No Shift	4	Limited	No Shift	5	Limited	No Shift	5.5	Limited	No Shift
+SCA37_DAB1	DAB1	SCA37	13	0.99	Strong	12	Strong	No Shift	12.5	Strong	No Shift	13.5	Strong	No Shift	14	Strong	No Shift
+FRA12A_DIP2B	DIP2B	FRA12A	11	18.08	Moderate	10	Moderate	No Shift	10.5	Moderate	No Shift	11.5	Moderate	No Shift	12	Definitive	Moderate -> Definitive
+DMD_DMD	DMD	DMD	0	8.65	Refuted	0	Refuted	No Shift	0	Refuted	No Shift	0.5	Refuted	No Shift	1	Refuted	No Shift
+DM1_DMPK	DMPK	DM1	18	30.58	Definitive	17	Definitive	No Shift	17.5	Definitive	No Shift	18.5	Definitive	No Shift	19	Definitive	No Shift
+RCPS_EIF4A3	EIF4A3	RCPS	15	4.24	Definitive	14	Definitive	No Shift	14.5	Definitive	No Shift	15.5	Definitive	No Shift	16	Definitive	No Shift
+SCA27B_FGF14	FGF14	SCA27B	13.5	22.41	Definitive	12.5	Definitive	No Shift	13	Definitive	No Shift	14	Definitive	No Shift	14.5	Definitive	No Shift
+FXS_FMR1	FMR1	FXS	14	39.09	Definitive	13	Definitive	No Shift	13.5	Definitive	No Shift	14.5	Definitive	No Shift	15	Definitive	No Shift
+FXTAS,POF1_FMR1	FMR1	FXTAS,POF1	13.5	5.29	Definitive	12.5	Definitive	No Shift	13	Definitive	No Shift	14	Definitive	No Shift	14.5	Definitive	No Shift
+BPES_FOXL2	FOXL2	BPES	14.5	19.47	Definitive	13.5	Definitive	No Shift	14	Definitive	No Shift	15	Definitive	No Shift	15.5	Definitive	No Shift
+OPDM2_GIPC1	GIPC1	OPDM2	15.5	4.99	Definitive	14.5	Definitive	No Shift	15	Definitive	No Shift	16	Definitive	No Shift	16.5	Definitive	No Shift
+HFG_HOXA13-I	HOXA13	HFG-I	3.5	3.08	Limited	2.5	Limited	No Shift	3	Limited	No Shift	4	Limited	No Shift	4.5	Limited	No Shift
+HFG_HOXA13-II	HOXA13	HFG-II	5.5	1.63	Limited	4.5	Limited	No Shift	5	Limited	No Shift	6	Limited	No Shift	6.5	Limited	No Shift
+HFG_HOXA13-III	HOXA13	HFG-III	4.5	7.46	Limited	3.5	Limited	No Shift	4	Limited	No Shift	5	Limited	No Shift	5.5	Limited	No Shift
+SD5_HOXD13	HOXD13	SD5	12.5	24.09	Definitive	11.5	Moderate	Definitive -> Moderate	12	Definitive	No Shift	13	Definitive	No Shift	13.5	Definitive	No Shift
+HDL2_JPH3	JPH3	HDL2	15	23.58	Definitive	14	Definitive	No Shift	14.5	Definitive	No Shift	15.5	Definitive	No Shift	16	Definitive	No Shift
+OPDM1_LRP12	LRP12	OPDM1	12	1.92	Strong	11	Moderate	Strong -> Moderate	11.5	Moderate	Strong -> Moderate	12.5	Strong	No Shift	13	Strong	No Shift
+FAME3_MARCHF6	MARCHF6	FAME3	11.5	17.33	Definitive	10.5	Moderate	Definitive -> Moderate	11	Moderate	Definitive -> Moderate	12	Definitive	No Shift	12.5	Definitive	No Shift
+CHNG3_MIR7-2	MIR7-2	CHNG3	13.5	NA	Strong	12.5	Strong	No Shift	13	Strong	No Shift	14	Strong	No Shift	14.5	Strong	No Shift
+NME_NAXE	NAXE	NME	5	NA	Limited	4	Limited	No Shift	4.5	Limited	No Shift	5.5	Limited	No Shift	6	Limited	No Shift
+ALS1_NIPA1	NIPA	ALS1	3	2.33	Disputed	2	Disputed	No Shift	2.5	Disputed	No Shift	3.5	Disputed	No Shift	4	Disputed	No Shift
+SCA36_NOP56	NOP56	SCA36	13	13.75	Definitive	12	Definitive	No Shift	12.5	Definitive	No Shift	13.5	Definitive	No Shift	14	Definitive	No Shift
+NIID_NOTCH2NLC	NOTCH2NLC	NIID	14	5.08	Definitive	13	Definitive	No Shift	13.5	Definitive	No Shift	14.5	Definitive	No Shift	15	Definitive	No Shift
+OPML1_NUTM2B_AS1	NUTM2B-AS1	OPML1	9.5	5	Moderate	8.5	Moderate	No Shift	9	Moderate	No Shift	10	Moderate	No Shift	10.5	Moderate	No Shift
+OPMD_PABPN1	PABPN1	OPMD	12.5	24.58	Definitive	11.5	Moderate	Definitive -> Moderate	12	Definitive	No Shift	13	Definitive	No Shift	13.5	Definitive	No Shift
+MRUPAV_PLIN4	PLIN4	MRUPAV	11	5.17	Moderate	10	Moderate	No Shift	10.5	Moderate	No Shift	11.5	Moderate	No Shift	12	Definitive	Moderate -> Definitive
+CPEO_POLG	POLG	CPEO	7	NA	Disputed	6	Disputed	No Shift	6.5	Disputed	No Shift	7.5	Disputed	No Shift	8	Disputed	No Shift
+SCA12_PPP2R2B	PPP2R2B	SCA12	8.5	24.58	Moderate	7.5	Moderate	No Shift	8	Moderate	No Shift	9	Moderate	No Shift	9.5	Moderate	No Shift
+HSAN-VIII_PRDM12	PRDM12	HSAN-VIII	11	NA	Moderate	10	Moderate	No Shift	10.5	Moderate	No Shift	11.5	Moderate	No Shift	12	Strong	Moderate -> Strong
+CJD_PRNP	PRNP	CJD	8.5	34.09	Moderate	7.5	Moderate	No Shift	8	Moderate	No Shift	9	Moderate	No Shift	9.5	Moderate	No Shift
+FAME8_RAI1	RAI1	FAME8	1.5	0.45	Limited	0.5	Limited	No Shift	1	Limited	No Shift	2	Limited	No Shift	2.5	Limited	No Shift
+FAME7_RAPGEF2	RAPGEF2	FAME7	3	0.91	Limited	2	Limited	No Shift	2.5	Limited	No Shift	3.5	Limited	No Shift	4	Limited	No Shift
+OPDM4_RILPL1	RILPL1	OPDM4	10	2.05	Moderate	9	Moderate	No Shift	9.5	Moderate	No Shift	10.5	Moderate	No Shift	11	Moderate	No Shift
+CCD_RUNX2	RUNX2	CCD	12	28.17	Definitive	11	Moderate	Definitive -> Moderate	11.5	Moderate	Definitive -> Moderate	12.5	Definitive	No Shift	13	Definitive	No Shift
+FAME1_SAMD12	SAMD12	FAME1	11.5	6.84	Definitive	10.5	Moderate	Definitive -> Moderate	11	Moderate	Definitive -> Moderate	12	Definitive	No Shift	12.5	Definitive	No Shift
+XLID_SOX3	SOX3	XLID, PHPX	5	0.88	Limited	4	Limited	No Shift	4.5	Limited	No Shift	5.5	Limited	No Shift	6	Limited	No Shift
+FAME2_STARD7	STARD7	FAME2	12	NA	Strong	11	Moderate	Strong -> Moderate	11.5	Moderate	Strong -> Moderate	12.5	Strong	No Shift	13	Strong	No Shift
+XDP_TAF1	TAF1	XDP	13.5	29.08	Definitive	12.5	Definitive	No Shift	13	Definitive	No Shift	14	Definitive	No Shift	14.5	Definitive	No Shift
+SCA17_TBP	TBP	SCA17	13.5	19.06	Definitive	12.5	Definitive	No Shift	13	Definitive	No Shift	14	Definitive	No Shift	14.5	Definitive	No Shift
+TOF_TBX1	TBX1	TOF	2	4.58	Limited	1	Limited	No Shift	1.5	Limited	No Shift	2.5	Limited	No Shift	3	Limited	No Shift
+FECD3_TCF4	TCF4	FECD3	17.5	9.41	Definitive	16.5	Definitive	No Shift	17	Definitive	No Shift	18	Definitive	No Shift	18.5	Definitive	No Shift
+SCA51_THAP11	THAP11	SCA51	13	21.16	Definitive	12	Definitive	No Shift	12.5	Definitive	No Shift	13.5	Definitive	No Shift	14	Definitive	No Shift
+FAME6_TNRC6A	TNRC6A	FAME6	2.7	NA	Limited	1.7000000000000002	Limited	No Shift	2.2	Limited	No Shift	3.2	Limited	No Shift	3.7	Limited	No Shift
+CPUM_TYMS	TYMS	CPUM	1.5	0.43	Limited	0.5	Limited	No Shift	1	Limited	No Shift	2	Limited	No Shift	2.5	Limited	No Shift
+HMNR7_VWA1	VWA1	HMNR7	12.5	3.08	Definitive	11.5	Moderate	Definitive -> Moderate	12	Definitive	No Shift	13	Definitive	No Shift	13.5	Definitive	No Shift
+DBQD2_XYLT1	XYLT1	DBQD2	8.5	4.83	Moderate	7.5	Moderate	No Shift	8	Moderate	No Shift	9	Moderate	No Shift	9.5	Moderate	No Shift
+FAME4_YEATS2	YEATS2	FAME4	6	11	Limited	5	Limited	No Shift	5.5	Limited	No Shift	6.5	Limited	No Shift	7	Moderate	Limited -> Moderate
+SCA4_ZFHX3	ZFHX3	SCA4	13.5	22.08	Definitive	12.5	Definitive	No Shift	13	Definitive	No Shift	14	Definitive	No Shift	14.5	Definitive	No Shift
+HPE5_ZIC2	ZIC2	HPE5	12.5	26.18	Definitive	11.5	Moderate	Definitive -> Moderate	12	Definitive	No Shift	13	Definitive	No Shift	13.5	Definitive	No Shift
+VACTERLX_ZIC3	ZIC3	VACTERLX	3.5	10.42	Limited	2.5	Limited	No Shift	3	Limited	No Shift	4	Limited	No Shift	4.5	Limited	No Shift
+FRA7A_ZNF713	ZNF713	FRA7A	2.5	10.32	Limited	1.5	Limited	No Shift	2	Limited	No Shift	3	Limited	No Shift	3.5	Limited	No Shift
