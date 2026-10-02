@@ -42,7 +42,7 @@ score_sizes <- c(
 unique(data$categorical_score)
 data %>% filter(
   Group %in% c(
-    "Clingen",
+    "ClinGen",
     "Ambry",
     "Labcorp", 
     "criTRia",
