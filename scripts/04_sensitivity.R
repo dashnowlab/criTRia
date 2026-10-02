@@ -16,31 +16,42 @@ critria <- read_tsv(critria_file, show_col_types = FALSE)
 
 cat("Loaded criTRia curations:", nrow(critria), "loci from", critria_file, "\n\n")
 
-# 2. Mathematical Classification Logic (criTRia SOP v1)
-# For any perturbed score (score + delta, bounded at minimum 0):
-# 1. Rule-Based Overrides: If classification is "Disputed" or "Refuted", return original classification.
-# 2. Limited: score < 7.0
-# 3. Moderate: 7.0 <= score < 12.0
-# 4. Strong / Definitive: score >= 12.0
-#    - If !is.na(publication_interval_years) and publication_interval_years >= 3.0: "Definitive"
-#    - Otherwise: "Strong"
-
-classify_criTRia <- function(score, pub_int, orig_class) {
+# 2. Classification rule, matching summarize_curations() in STRchive's
+# scripts/check-curations.py:
+# - Disputed and Refuted are set manually and never change.
+# - The total score (capped at 18) is rounded to the nearest integer, with halves
+#   rounded to even as in Python's round() (R's round() does the same), so 11.5 -> 12.
+# - Rounded 12-18: Definitive if >= 2 publications at least 3 years apart, else Strong.
+# - Rounded 7-11: Moderate. Rounded 1-6: Limited. Rounded 0: No Known Relationship.
+classify_criTRia <- function(score, pub_int, pub_count, orig_class) {
   if (orig_class %in% c("Disputed", "Refuted", "Contradictory")) {
     return(orig_class)
   }
-  if (score < 7.0) {
-    return("Limited")
-  } else if (score < 12.0) {
-    return("Moderate")
+  rounded <- round(min(score, 18))
+  pub_int <- ifelse(is.na(pub_int), 0, pub_int)
+  if (rounded >= 12) {
+    if (pub_count >= 2 && pub_int >= 3) "Definitive" else "Strong"
+  } else if (rounded >= 7) {
+    "Moderate"
+  } else if (rounded >= 1) {
+    "Limited"
   } else {
-    # score >= 12.0
-    if (!is.na(pub_int) && pub_int >= 3.0) {
-      return("Definitive")
-    } else {
-      return("Strong")
-    }
+    "No Known Relationship"
   }
+}
+
+# Check the rule reproduces every current classification before perturbing
+unperturbed <- mapply(
+  classify_criTRia,
+  critria$total_score,
+  critria$publication_interval_years,
+  critria$publication_count,
+  critria$classification,
+  USE.NAMES = FALSE
+)
+mismatched <- critria$Locus_ID[unperturbed != critria$classification]
+if (length(mismatched) > 0) {
+  stop("Classification rule does not reproduce current classifications for: ", paste(mismatched, collapse = ", "))
 }
 
 # 3. Calculate Perturbed Classifications
@@ -53,6 +64,7 @@ per_locus_df <- critria %>%
     Gene,
     Disease_ID,
     Original_Score = total_score,
+    Publication_Count = publication_count,
     Publication_Interval_Years = publication_interval_years,
     Original_Classification = classification
   )
@@ -69,6 +81,7 @@ for (d in deltas) {
     classify_criTRia,
     scores_d,
     per_locus_df$Publication_Interval_Years,
+    per_locus_df$Publication_Count,
     per_locus_df$Original_Classification,
     USE.NAMES = FALSE
   )
