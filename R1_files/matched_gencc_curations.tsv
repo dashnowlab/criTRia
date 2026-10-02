@@ -1,0 +1,181 @@
+Locus_ID	Gene	Disease_ID	Submitter	Score	Date	Disease_Title_GenCC	Disease_Curie_GenCC
+BPES_FOXL2	FOXL2	BPES	Ambry	Definitive	2018-07-31T13:30:15Z	blepharophimosis, ptosis, and epicanthus inversus syndrome	MONDO:0007201
+BPES_FOXL2	FOXL2	BPES	G2P	Definitive	2017-08-27T00:00:00Z	blepharophimosis, ptosis, and epicanthus inversus syndrome	MONDO:0007201
+BPES_FOXL2	FOXL2	BPES	Labcorp	Strong	2023-02-22T21:21:01Z	blepharophimosis, ptosis, and epicanthus inversus syndrome	MONDO:0007201
+BPES_FOXL2	FOXL2	BPES	PanelApp	Strong	2025-01-17T00:00:00Z	blepharophimosis, ptosis, and epicanthus inversus syndrome	MONDO:0007201
+CCD_RUNX2	RUNX2	CCD	Ambry	Definitive	2018-08-13T13:31:46Z	cleidocranial dysplasia 1	MONDO:0007340
+CCD_RUNX2	RUNX2	CCD	G2P	Definitive	2023-05-24T00:00:00Z	cleidocranial dysplasia 1	MONDO:0007340
+CCD_RUNX2	RUNX2	CCD	Labcorp	Strong	2023-07-06T15:43:56Z	cleidocranial dysplasia 1	MONDO:0007340
+CCD_RUNX2	RUNX2	CCD	Orphanet	Supportive	2021-09-14T00:00:00Z	cleidocranial dysplasia 1	MONDO:0007340
+CCD_RUNX2	RUNX2	CCD	PanelApp	Strong	2025-01-17T00:00:00Z	cleidocranial dysplasia 1	MONDO:0007340
+CJD_PRNP	PRNP	CJD	Ambry	Definitive	2018-03-22T13:38:12Z	Gerstmann-Straussler-Scheinker syndrome	MONDO:0007656
+CJD_PRNP	PRNP	CJD	Labcorp	Strong	2023-01-23T19:17:49Z	inherited Creutzfeldt-Jakob disease	MONDO:0007403
+CJD_PRNP	PRNP	CJD	Orphanet	Supportive	2021-09-14T00:00:00Z	Gerstmann-Straussler-Scheinker syndrome	MONDO:0007656
+CJD_PRNP	PRNP	CJD	PanelApp	Strong	2021-02-18T13:06:25Z	inherited Creutzfeldt-Jakob disease	MONDO:0007403
+CPEO_POLG	POLG	CPEO	Ambry	Definitive	2018-02-27T00:00:00Z	progressive external ophthalmoplegia with mitochondrial DNA deletions, autosomal dominant 1	MONDO:0024528
+CPEO_POLG	POLG	CPEO	G2P	Definitive	2017-08-30T00:00:00Z	progressive external ophthalmoplegia with mitochondrial DNA deletions, autosomal dominant 1	MONDO:0024528
+CPEO_POLG	POLG	CPEO	Labcorp	Strong	2021-04-16T08:49:22Z	progressive external ophthalmoplegia with mitochondrial DNA deletions, autosomal dominant 1	MONDO:0024528
+CPEO_POLG	POLG	CPEO	Orphanet	Supportive	2021-09-14T00:00:00Z	autosomal recessive progressive external ophthalmoplegia	MONDO:0016810
+CPEO_POLG	POLG	CPEO	PanelApp	Strong	2025-01-17T00:00:00Z	progressive external ophthalmoplegia with mitochondrial DNA deletions, autosomal dominant 1	MONDO:0024528
+DBQD2_XYLT1	XYLT1	DBQD2	G2P	Strong	2025-06-04T00:00:00Z	Desbuquois dysplasia 2	MONDO:0014343
+DBQD2_XYLT1	XYLT1	DBQD2	Labcorp	Strong	2022-04-19T10:27:11Z	Desbuquois dysplasia 2	MONDO:0014343
+DBQD2_XYLT1	XYLT1	DBQD2	Orphanet	Supportive	2021-09-14T00:00:00Z	Desbuquois dysplasia	MONDO:0015426
+DBQD2_XYLT1	XYLT1	DBQD2	PanelApp	Strong	2025-01-17T00:00:00Z	Desbuquois dysplasia 2	MONDO:0014343
+DM1_DMPK	DMPK	DM1	G2P	Definitive	2018-01-21T00:00:00Z	myotonic dystrophy type 1	MONDO:0008056
+DM1_DMPK	DMPK	DM1	Labcorp	Strong	2022-01-26T08:02:04Z	myotonic dystrophy type 1	MONDO:0008056
+DM2_CNBP	CNBP	DM2	G2P	Definitive	2017-08-16T00:00:00Z	myotonic dystrophy type 2	MONDO:0011266
+DM2_CNBP	CNBP	DM2	Labcorp	Strong	2021-04-16T08:49:02Z	myotonic dystrophy type 2	MONDO:0011266
+DM2_CNBP	CNBP	DM2	Orphanet	Supportive	2021-09-14T00:00:00Z	myotonic dystrophy type 2	MONDO:0011266
+DMD_DMD	DMD	DMD	Ambry	Definitive	2018-01-26T13:34:25Z	Duchenne muscular dystrophy	MONDO:0010679
+DMD_DMD	DMD	DMD	ClinGen	Definitive	2024-11-14T00:00:00Z	progressive muscular dystrophy	MONDO:0016106
+DMD_DMD	DMD	DMD	G2P	Definitive	2015-07-22T00:00:00Z	Duchenne muscular dystrophy	MONDO:0010679
+DMD_DMD	DMD	DMD	Labcorp	Strong	2023-05-26T15:18:23Z	Duchenne muscular dystrophy	MONDO:0010679
+DMD_DMD	DMD	DMD	Myriad	Definitive	2018-07-05T20:05:06Z	Duchenne and Becker muscular dystrophy	MONDO:0016899
+DMD_DMD	DMD	DMD	Natera	Definitive	2022-12-16T05:00:00Z	Duchenne muscular dystrophy	MONDO:0010679
+DMD_DMD	DMD	DMD	Orphanet	Supportive	2021-09-14T00:00:00Z	Becker muscular dystrophy	MONDO:0010311
+DMD_DMD	DMD	DMD	PanelApp	Strong	2025-01-17T00:00:00Z	progressive muscular dystrophy	MONDO:0016106
+DRPLA_ATN1	ATN1	DRPLA	ClinGen	Definitive	2026-05-13T00:00:00Z	dentatorubral-pallidoluysian atrophy	MONDO:0007435
+DRPLA_ATN1	ATN1	DRPLA	Labcorp	Strong	2021-08-18T10:09:37Z	dentatorubral-pallidoluysian atrophy	MONDO:0007435
+DRPLA_ATN1	ATN1	DRPLA	Orphanet	Supportive	2021-09-14T00:00:00Z	dentatorubral-pallidoluysian atrophy	MONDO:0007435
+EIEE1_ARX	ARX	EIEE1	ClinGen	Definitive	2019-06-04T00:00:00Z	genetic developmental and epileptic encephalopathy	MONDO:0100062
+EIEE1_ARX	ARX	EIEE1	Orphanet	Supportive	2021-09-14T00:00:00Z	genetic developmental and epileptic encephalopathy	MONDO:0100062
+EIEE1_ARX	ARX	EIEE1	PanelApp	Strong	2025-01-17T00:00:00Z	developmental and epileptic encephalopathy, 1	MONDO:0010632
+FAME1_SAMD12	SAMD12	FAME1	Labcorp	Strong	2020-04-14T12:30:49Z	epilepsy, familial adult myoclonic, 1	MONDO:0010985
+FAME1_SAMD12	SAMD12	FAME1	Orphanet	Supportive	2021-09-14T00:00:00Z	benign adult familial myoclonic epilepsy	MONDO:0019448
+FAME1_SAMD12	SAMD12	FAME1	PanelApp	Limited	2025-01-17T00:00:00Z	epilepsy, familial adult myoclonic, 1	MONDO:0010985
+FAME2_STARD7	STARD7	FAME2	PanelApp	Limited	2025-01-17T00:00:00Z	epilepsy, familial adult myoclonic, 2	MONDO:0011930
+FAME3_MARCHF6	MARCHF6	FAME3	Orphanet	Supportive	2021-09-14T00:00:00Z	benign adult familial myoclonic epilepsy	MONDO:0019448
+FAME4_YEATS2	YEATS2	FAME4	Orphanet	Supportive	2021-09-14T00:00:00Z	benign adult familial myoclonic epilepsy	MONDO:0019448
+FAME4_YEATS2	YEATS2	FAME4	PanelApp	Limited	2025-01-17T00:00:00Z	epilepsy, familial adult myoclonic, 4	MONDO:0014055
+FAME6_TNRC6A	TNRC6A	FAME6	Labcorp	Limited	2019-09-23T14:16:35Z	epilepsy, familial adult myoclonic, 6	MONDO:0054846
+FAME6_TNRC6A	TNRC6A	FAME6	PanelApp	Limited	2025-01-17T00:00:00Z	epilepsy, familial adult myoclonic, 6	MONDO:0054846
+FAME7_RAPGEF2	RAPGEF2	FAME7	Labcorp	Limited	2019-09-23T14:14:52Z	epilepsy, familial adult myoclonic, 7	MONDO:0054847
+FECD3_TCF4	TCF4	FECD3	G2P	Strong	2017-08-31T00:00:00Z	corneal dystrophy, Fuchs endothelial, 3	MONDO:0013203
+FECD3_TCF4	TCF4	FECD3	Orphanet	Supportive	2021-09-14T00:00:00Z	Fuchs' endothelial dystrophy	MONDO:0005321
+FRA12A_DIP2B	DIP2B	FRA12A	Ambry	Limited	2023-09-29T23:10:57Z	intellectual disability, FRA12A type	MONDO:0007634
+FRA12A_DIP2B	DIP2B	FRA12A	G2P	Limited	2015-07-22T00:00:00Z	intellectual disability, FRA12A type	MONDO:0007634
+FRA12A_DIP2B	DIP2B	FRA12A	Labcorp	No Known	2017-04-17T20:04:49Z	intellectual disability, FRA12A type	MONDO:0007634
+FRA2A_AFF3	AFF3	FRA2A	G2P	Strong	2025-01-14T00:00:00Z	KINSSHIP syndrome	MONDO:0851095
+FRA2A_AFF3	AFF3	FRA2A	Labcorp	Strong	2021-05-18T07:16:43Z	KINSSHIP syndrome	MONDO:0851095
+FRA2A_AFF3	AFF3	FRA2A	PanelApp	Strong	2025-01-17T00:00:00Z	KINSSHIP syndrome	MONDO:0851095
+FXS_FMR1	FMR1	FXS	Ambry	Definitive	2017-12-04T00:00:00Z	fragile X syndrome	MONDO:0010383
+FXS_FMR1	FMR1	FXS	ClinGen	Definitive	2019-06-03T00:00:00Z	fragile X syndrome	MONDO:0010383
+FXS_FMR1	FMR1	FXS	G2P	Definitive	2016-12-07T00:00:00Z	fragile X syndrome	MONDO:0010383
+FXS_FMR1	FMR1	FXS	Labcorp	Strong	2023-05-09T14:24:02Z	fragile X syndrome	MONDO:0010383
+FXS_FMR1	FMR1	FXS	Myriad	Definitive	2018-08-17T20:05:07Z	fragile X syndrome	MONDO:0010383
+FXS_FMR1	FMR1	FXS	Natera	Definitive	2022-12-16T05:00:00Z	fragile X syndrome	MONDO:0010383
+FXS_FMR1	FMR1	FXS	Orphanet	Supportive	2021-09-14T00:00:00Z	fragile X syndrome	MONDO:0010383
+FXS_FMR1	FMR1	FXS	PanelApp	Strong	2025-01-17T00:00:00Z	fragile X syndrome	MONDO:0010383
+FXTAS,POF1_FMR1	FMR1	FXTAS,POF1	Ambry	Strong	2018-01-03T13:35:06Z	premature ovarian failure 1	MONDO:0010706
+FXTAS,POF1_FMR1	FMR1	FXTAS,POF1	G2P	Definitive	2022-08-03T00:00:00Z	fragile X-associated tremor/ataxia syndrome	MONDO:0010382
+FXTAS,POF1_FMR1	FMR1	FXTAS,POF1	Labcorp	Strong	2023-06-13T03:37:12Z	fragile X-associated tremor/ataxia syndrome	MONDO:0010382
+FXTAS,POF1_FMR1	FMR1	FXTAS,POF1	Orphanet	Supportive	2021-09-14T00:00:00Z	fragile X-associated tremor/ataxia syndrome	MONDO:0010382
+HDL2_JPH3	JPH3	HDL2	Ambry	Definitive	2018-08-31T13:35:59Z	Huntington disease-like 2	MONDO:0011671
+HDL2_JPH3	JPH3	HDL2	Labcorp	Strong	2021-04-16T08:49:14Z	Huntington disease-like 2	MONDO:0011671
+HDL2_JPH3	JPH3	HDL2	Orphanet	Supportive	2021-09-14T00:00:00Z	Huntington disease-like 2	MONDO:0011671
+HFG_HOXA13-I	HOXA13	HFG-I	Ambry	Moderate	2018-08-31T13:35:42Z	hand-foot-genital syndrome	MONDO:0007698
+HFG_HOXA13-I	HOXA13	HFG-I	ClinGen	Definitive	2025-07-22T00:00:00Z	hand-foot-genital syndrome	MONDO:0007698
+HFG_HOXA13-I	HOXA13	HFG-I	G2P	Definitive	2023-05-24T00:00:00Z	hand-foot-genital syndrome	MONDO:0007698
+HFG_HOXA13-I	HOXA13	HFG-I	Labcorp	Strong	2023-02-10T15:07:42Z	hand-foot-genital syndrome	MONDO:0007698
+HFG_HOXA13-I	HOXA13	HFG-I	Orphanet	Supportive	2021-09-14T00:00:00Z	hand-foot-genital syndrome	MONDO:0007698
+HFG_HOXA13-I	HOXA13	HFG-I	PanelApp	Strong	2025-01-17T00:00:00Z	hand-foot-genital syndrome	MONDO:0007698
+HFG_HOXA13-II	HOXA13	HFG-II	Ambry	Moderate	2018-08-31T13:35:42Z	hand-foot-genital syndrome	MONDO:0007698
+HFG_HOXA13-II	HOXA13	HFG-II	ClinGen	Definitive	2025-07-22T00:00:00Z	hand-foot-genital syndrome	MONDO:0007698
+HFG_HOXA13-II	HOXA13	HFG-II	G2P	Definitive	2023-05-24T00:00:00Z	hand-foot-genital syndrome	MONDO:0007698
+HFG_HOXA13-II	HOXA13	HFG-II	Labcorp	Strong	2023-02-10T15:07:42Z	hand-foot-genital syndrome	MONDO:0007698
+HFG_HOXA13-II	HOXA13	HFG-II	Orphanet	Supportive	2021-09-14T00:00:00Z	hand-foot-genital syndrome	MONDO:0007698
+HFG_HOXA13-II	HOXA13	HFG-II	PanelApp	Strong	2025-01-17T00:00:00Z	hand-foot-genital syndrome	MONDO:0007698
+HFG_HOXA13-III	HOXA13	HFG-III	Ambry	Moderate	2018-08-31T13:35:42Z	hand-foot-genital syndrome	MONDO:0007698
+HFG_HOXA13-III	HOXA13	HFG-III	ClinGen	Definitive	2025-07-22T00:00:00Z	hand-foot-genital syndrome	MONDO:0007698
+HFG_HOXA13-III	HOXA13	HFG-III	G2P	Definitive	2023-05-24T00:00:00Z	hand-foot-genital syndrome	MONDO:0007698
+HFG_HOXA13-III	HOXA13	HFG-III	Labcorp	Strong	2023-02-10T15:07:42Z	hand-foot-genital syndrome	MONDO:0007698
+HFG_HOXA13-III	HOXA13	HFG-III	Orphanet	Supportive	2021-09-14T00:00:00Z	hand-foot-genital syndrome	MONDO:0007698
+HFG_HOXA13-III	HOXA13	HFG-III	PanelApp	Strong	2025-01-17T00:00:00Z	hand-foot-genital syndrome	MONDO:0007698
+HMNR7_VWA1	VWA1	HMNR7	Labcorp	Strong	2022-09-07T16:02:21Z	neuronopathy, distal hereditary motor, autosomal recessive 7	MONDO:0030977
+HMNR7_VWA1	VWA1	HMNR7	Orphanet	Supportive	2021-09-14T00:00:00Z	neuronopathy, distal hereditary motor, autosomal recessive 5	MONDO:0013947
+HMNR7_VWA1	VWA1	HMNR7	PanelApp	Strong	2025-01-17T00:00:00Z	neuronopathy, distal hereditary motor, autosomal recessive 7	MONDO:0030977
+HPE5_ZIC2	ZIC2	HPE5	Ambry	Definitive	2018-08-31T19:03:59Z	holoprosencephaly 5	MONDO:0012322
+HPE5_ZIC2	ZIC2	HPE5	G2P	Definitive	2015-07-22T00:00:00Z	holoprosencephaly 5	MONDO:0012322
+HPE5_ZIC2	ZIC2	HPE5	Labcorp	Strong	2021-05-18T11:44:44Z	holoprosencephaly 5	MONDO:0012322
+HPE5_ZIC2	ZIC2	HPE5	PanelApp	Strong	2025-01-17T00:00:00Z	holoprosencephaly 5	MONDO:0012322
+HSAN-VIII_PRDM12	PRDM12	HSAN-VIII	G2P	Definitive	2016-01-08T00:00:00Z	congenital insensitivity to pain-hypohidrosis syndrome	MONDO:0014662
+HSAN-VIII_PRDM12	PRDM12	HSAN-VIII	Illumina	Definitive	2021-01-22T00:00:00Z	hereditary sensory and autonomic neuropathy	MONDO:0015364
+HSAN-VIII_PRDM12	PRDM12	HSAN-VIII	Labcorp	Strong	2023-06-23T15:19:14Z	congenital insensitivity to pain-hypohidrosis syndrome	MONDO:0014662
+HSAN-VIII_PRDM12	PRDM12	HSAN-VIII	Orphanet	Supportive	2021-09-14T00:00:00Z	congenital insensitivity to pain-hypohidrosis syndrome	MONDO:0014662
+HSAN-VIII_PRDM12	PRDM12	HSAN-VIII	PanelApp	Strong	2025-01-17T00:00:00Z	congenital insensitivity to pain-hypohidrosis syndrome	MONDO:0014662
+MRUPAV_PLIN4	PLIN4	MRUPAV	Ambry	Moderate	2024-10-11T12:08:32Z	vacuolar Neuromyopathy	MONDO:0011155
+NME_NAXE	NAXE	NME	ClinGen	Definitive	2024-02-22T00:00:00Z	mitochondrial disease	MONDO:0044970
+NME_NAXE	NAXE	NME	G2P	Strong	2017-02-16T00:00:00Z	encephalopathy, progressive, early-onset, with brain edema and/or leukoencephalopathy, 1	MONDO:0020781
+NME_NAXE	NAXE	NME	PanelApp	Strong	2025-01-17T00:00:00Z	encephalopathy, progressive, early-onset, with brain edema and/or leukoencephalopathy, 1	MONDO:0020781
+OPDM1_LRP12	LRP12	OPDM1	Ambry	Strong	2023-05-24T00:00:00Z	oculopharyngodistal myopathy 1	MONDO:0020793
+OPDM1_LRP12	LRP12	OPDM1	ClinGen	Moderate	2024-05-14T00:00:00Z	oculopharyngodistal myopathy 1	MONDO:0020793
+OPDM2_GIPC1	GIPC1	OPDM2	Labcorp	Strong	2021-01-04T11:08:33Z	oculopharyngodistal myopathy 2	MONDO:0030134
+OPDM2_GIPC1	GIPC1	OPDM2	Orphanet	Supportive	2021-09-14T00:00:00Z	oculopharyngodistal myopathy	MONDO:0025193
+OPDM2_GIPC1	GIPC1	OPDM2	PanelApp	Limited	2025-01-17T00:00:00Z	oculopharyngodistal myopathy 2	MONDO:0030134
+OPDM4_RILPL1	RILPL1	OPDM4	Ambry	Limited	2023-05-24T00:00:00Z	oculopharyngodistal myopathy 4	MONDO:0030712
+OPMD_PABPN1	PABPN1	OPMD	Ambry	Definitive	2018-08-31T13:37:35Z	oculopharyngeal muscular dystrophy	MONDO:0008116
+OPMD_PABPN1	PABPN1	OPMD	Labcorp	Strong	2023-05-09T19:23:23Z	oculopharyngeal muscular dystrophy	MONDO:0008116
+OPMD_PABPN1	PABPN1	OPMD	Orphanet	Supportive	2021-09-14T00:00:00Z	oculopharyngeal muscular dystrophy	MONDO:0008116
+OPMD_PABPN1	PABPN1	OPMD	PanelApp	Strong	2025-01-17T00:00:00Z	oculopharyngeal muscular dystrophy 1	MONDO:0958176
+PRTS_ARX	ARX	PRTS	Orphanet	Supportive	2021-09-14T00:00:00Z	Partington syndrome	MONDO:0010654
+RCPS_EIF4A3	EIF4A3	RCPS	Ambry	Moderate	2018-03-16T13:34:41Z	Richieri Costa-Pereira syndrome	MONDO:0009998
+RCPS_EIF4A3	EIF4A3	RCPS	G2P	Definitive	2023-05-24T00:00:00Z	Richieri Costa-Pereira syndrome	MONDO:0009998
+RCPS_EIF4A3	EIF4A3	RCPS	Labcorp	Strong	2018-12-15T10:42:05Z	Richieri Costa-Pereira syndrome	MONDO:0009998
+RCPS_EIF4A3	EIF4A3	RCPS	Orphanet	Supportive	2021-09-14T00:00:00Z	Richieri Costa-Pereira syndrome	MONDO:0009998
+RCPS_EIF4A3	EIF4A3	RCPS	PanelApp	Strong	2025-01-17T00:00:00Z	Richieri Costa-Pereira syndrome	MONDO:0009998
+SCA10_ATXN10	ATXN10	SCA10	Labcorp	Strong	2020-07-15T16:31:36Z	spinocerebellar ataxia type 10	MONDO:0011330
+SCA10_ATXN10	ATXN10	SCA10	Orphanet	Supportive	2021-09-14T00:00:00Z	spinocerebellar ataxia type 10	MONDO:0011330
+SCA12_PPP2R2B	PPP2R2B	SCA12	Ambry	Moderate	2024-08-19T12:08:33Z	spinocerebellar ataxia type 12	MONDO:0011439
+SCA12_PPP2R2B	PPP2R2B	SCA12	Labcorp	Strong	2021-04-19T12:32:33Z	spinocerebellar ataxia type 12	MONDO:0011439
+SCA12_PPP2R2B	PPP2R2B	SCA12	Orphanet	Supportive	2021-09-14T00:00:00Z	spinocerebellar ataxia type 12	MONDO:0011439
+SCA17_TBP	TBP	SCA17	Ambry	Strong	2024-03-14T12:08:40Z	spinocerebellar ataxia type 17	MONDO:0011781
+SCA17_TBP	TBP	SCA17	Lab MM	Definitive	2020-04-14T13:38:03Z	spinocerebellar ataxia type 17	MONDO:0011781
+SCA17_TBP	TBP	SCA17	Labcorp	Strong	2022-10-28T18:01:00Z	spinocerebellar ataxia type 17	MONDO:0011781
+SCA17_TBP	TBP	SCA17	Orphanet	Supportive	2021-09-14T00:00:00Z	spinocerebellar ataxia type 17	MONDO:0011781
+SCA1_ATXN1	ATXN1	SCA1	Ambry	Moderate	2018-02-20T13:29:29Z	spinocerebellar ataxia type 1	MONDO:0008119
+SCA1_ATXN1	ATXN1	SCA1	Labcorp	Strong	2021-04-16T08:48:58Z	spinocerebellar ataxia type 1	MONDO:0008119
+SCA1_ATXN1	ATXN1	SCA1	Orphanet	Supportive	2021-09-14T00:00:00Z	spinocerebellar ataxia type 1	MONDO:0008119
+SCA31_BEAN1	BEAN1	SCA31	Ambry	Limited	2018-08-31T19:04:22Z	spinocerebellar ataxia type 31	MONDO:0007296
+SCA31_BEAN1	BEAN1	SCA31	Labcorp	Strong	2021-04-16T08:48:59Z	spinocerebellar ataxia type 31	MONDO:0007296
+SCA31_BEAN1	BEAN1	SCA31	Orphanet	Supportive	2021-09-14T00:00:00Z	spinocerebellar ataxia type 31	MONDO:0007296
+SCA36_NOP56	NOP56	SCA36	Ambry	Definitive	2020-03-04T13:37:22Z	spinocerebellar ataxia type 36	MONDO:0013594
+SCA36_NOP56	NOP56	SCA36	Labcorp	Strong	2021-04-19T12:32:29Z	spinocerebellar ataxia type 36	MONDO:0013594
+SCA36_NOP56	NOP56	SCA36	Orphanet	Supportive	2021-09-14T00:00:00Z	spinocerebellar ataxia type 36	MONDO:0013594
+SCA37_DAB1	DAB1	SCA37	Labcorp	Limited	2021-05-07T08:10:52Z	spinocerebellar ataxia type 37	MONDO:0014410
+SCA37_DAB1	DAB1	SCA37	Orphanet	Supportive	2021-09-14T00:00:00Z	spinocerebellar ataxia type 37	MONDO:0014410
+SCA37_DAB1	DAB1	SCA37	PanelApp	Strong	2025-01-17T00:00:00Z	spinocerebellar ataxia type 37	MONDO:0014410
+SCA3_ATXN3	ATXN3	SCA3	Ambry	Strong	2018-06-29T13:33:06Z	Machado-Joseph disease	MONDO:0007182
+SCA3_ATXN3	ATXN3	SCA3	Lab MM	Definitive	2020-04-22T13:37:12Z	Machado-Joseph disease	MONDO:0007182
+SCA3_ATXN3	ATXN3	SCA3	Labcorp	Strong	2021-04-19T12:32:08Z	Machado-Joseph disease	MONDO:0007182
+SCA3_ATXN3	ATXN3	SCA3	Orphanet	Supportive	2021-09-14T00:00:00Z	Machado-Joseph disease type 1	MONDO:0017174
+SCA4_ZFHX3	ZFHX3	SCA4	Ambry	Moderate	2024-09-06T12:08:44Z	spinocerebellar ataxia type 4	MONDO:0010847
+SCA4_ZFHX3	ZFHX3	SCA4	PanelApp	Strong	2025-01-17T00:00:00Z	spinocerebellar ataxia type 4	MONDO:0010847
+SCA6_CACNA1A	CACNA1A	SCA6	Ambry	Strong	2018-06-26T13:33:24Z	spinocerebellar ataxia type 6	MONDO:0008457
+SCA6_CACNA1A	CACNA1A	SCA6	Labcorp	Strong	2021-10-18T13:57:17Z	spinocerebellar ataxia type 6	MONDO:0008457
+SCA6_CACNA1A	CACNA1A	SCA6	Orphanet	Supportive	2021-09-14T00:00:00Z	spinocerebellar ataxia type 6	MONDO:0008457
+SCA6_CACNA1A	CACNA1A	SCA6	PanelApp	Strong	2021-02-18T13:06:14Z	spinocerebellar ataxia type 6	MONDO:0008457
+SCA7_ATXN7	ATXN7	SCA7	Ambry	Moderate	2018-02-20T13:29:29Z	spinocerebellar ataxia type 7	MONDO:0008120
+SCA7_ATXN7	ATXN7	SCA7	G2P	Definitive	2017-08-14T00:00:00Z	spinocerebellar ataxia 7	MONDO:0016163
+SCA7_ATXN7	ATXN7	SCA7	Labcorp	Strong	2021-04-16T08:48:58Z	spinocerebellar ataxia 7	MONDO:0016163
+SCA7_ATXN7	ATXN7	SCA7	Orphanet	Supportive	2021-09-14T00:00:00Z	spinocerebellar ataxia type 7	MONDO:0008120
+SCA8_ATXN8OS	ATXN8OS	SCA8	Ambry	Moderate	2023-07-26T23:10:56Z	spinocerebellar ataxia type 8	MONDO:0012116
+SD5_HOXD13	HOXD13	SD5	G2P	Definitive	2023-05-24T00:00:00Z	brachydactyly-syndactyly syndrome	MONDO:0012544
+SD5_HOXD13	HOXD13	SD5	Lab MM	Strong	2020-06-01T13:37:30Z	brachydactyly-syndactyly syndrome	MONDO:0012544
+SD5_HOXD13	HOXD13	SD5	Labcorp	Strong	2022-09-09T19:42:37Z	synpolydactyly type 1	MONDO:0008513
+SD5_HOXD13	HOXD13	SD5	Orphanet	Supportive	2021-09-14T00:00:00Z	syndactyly type 5	MONDO:0008516
+SD5_HOXD13	HOXD13	SD5	PanelApp	Strong	2025-01-17T00:00:00Z	syndactyly type 5	MONDO:0008516
+TOF_TBX1	TBX1	TOF	Ambry	Definitive	2018-08-29T19:02:53Z	conotruncal heart malformations	MONDO:0016581
+TOF_TBX1	TBX1	TOF	Labcorp	Strong	2021-08-20T09:41:07Z	conotruncal heart malformations	MONDO:0016581
+VACTERLX_ZIC3	ZIC3	VACTERLX	Ambry	Moderate	2018-08-31T19:03:59Z	VACTERL association, X-linked, with or without hydrocephalus	MONDO:0010752
+VACTERLX_ZIC3	ZIC3	VACTERLX	G2P	Definitive	2023-05-24T00:00:00Z	VACTERL association, X-linked, with or without hydrocephalus	MONDO:0010752
+VACTERLX_ZIC3	ZIC3	VACTERLX	PanelApp	Strong	2025-01-17T00:00:00Z	VACTERL association, X-linked, with or without hydrocephalus	MONDO:0010752
+XDP_TAF1	TAF1	XDP	Ambry	Strong	2024-11-20T12:08:40Z	X-linked dystonia-parkinsonism	MONDO:0010747
+XDP_TAF1	TAF1	XDP	Labcorp	Limited	2021-04-16T09:02:04Z	X-linked dystonia-parkinsonism	MONDO:0010747
+XDP_TAF1	TAF1	XDP	Orphanet	Supportive	2021-09-14T00:00:00Z	X-linked dystonia-parkinsonism	MONDO:0010747
+XDP_TAF1	TAF1	XDP	PanelApp	Strong	2025-01-17T00:00:00Z	X-linked dystonia-parkinsonism	MONDO:0010747
+XLID_SOX3	SOX3	XLID, PHPX	Ambry	Limited	2025-06-10T18:19:59Z	panhypopituitarism, X-linked	MONDO:0010712
+XLID_SOX3	SOX3	XLID, PHPX	ClinGen	Moderate	2026-06-15T00:00:00Z	SOX3-related X-linked pituitary hormone deficiency with or without intellectual developmental disorder	MONDO:0800474
+XLID_SOX3	SOX3	XLID, PHPX	G2P	Definitive	2015-07-22T00:00:00Z	intellectual disability, X-linked, with panhypopituitarism	MONDO:0010252
+XLID_SOX3	SOX3	XLID, PHPX	Labcorp	Strong	2021-04-16T09:02:15Z	panhypopituitarism, X-linked	MONDO:0010712
+XLID_SOX3	SOX3	XLID, PHPX	Orphanet	Supportive	2021-09-14T00:00:00Z	X-linked intellectual disability with isolated growth hormone deficiency	MONDO:0019032
+XLID_SOX3	SOX3	XLID, PHPX	PanelApp	Limited	2025-01-17T00:00:00Z	panhypopituitarism, X-linked	MONDO:0010712
