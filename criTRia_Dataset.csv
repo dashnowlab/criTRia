@@ -36,6 +36,7 @@ CJD_PRNP,criTRia,Moderate
 CPEO_POLG,Ambry,Definitive
 CPEO_POLG,G2P,Definitive
 CPEO_POLG,Labcorp,Strong
+CPEO_POLG,Orphanet,Supportive
 CPEO_POLG,PanelApp,Strong
 CPEO_POLG,criTRia,Contradictory
 CPUM_TYMS,criTRia,Limited
@@ -102,6 +103,7 @@ FRA12A_DIP2B,Ambry,Limited
 FRA12A_DIP2B,G2P,Limited
 FRA12A_DIP2B,Labcorp,No Known
 FRA12A_DIP2B,criTRia,Contradictory
+FRA2A_AFF3,G2P,Moderate
 FRA2A_AFF3,criTRia,Definitive
 FRA7A_ZNF713,G2P,Limited
 FRA7A_ZNF713,criTRia,Limited
@@ -188,6 +190,7 @@ MODY8_CEL,PanelApp,Strong
 MRUPAV_PLIN4,Ambry,Moderate
 MRUPAV_PLIN4,criTRia,Moderate
 NIID_NOTCH2NLC,criTRia,Definitive
+NME_NAXE,ClinGen,Definitive
 NME_NAXE,G2P,Strong
 NME_NAXE,PanelApp,Strong
 NME_NAXE,criTRia,Limited
@@ -286,6 +289,8 @@ SD5_HOXD13,Labcorp,Strong
 SD5_HOXD13,Orphanet,Supportive
 SD5_HOXD13,PanelApp,Strong
 SD5_HOXD13,criTRia,Definitive
+TOF_TBX1,Ambry,Definitive
+TOF_TBX1,Labcorp,Strong
 TOF_TBX1,criTRia,Limited
 VACTERLX_ZIC3,Ambry,Moderate
 VACTERLX_ZIC3,G2P,Definitive

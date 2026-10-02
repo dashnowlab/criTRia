@@ -11,7 +11,7 @@ Use `download_sheet_to_criteria_dataset.py` to build `criTRia_Dataset.csv` from:
 - [GenCC submissions](https://thegencc.org/download) (ClinGen, Ambry, G2P, PanelApp (Genomics England and Australia combined), Illumina, Labcorp, Lab MM, Myriad, Orphanet)
 - criTRia curations and locus disease IDs from [STRchive](https://github.com/dashnowlab/STRchive) (a copy of the curations is saved to `criTRia-curations.tsv` on every run)
 
-A GenCC classification is assigned to a locus only when its disease ID (MONDO, OMIM or Orphanet) is one of the IDs listed for that locus in STRchive. If a group has several matching records, the strongest is kept, with Refuted or Disputed taking precedence over any positive classification. Every record for each locus gene is written to `gene_disease_matches.tsv` with `status` set to `match`, `excluded` (listed in `EXCLUDED_DISEASE_IDS`) or `disease_mismatch`, so mismatches can be reviewed and, if they are the same disease, added to `EXTRA_DISEASE_IDS` in the script.
+A GenCC classification is assigned to a locus only when its disease ID (MONDO, OMIM or Orphanet) is one of the IDs listed for that locus in STRchive. If a group has several matching records, the most recent curation is kept; for records curated on the same date, Refuted or Disputed takes precedence, then the strongest classification. Every record for each locus gene is written to `gene_disease_matches.tsv` with `status` set to `match`, `excluded` (listed in `EXCLUDED_DISEASE_IDS`) or `disease_mismatch`, so mismatches can be reviewed and, if they are the same disease, added to `EXTRA_DISEASE_IDS` in the script.
 
 - Output columns: `Gene,Group,categorical_score`
 - `Refuted` and `Disputed` scores are converted to `Contradictory`
@@ -21,6 +21,15 @@ Run from the repository root:
 ```bash
 python3 download_sheet_to_criteria_dataset.py
 ```
+
+### Manually reviewed comparisons not matched
+
+GenCC classifications for a locus gene that were reviewed by hand and deliberately not matched to the locus disease. These already fail the disease ID match, so they need no special handling in the script.
+
+| Locus | GenCC disease | Groups | Reason not matched |
+| :--- | :--- | :--- | :--- |
+| FRA2A_AFF3 | KINSSHIP syndrome (MONDO:0851095, OMIM:619297) | G2P, Labcorp, PanelApp (all Strong) | KINSSHIP is caused by de novo AFF3 degron variants that increase AFF3 and has a distinct multisystem phenotype (horseshoe kidney, mesomelic dysplasia, seizures, hypertrichosis, pulmonary involvement; PMID 33961779), whereas FRA2A silences AFF3 and causes intellectual disability. Labcorp's record also cites the FRA2A expansion paper (PMID 24763282) but is excluded on its disease label. |
+| SD5_HOXD13 | Brachydactyly-syndactyly syndrome (MONDO:0012544, OMIM:610713) | G2P (Definitive), Lab MM (Strong), Orphanet (Supportive) | Caused by a contraction of the same HOXD13 polyalanine tract (15 to 8 alanines; PMID 17236141), but a different disease from the synpolydactyly type 1 caused by expansions, which criTRia curated. Treated as a separate locus-disease relationship, as for FMR1 (FXS vs FXTAS/POF1). G2P's record also cites synpolydactyly expansion papers (e.g. PMID 8817328) but is excluded on its disease label. |
 
 ### GenCC classifications based only on non-tandem-repeat variants
 
@@ -36,9 +45,11 @@ Some GenCC classifications that match a locus disease are based only on non-tand
 | DMD_DMD | G2P | Definitive | Curated 2015, before the TR was reported (2016) |
 | DMD_DMD | Labcorp | Strong | Cites only non-TR variant papers |
 | DMD_DMD | PanelApp | Strong | Cites only the GeneReviews dystrophinopathies chapter |
+| FRA2A_AFF3 | G2P | Moderate | Cites only a paper on AFF3 loss-of-function and missense variants |
 | EPM1_CSTB | Labcorp | Strong | Cites only point-mutation, null-allele and mouse model papers |
 | HPE5_ZIC2 | G2P | Definitive | Cites only non-TR variant papers |
 | HPE5_ZIC2 | Labcorp | Strong | Cites only non-TR variant papers |
+| NME_NAXE | ClinGen | Definitive | Cites only point-mutation papers; TR reported 2024 |
 | NME_NAXE | G2P | Strong | Curated 2017, before the TR was reported (2024) |
 | NME_NAXE | PanelApp | Strong | Cites only point-mutation papers |
 | SCA27B_FGF14 | Ambry | Moderate | SCA27A curation from 2018, before the TR was reported (2023) |

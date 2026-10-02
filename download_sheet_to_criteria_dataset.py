@@ -97,6 +97,14 @@ EXTRA_DISEASE_IDS: dict[str, set[str]] = {
     "FRA7A_ZNF713": {"MONDO:0005260", "OMIM:209850"},
     # SCA27A (FGF14 coding variants) overlaps SCA27B clinically
     "SCA27B_FGF14": {"MONDO:0012247", "MONDO:0008654"},
+    # General AR/AD progressive external ophthalmoplegia (parents of STRchive's POLG-specific terms)
+    "CPEO_POLG": {"MONDO:0016810", "MONDO:0008003"},
+    # Conotruncal heart malformations, a group that includes tetralogy of Fallot
+    "TOF_TBX1": {"MONDO:0016581", "OMIM:217095"},
+    # ClinGen lumped term; its NAXE evidence is all NAXE-related encephalopathy
+    "NME_NAXE": {"MONDO:0044970"},
+    # G2P intellectual disability from AFF3 loss of function (not KINSSHIP syndrome)
+    "FRA2A_AFF3": {"MONDO:0001071"},
     # ClinGen lumped ARX into two terms; assign one to each polyalanine tract
     "EIEE1_ARX": {"MONDO:0100062"},  # genetic developmental and epileptic encephalopathy
     "PRTS_ARX": {"MONDO:0100148"},  # X-linked complex neurodevelopmental disorder
@@ -111,9 +119,9 @@ EXCLUDED_DISEASE_IDS: dict[str, set[str]] = {
     "EIEE1_ARX": {"OMIM:300215", "MONDO:0010268", "Orphanet:452"},
 }
 
-# Used to pick one classification when a group has several matching records.
-# Refuted and Disputed outrank everything, so a group's contradicting record is
-# never hidden by a stronger positive one.
+# Breaks ties between a group's matching records curated on the same date.
+# Refuted and Disputed outrank everything, so a contradicting record is never
+# hidden by a positive one from the same date.
 SCORE_RANK = {
     "Refuted": 9,
     "Disputed": 8,
@@ -268,13 +276,19 @@ def match_records(loci: dict[str, dict], records: list[dict[str, str]]) -> list[
 
 
 def summarise_matches(report: list[dict[str, str]]) -> list[dict[str, str]]:
-    """Collapse matched records to one score per locus and group (strongest wins)."""
+    """Collapse matched records to one score per locus and group.
+
+    The most recent curation wins; records curated on the same date are ranked
+    by SCORE_RANK.
+    """
     best: dict[tuple[str, str], dict[str, str]] = {}
     for row in report:
         if row["status"] != "match" or not row["group"]:
             continue
         key = (row["locus"], row["group"])
-        if key not in best or rank_score(row["classification"]) > rank_score(best[key]["classification"]):
+        order = (row["date"], rank_score(row["classification"]))
+        current = best.get(key)
+        if current is None or order > (current["date"], rank_score(current["classification"])):
             best[key] = row
     return [
         {
