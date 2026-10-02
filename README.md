@@ -1,26 +1,70 @@
 # criTRia
 
-criTRia (pronounce criteria) is a formalized scoring framework designed to accurately evaluate TR-disease relationships. criTRia builds on current best-practice scoring procedures developed by the Clinical Genome Resource (ClinGen) while (re)curating based on locus-level (rather than gene-level) classification, introducing TR-specific evidence categories and reweighted scoring. In this repository you will find all data and code used to evaluate success and create the figures for the manuscript and SOP, up to date as of the latest commit.
+criTRia (pronounce criteria) is a formalized scoring framework designed to accurately evaluate TR-disease relationships. criTRia builds on current best-practice scoring procedures developed by the Clinical Genome Resource (ClinGen) while (re)curating based on locus-level (rather than gene-level) classification, introducing TR-specific evidence categories and reweighted scoring. This repository contains the data and code for the criTRia manuscript, and always reflects the latest version of the paper. Earlier versions are available from the git history.
 
-The current version of the criTRia curations is on the [STRchive criTRia page](https://strchive.org/critria), which lists each locus-disease classification with its score and links to the criTRia SOP. The curations are maintained in the STRchive GitHub repository as [`data/criTRia-curations.tsv`](https://github.com/dashnowlab/STRchive/blob/main/data/criTRia-curations.tsv). `criTRia-curations.tsv` in this repository is a snapshot of that file, refreshed every time the download script below is run.
+Preprint: Weiner MA, Hiatt L, Ajuyah P, Aliyev E, Dashnow H. criTRia: A Classification System and Evidence Criteria for Tandem Repeat Locus-Disease Relationships. medRxiv (2026). https://doi.org/10.64898/2026.07.04.26357279
 
-## Download and format classifications (Python)
+The current version of the criTRia curations is on the [STRchive criTRia page](https://strchive.org/critria), which lists each locus-disease classification with its score and links to the criTRia SOP. The curations are maintained in the STRchive GitHub repository as [`data/criTRia-curations.tsv`](https://github.com/dashnowlab/STRchive/blob/main/data/criTRia-curations.tsv). `paper/supp4_criTRia_curations.tsv` is a snapshot of that file with an added `Locus_ID` column (the STRchive locus ID), refreshed every time the pipeline runs.
 
-Use `download_sheet_to_criteria_dataset.py` to build `criTRia_Dataset.csv` from:
+## Paper items
 
-- [GenCC submissions](https://thegencc.org/download) (ClinGen, Ambry, G2P, PanelApp (Genomics England and Australia combined), Illumina, Labcorp, Lab MM, Myriad, Orphanet)
-- criTRia curations and locus disease IDs from [STRchive](https://github.com/dashnowlab/STRchive) (a copy of the curations is saved to `criTRia-curations.tsv` on every run)
+Every file in `paper/` goes into the manuscript, and nothing else does.
 
-A GenCC classification is assigned to a locus only when its disease ID (MONDO, OMIM or Orphanet) is one of the IDs listed for that locus in STRchive. If a group has several matching records, the most recent curation is kept; for records curated on the same date, Refuted or Disputed takes precedence, then the strongest classification. Every record for each locus gene is written to `gene_disease_matches.tsv` with `status` set to `match`, `excluded` (listed in `EXCLUDED_DISEASE_IDS`) or `disease_mismatch`, so mismatches can be reviewed and, if they are the same disease, added to `EXTRA_DISEASE_IDS` in the script.
+| Paper item | File | Made by |
+| :--- | :--- | :--- |
+| Figure 1 (evidence matrix) | Made by hand: [Google Sheet](https://docs.google.com/spreadsheets/d/1VEuZqvwtQWzVSBc7Aj4FUPQABwyNTCcb8XDNCZ-xoKM/edit?usp=sharing) | – |
+| Figure 2 (criTRia vs GenCC heatmap) | `paper/fig2_heatmap.pdf`, `paper/fig2_heatmap.png` | `scripts/03_figures.R` |
+| Figure 3 (minimum evidence for a new TR locus) | Made by hand | – |
+| Supplemental File 3 (criTRia and GenCC classifications) | `paper/supp3_dataset.tsv` | `scripts/01_download_and_match.py` |
+| Supplemental File 4 (criTRia curations) | `paper/supp4_criTRia_curations.tsv` | `scripts/01_download_and_match.py` |
+| Supplemental File X (discordant loci) | `paper/suppX_discordant_loci.tsv` | `scripts/02_discordance.R` |
 
-- Output columns: `Gene,Group,categorical_score`
-- `Refuted` and `Disputed` scores are converted to `Contradictory`
+Supplemental Files 1 (SOP) and 2 (LLM prompt) are not kept in this repository.
 
-Run from the repository root:
+## Running
+
+Rebuild everything, in order, with:
 
 ```bash
-python3 download_sheet_to_criteria_dataset.py
+./run_all.sh
 ```
+
+Requires Python 3 and R with tidyverse, ggnewscale, cowplot, gt, UpSetR and data.table.
+
+## Layout
+
+```
+run_all.sh        runs the scripts below in order
+scripts/
+  01_download_and_match.py   download GenCC, STRchive and criTRia data; match GenCC diseases to loci
+  02_discordance.R           discordance matrix and discordant loci table
+  03_figures.R               Figure 2 and exploratory figures
+  04_sensitivity.R           score-perturbation sensitivity analysis (exploratory)
+  discordance.R              discordance flags, shared by 02 and 03
+data/
+  raw/          downloaded inputs (dated GenCC snapshot)
+  processed/    intermediate outputs: gene_disease_matches.tsv, discordance_matrix.tsv
+paper/          outputs used in the manuscript (see Paper items)
+exploratory/    outputs not used in the manuscript
+```
+
+## Data and methods
+
+### Sources
+
+- [GenCC submissions](https://thegencc.org/download) (ClinGen, Ambry, G2P, PanelApp (Genomics England and Australia combined), Illumina, Labcorp, Lab MM, Myriad, Orphanet), downloaded on each run. If the download fails, the dated snapshot `data/raw/gencc-submissions_2026-10-02.tsv` is used instead.
+- Locus disease IDs from the [STRchive](https://github.com/dashnowlab/STRchive) loci file. Provisional loci are excluded.
+- criTRia curations from STRchive (saved to `paper/supp4_criTRia_curations.tsv`).
+
+### Matching GenCC classifications to loci
+
+A GenCC classification is assigned to a locus only when its disease ID (MONDO, OMIM or Orphanet) is one of the IDs listed for that locus in STRchive, or one accepted after manual review (`EXTRA_DISEASE_IDS` in `scripts/01_download_and_match.py`). If a group has several matching records, the most recent curation is kept; for records curated on the same date, Refuted or Disputed takes precedence, then the strongest classification. `Refuted` and `Disputed` are reported as `Contradictory`.
+
+`paper/supp3_dataset.tsv` has one row per locus and group: `Locus_ID`, `Group`, `categorical_score`, and for GenCC rows the `Submitter`, matched `Disease_ID` and `Disease_Name`, and `Curation_Date` of the record used. Every GenCC record for each locus gene is listed in `data/processed/gene_disease_matches.tsv` with `status` set to `match`, `excluded` (listed in `EXCLUDED_DISEASE_IDS`) or `disease_mismatch`, so mismatches can be reviewed.
+
+### Discordance
+
+A locus is discordant when one classification is high (Definitive, Strong or Moderate) and another is low (Limited, Contradictory or No Known); Supportive counts as neither. "vs criTRia" means criTRia is on the opposite side from at least one GenCC group, and "within GenCC" means GenCC groups disagree among themselves. Both flags are defined in `scripts/discordance.R` and used for Figure 2 and Supplemental File X. The scenario and rationale text in `scripts/02_discordance.R` is written by hand and should be checked when classifications change.
 
 ### Manually reviewed comparisons not matched
 
@@ -33,7 +77,7 @@ GenCC classifications for a locus gene that were reviewed by hand and deliberate
 
 ### GenCC classifications based only on non-tandem-repeat variants
 
-Some GenCC classifications that match a locus disease are based only on non-tandem-repeat (non-TR) variants in the gene. These are included in `criTRia_Dataset.csv` and the figures like any other classification, so their scores reflect gene-level rather than repeat-level evidence. They were identified from each record's curation date (compared with the year STRchive gives for the TR being reported) and the papers it cites. Records that cite nothing, or whose citations may include repeat alleles, are not listed.
+Some GenCC classifications that match a locus disease are based only on non-tandem-repeat (non-TR) variants in the gene. These are included in the dataset and figures like any other classification, so their scores reflect gene-level rather than repeat-level evidence. They were identified from each record's curation date (compared with the year STRchive gives for the TR being reported) and the papers it cites. Records that cite nothing, or whose citations may include repeat alleles, are not listed.
 
 | Locus | Group | Score | Reason |
 | :--- | :--- | :--- | :--- |
@@ -57,23 +101,7 @@ Some GenCC classifications that match a locus disease are based only on non-tand
 | SCA27B_FGF14 | PanelApp | Strong | SCA27A curation citing only FGF14 coding-variant papers |
 | SCA4_ZFHX3 | PanelApp | Strong | Cites only ZFHX3 loss-of-function neurodevelopmental disorder papers |
 
-Merge data and generate figures
-
-```bash
-Rscript criTRia_Figure_Script.R
-```
-
-## Figure source files
-
-This repository includes links to editable source files for figures used in the criTRia manuscript.
-
-| Figure # | Description | Editable Source Link |
-| :--- | :--- | :--- |
-| **Figure 1** | criTRia scoring framework overview | [https://docs.google.com/spreadsheets/d/1VEuZqvwtQWzVSBc7Aj4FUPQABwyNTCcb8XDNCZ-xoKM/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1VEuZqvwtQWzVSBc7Aj4FUPQABwyNTCcb8XDNCZ-xoKM/edit?usp=sharing) |
-| **Figure 2** | Comparison of criTRia vs Gene Curation Coalition | [https://docs.google.com/spreadsheets/d/1DonSiPVjeQLsB8HoFzn50jFCnWvMPxVZ124SzS0s7r0/edit?gid=0#gid=0](https://docs.google.com/spreadsheets/d/1DonSiPVjeQLsB8HoFzn50jFCnWvMPxVZ124SzS0s7r0/edit?gid=0#gid=0) |
-| **Figure 3** | TR-disease association results | [https://github.com/dashnowlab/criTRia/blob/main/criTRia_Figure_Script.R](https://github.com/dashnowlab/criTRia/blob/main/criTRia_Figure_Script.R) |
-
-## Repository contributors:
+## Repository contributors
 
 - **Principal Investigator:** Harriet Dashnow
 - **First Author:** Macayla Ann Weiner
