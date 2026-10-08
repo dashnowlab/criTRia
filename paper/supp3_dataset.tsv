@@ -1,0 +1,305 @@
+Locus_ID	Group	categorical_score	Submitter	Disease_ID	Disease_Name	Curation_Date
+ADTKD_MUC1	Ambry	Moderate	Ambry Genetics	MONDO:0020726	tubulointerstitial kidney disease, autosomal dominant, 2	2018-02-20
+ADTKD_MUC1	ClinGen	Definitive	ClinGen	MONDO:0020726	tubulointerstitial kidney disease, autosomal dominant, 2	2021-01-13
+ADTKD_MUC1	Labcorp	Limited	Labcorp Genetics (formerly Invitae)	MONDO:0020726	tubulointerstitial kidney disease, autosomal dominant, 2	2022-12-09
+ADTKD_MUC1	Orphanet	Supportive	Orphanet	MONDO:0020726	tubulointerstitial kidney disease, autosomal dominant, 2	2021-09-14
+ADTKD_MUC1	PanelApp	Strong	PanelApp Australia	MONDO:0020726	tubulointerstitial kidney disease, autosomal dominant, 2	2025-01-17
+ALS1_NIPA1	criTRia	Contradictory	criTRia	ALS1	Amyotrophic lateral sclerosis	2025-06-06
+BPES_FOXL2	Ambry	Definitive	Ambry Genetics	MONDO:0007201	blepharophimosis, ptosis, and epicanthus inversus syndrome	2018-07-31
+BPES_FOXL2	G2P	Definitive	G2P	MONDO:0007201	blepharophimosis, ptosis, and epicanthus inversus syndrome	2017-08-27
+BPES_FOXL2	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0007201	blepharophimosis, ptosis, and epicanthus inversus syndrome	2023-02-22
+BPES_FOXL2	PanelApp	Strong	PanelApp Australia	MONDO:0007201	blepharophimosis, ptosis, and epicanthus inversus syndrome	2025-01-17
+BPES_FOXL2	criTRia	Definitive	criTRia	BPES	Blepharophimosis, epicanthus inversus, and ptosis	2025-06-04
+CANVAS_RFC1	Ambry	Moderate	Ambry Genetics	MONDO:0013809	cerebellar ataxia, neuropathy, and vestibular areflexia syndrome	2020-02-13
+CANVAS_RFC1	ClinGen	Definitive	ClinGen	MONDO:0044720	cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome	2024-10-09
+CANVAS_RFC1	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0044720	cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome	2021-05-11
+CANVAS_RFC1	Orphanet	Supportive	Orphanet	MONDO:0044720	cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome	2021-09-14
+CANVAS_RFC1	PanelApp	Strong	PanelApp Australia	MONDO:0044720	cerebellar ataxia with neuropathy and bilateral vestibular areflexia syndrome	2025-01-17
+CCD_RUNX2	Ambry	Definitive	Ambry Genetics	MONDO:0007340	cleidocranial dysplasia 1	2018-08-13
+CCD_RUNX2	G2P	Definitive	G2P	MONDO:0007340	cleidocranial dysplasia 1	2023-05-24
+CCD_RUNX2	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0007340	cleidocranial dysplasia 1	2023-07-06
+CCD_RUNX2	Orphanet	Supportive	Orphanet	MONDO:0007340	cleidocranial dysplasia 1	2021-09-14
+CCD_RUNX2	PanelApp	Strong	PanelApp Australia	MONDO:0007340	cleidocranial dysplasia 1	2025-01-17
+CCD_RUNX2	criTRia	Definitive	criTRia	CCD	Cleidocranial dysplasia	2025-08-14
+CCHS_PHOX2B	Ambry	Definitive	Ambry Genetics	MONDO:0800026	central hypoventilation syndrome, congenital, 1, with or without Hirschsprung disease	2023-01-10
+CCHS_PHOX2B	ClinGen	Definitive	ClinGen	MONDO:0800026	central hypoventilation syndrome, congenital, 1, with or without Hirschsprung disease	2022-12-30
+CCHS_PHOX2B	G2P	Definitive	G2P	MONDO:0800026	central hypoventilation syndrome, congenital, 1, with or without Hirschsprung disease	2015-07-22
+CCHS_PHOX2B	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0800026	central hypoventilation syndrome, congenital, 1, with or without Hirschsprung disease	2022-10-11
+CCHS_PHOX2B	Orphanet	Supportive	Orphanet	MONDO:0008852	congenital central hypoventilation syndrome	2021-09-14
+CCHS_PHOX2B	PanelApp	Strong	PanelApp Australia	MONDO:0800026	central hypoventilation syndrome, congenital, 1, with or without Hirschsprung disease	2025-01-17
+CHNG3_MIR7-2	criTRia	Strong	criTRia	CHNG3	Nongoitrous congenital hypothyroidism-3	2025-08-18
+CJD_PRNP	Ambry	Definitive	Ambry Genetics	MONDO:0007656	Gerstmann-Straussler-Scheinker syndrome	2018-03-22
+CJD_PRNP	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0007403	inherited Creutzfeldt-Jakob disease	2023-01-23
+CJD_PRNP	Orphanet	Supportive	Orphanet	MONDO:0007656	Gerstmann-Straussler-Scheinker syndrome	2021-09-14
+CJD_PRNP	PanelApp	Strong	Genomics England PanelApp	MONDO:0007656	Gerstmann-Straussler-Scheinker syndrome	2021-02-18
+CJD_PRNP	criTRia	Moderate	criTRia	CJD	Creutzfeldt-Jakob disease and Gerstmann-Straussler-Scheinker syndrome	2025-08-14
+CPEO_POLG	Ambry	Definitive	Ambry Genetics	MONDO:0024528	progressive external ophthalmoplegia with mitochondrial DNA deletions, autosomal dominant 1	2018-02-27
+CPEO_POLG	G2P	Definitive	G2P	MONDO:0024528	progressive external ophthalmoplegia with mitochondrial DNA deletions, autosomal dominant 1	2017-08-30
+CPEO_POLG	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0024528	progressive external ophthalmoplegia with mitochondrial DNA deletions, autosomal dominant 1	2021-04-16
+CPEO_POLG	Orphanet	Supportive	Orphanet	MONDO:0016810	autosomal recessive progressive external ophthalmoplegia	2021-09-14
+CPEO_POLG	PanelApp	Strong	PanelApp Australia	MONDO:0024528	progressive external ophthalmoplegia with mitochondrial DNA deletions, autosomal dominant 1	2025-01-17
+CPEO_POLG	criTRia	Contradictory	criTRia	CPEO	Progressive external ophthalmoplegia, Parkinson's disease	2025-08-18
+CPUM_TYMS	criTRia	Limited	criTRia	CPUM	Congenital Progressive Universal Melanosis	2025-08-14
+DBQD2_XYLT1	G2P	Strong	G2P	MONDO:0014343	Desbuquois dysplasia 2	2025-06-04
+DBQD2_XYLT1	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0014343	Desbuquois dysplasia 2	2022-04-19
+DBQD2_XYLT1	Orphanet	Supportive	Orphanet	MONDO:0015426	Desbuquois dysplasia	2021-09-14
+DBQD2_XYLT1	PanelApp	Strong	PanelApp Australia	MONDO:0014343	Desbuquois dysplasia 2	2025-01-17
+DBQD2_XYLT1	criTRia	Moderate	criTRia	DBQD2	Baratela-Scott Syndrome/Desbuquois dysplasia 2	2025-08-18
+DM1_DMPK	G2P	Definitive	G2P	MONDO:0008056	myotonic dystrophy type 1	2018-01-21
+DM1_DMPK	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0008056	myotonic dystrophy type 1	2022-01-26
+DM1_DMPK	criTRia	Definitive	criTRia	DM1	Myotonic dystrophy type 1	2025-07-21
+DM2_CNBP	G2P	Definitive	G2P	MONDO:0011266	myotonic dystrophy type 2	2017-08-16
+DM2_CNBP	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0011266	myotonic dystrophy type 2	2021-04-16
+DM2_CNBP	Orphanet	Supportive	Orphanet	MONDO:0011266	myotonic dystrophy type 2	2021-09-14
+DM2_CNBP	criTRia	Definitive	criTRia	DM2	Myotonic dystrophy type 2	2025-07-21
+DMD_DMD	Ambry	Definitive	Ambry Genetics	MONDO:0010679	Duchenne muscular dystrophy	2018-01-26
+DMD_DMD	ClinGen	Definitive	ClinGen	MONDO:0016106	progressive muscular dystrophy	2024-11-14
+DMD_DMD	G2P	Definitive	G2P	MONDO:0010679	Duchenne muscular dystrophy	2015-07-22
+DMD_DMD	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0010679	Duchenne muscular dystrophy	2023-05-26
+DMD_DMD	Myriad	Definitive	Myriad Women's Health	MONDO:0016899	Duchenne and Becker muscular dystrophy	2018-07-05
+DMD_DMD	Orphanet	Supportive	Orphanet	MONDO:0010679	Duchenne muscular dystrophy	2021-09-14
+DMD_DMD	PanelApp	Strong	PanelApp Australia	MONDO:0016106	progressive muscular dystrophy	2025-01-17
+DMD_DMD	criTRia	Contradictory	criTRia	DMD	Duchenne muscular dystrophy	2025-05-14
+DRPLA_ATN1	ClinGen	Definitive	ClinGen	MONDO:0007435	dentatorubral-pallidoluysian atrophy	2026-05-13
+DRPLA_ATN1	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0007435	dentatorubral-pallidoluysian atrophy	2021-08-18
+DRPLA_ATN1	Orphanet	Supportive	Orphanet	MONDO:0007435	dentatorubral-pallidoluysian atrophy	2021-09-14
+DRPLA_ATN1	criTRia	Definitive	criTRia	DRPLA	Dentatorubral-Pallidoluysian Atrophy	2026-05-22
+EDM1-PSACH_COMP	ClinGen	Definitive	ClinGen	MONDO:0100593	COMP-related skeletal dysplasia	2025-02-28
+EDM1-PSACH_COMP	G2P	Definitive	G2P	MONDO:0100593	COMP-related skeletal dysplasia	2026-06-09
+EDM1-PSACH_COMP	Illumina	Definitive	Illumina	MONDO:0008322	pseudoachondroplasia	2017-03-06
+EDM1-PSACH_COMP	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0008322	pseudoachondroplasia	2023-01-10
+EDM1-PSACH_COMP	Orphanet	Supportive	Orphanet	MONDO:0008322	pseudoachondroplasia	2021-09-14
+EIEE1_ARX	Ambry	Moderate	Ambry Genetics	MONDO:0010317	intellectual disability, X-linked, with or without seizures, ARX-related	2018-08-14
+EIEE1_ARX	ClinGen	Definitive	ClinGen	MONDO:0100062	genetic developmental and epileptic encephalopathy	2019-06-04
+EIEE1_ARX	Orphanet	Supportive	Orphanet	MONDO:0100062	genetic developmental and epileptic encephalopathy	2021-09-14
+EIEE1_ARX	PanelApp	Strong	PanelApp Australia	MONDO:0010632	developmental and epileptic encephalopathy, 1	2025-01-17
+EIEE1_ARX	criTRia	Definitive	criTRia	EIEE1	Early-infantile epileptic encephalopathy	2025-08-18
+EPM1_CSTB	ClinGen	Definitive	ClinGen	MONDO:0009698	Unverricht-Lundborg syndrome	2020-06-16
+EPM1_CSTB	G2P	Definitive	G2P	MONDO:0009698	Unverricht-Lundborg syndrome	2015-07-22
+EPM1_CSTB	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0009698	Unverricht-Lundborg syndrome	2023-06-08
+EPM1_CSTB	Orphanet	Supportive	Orphanet	MONDO:0009698	Unverricht-Lundborg syndrome	2021-09-14
+EPM_CSNK1E	criTRia	Limited	criTRia	EPM	Progressive Myoclonic Epilepsy and Developmental and Epileptic Encephalopathy	2025-03-09
+FAME1_SAMD12	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0010985	epilepsy, familial adult myoclonic, 1	2020-04-14
+FAME1_SAMD12	Orphanet	Supportive	Orphanet	MONDO:0019448	benign adult familial myoclonic epilepsy	2021-09-14
+FAME1_SAMD12	PanelApp	Limited	PanelApp Australia	MONDO:0010985	epilepsy, familial adult myoclonic, 1	2025-01-17
+FAME1_SAMD12	criTRia	Definitive	criTRia	FAME1	Familial adult myoclonic epilepsy type 1	2025-08-14
+FAME2_STARD7	PanelApp	Limited	PanelApp Australia	MONDO:0011930	epilepsy, familial adult myoclonic, 2	2025-01-17
+FAME2_STARD7	criTRia	Strong	criTRia	FAME2	Familial adult myoclonic epilepsy 2	2025-08-14
+FAME3_MARCHF6	Orphanet	Supportive	Orphanet	MONDO:0019448	benign adult familial myoclonic epilepsy	2021-09-14
+FAME3_MARCHF6	criTRia	Definitive	criTRia	FAME3	Familial adult myoclonic epilepsy type 3	2025-08-12
+FAME4_YEATS2	Orphanet	Supportive	Orphanet	MONDO:0019448	benign adult familial myoclonic epilepsy	2021-09-14
+FAME4_YEATS2	PanelApp	Limited	PanelApp Australia	MONDO:0014055	epilepsy, familial adult myoclonic, 4	2025-01-17
+FAME4_YEATS2	criTRia	Limited	criTRia	FAME4	Familial adult myoclonic epilepsy 4	2025-08-18
+FAME6_TNRC6A	Labcorp	Limited	Labcorp Genetics (formerly Invitae)	MONDO:0054846	epilepsy, familial adult myoclonic, 6	2019-09-23
+FAME6_TNRC6A	PanelApp	Limited	PanelApp Australia	MONDO:0054846	epilepsy, familial adult myoclonic, 6	2025-01-17
+FAME6_TNRC6A	criTRia	Limited	criTRia	FAME6	Familial adult myoclonic epilepsy type 6	2025-08-14
+FAME7_RAPGEF2	Labcorp	Limited	Labcorp Genetics (formerly Invitae)	MONDO:0054847	epilepsy, familial adult myoclonic, 7	2019-09-23
+FAME7_RAPGEF2	criTRia	Limited	criTRia	FAME7	Familial adult myoclonic epilepsy type 7	2025-08-14
+FAME8_RAI1	criTRia	Limited	criTRia	FAME8	Familial adult myoclonic epilepsy type 8	2025-08-14
+FECD3_TCF4	G2P	Strong	G2P	MONDO:0013203	corneal dystrophy, Fuchs endothelial, 3	2017-08-31
+FECD3_TCF4	Orphanet	Supportive	Orphanet	MONDO:0005321	Fuchs' endothelial dystrophy	2021-09-14
+FECD3_TCF4	criTRia	Definitive	criTRia	FECD3	Fuchs endothelial corneal dystrophy 3	2025-08-18
+FRA12A_DIP2B	Ambry	Limited	Ambry Genetics	MONDO:0007634	intellectual disability, FRA12A type	2023-09-29
+FRA12A_DIP2B	G2P	Limited	G2P	MONDO:0007634	intellectual disability, FRA12A type	2015-07-22
+FRA12A_DIP2B	Labcorp	No Known	Labcorp Genetics (formerly Invitae)	MONDO:0007634	intellectual disability, FRA12A type	2017-04-17
+FRA12A_DIP2B	criTRia	Contradictory	criTRia	FRA12A	Intellectual developmental disorder, FRA12A type	2026-05-20
+FRA2A_AFF3	G2P	Moderate	G2P	MONDO:0001071	intellectual disability	2024-11-22
+FRA2A_AFF3	criTRia	Definitive	criTRia	FRA2A	Intellectual disability associated with fragile site FRA2A	2025-08-12
+FRA7A_ZNF713	G2P	Limited	G2P	MONDO:0005260	autism	2025-01-27
+FRA7A_ZNF713	criTRia	Limited	criTRia	FRA7A	Autism spectrum disorder associated with fragile site FRA7A	2025-08-18
+FRAXE_AFF2	ClinGen	Definitive	ClinGen	MONDO:0019181	non-syndromic X-linked intellectual disability	2025-08-11
+FRAXE_AFF2	G2P	Definitive	G2P	MONDO:0010659	FRAXE intellectual disability	2024-09-03
+FRAXE_AFF2	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0010659	FRAXE intellectual disability	2021-05-25
+FRAXE_AFF2	Orphanet	Supportive	Orphanet	MONDO:0010659	FRAXE intellectual disability	2021-09-14
+FRAXE_AFF2	PanelApp	Strong	PanelApp Australia	MONDO:0010659	FRAXE intellectual disability	2025-01-17
+FRDA_FXN	ClinGen	Definitive	ClinGen	MONDO:0100339	Friedreich ataxia	2017-12-22
+FRDA_FXN	G2P	Definitive	G2P	MONDO:0100340	Friedreich ataxia 1	2025-01-13
+FRDA_FXN	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0100340	Friedreich ataxia 1	2022-09-15
+FRDA_FXN	Orphanet	Supportive	Orphanet	MONDO:0009245	Friedreich ataxia	2021-09-14
+FRDA_FXN	PanelApp	Strong	PanelApp Australia	MONDO:0100339	Friedreich ataxia	2025-01-17
+FTDALS1_C9orf72	Ambry	Moderate	Ambry Genetics	MONDO:0007105	frontotemporal dementia and/or amyotrophic lateral sclerosis 1	2015-09-16
+FTDALS1_C9orf72	ClinGen	Definitive	ClinGen	MONDO:0007105	frontotemporal dementia and/or amyotrophic lateral sclerosis 1	2021-09-21
+FTDALS1_C9orf72	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0007105	frontotemporal dementia and/or amyotrophic lateral sclerosis 1	2023-09-11
+FXS_FMR1	Ambry	Definitive	Ambry Genetics	MONDO:0010383	fragile X syndrome	2017-12-04
+FXS_FMR1	ClinGen	Definitive	ClinGen	MONDO:0010383	fragile X syndrome	2019-06-03
+FXS_FMR1	G2P	Definitive	G2P	MONDO:0010383	fragile X syndrome	2016-12-07
+FXS_FMR1	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0010383	fragile X syndrome	2023-05-09
+FXS_FMR1	Myriad	Definitive	Myriad Women's Health	MONDO:0010383	fragile X syndrome	2018-08-17
+FXS_FMR1	Orphanet	Supportive	Orphanet	MONDO:0010383	fragile X syndrome	2021-09-14
+FXS_FMR1	PanelApp	Strong	PanelApp Australia	MONDO:0010383	fragile X syndrome	2025-01-17
+FXS_FMR1	criTRia	Definitive	criTRia	FXS	Fragile X syndrome	2025-08-18
+FXTAS,POF1_FMR1	Ambry	Strong	Ambry Genetics	MONDO:0010706	premature ovarian failure 1	2018-01-03
+FXTAS,POF1_FMR1	G2P	Definitive	G2P	MONDO:0010382	fragile X-associated tremor/ataxia syndrome	2022-08-03
+FXTAS,POF1_FMR1	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0010382	fragile X-associated tremor/ataxia syndrome	2023-06-13
+FXTAS,POF1_FMR1	Orphanet	Supportive	Orphanet	MONDO:0010382	fragile X-associated tremor/ataxia syndrome	2021-09-14
+FXTAS,POF1_FMR1	criTRia	Definitive	criTRia	FXTAS,POF1	Fragile X-associated tremor/ataxia syndrome; premature ovarian failure 1	2025-08-18
+GDPAG_GLS	Ambry	Moderate	Ambry Genetics	MONDO:0600001	glutaminase deficiency	2023-09-21
+GDPAG_GLS	ClinGen	Definitive	ClinGen	MONDO:0600001	glutaminase deficiency	2021-07-09
+GDPAG_GLS	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0032733	global developmental delay, progressive ataxia, and elevated glutamine	2021-04-16
+GDPAG_GLS	PanelApp	Strong	PanelApp Australia	MONDO:0032733	global developmental delay, progressive ataxia, and elevated glutamine	2025-01-17
+HDL2_JPH3	Ambry	Definitive	Ambry Genetics	MONDO:0011671	Huntington disease-like 2	2018-08-31
+HDL2_JPH3	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0011671	Huntington disease-like 2	2021-04-16
+HDL2_JPH3	Orphanet	Supportive	Orphanet	MONDO:0011671	Huntington disease-like 2	2021-09-14
+HDL2_JPH3	criTRia	Definitive	criTRia	HDL2	Huntington disease-like 2	2025-06-04
+HD_HTT	Ambry	Definitive	Ambry Genetics	MONDO:0007739	Huntington disease	2016-07-14
+HD_HTT	ClinGen	Definitive	ClinGen	MONDO:0007739	Huntington disease	2021-11-08
+HD_HTT	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0007739	Huntington disease	2021-04-16
+HD_HTT	Orphanet	Supportive	Orphanet	MONDO:0007739	Huntington disease	2021-09-14
+HFG_HOXA13-I	Ambry	Moderate	Ambry Genetics	MONDO:0007698	hand-foot-genital syndrome	2018-08-31
+HFG_HOXA13-I	ClinGen	Definitive	ClinGen	MONDO:0007698	hand-foot-genital syndrome	2025-07-22
+HFG_HOXA13-I	G2P	Definitive	G2P	MONDO:0007698	hand-foot-genital syndrome	2023-05-24
+HFG_HOXA13-I	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0007698	hand-foot-genital syndrome	2023-02-10
+HFG_HOXA13-I	Orphanet	Supportive	Orphanet	MONDO:0007698	hand-foot-genital syndrome	2021-09-14
+HFG_HOXA13-I	PanelApp	Strong	PanelApp Australia	MONDO:0007698	hand-foot-genital syndrome	2025-01-17
+HFG_HOXA13-I	criTRia	Limited	criTRia	HFG-I	Hand-foot-genital syndrome 1	2025-08-18
+HFG_HOXA13-II	Ambry	Moderate	Ambry Genetics	MONDO:0007698	hand-foot-genital syndrome	2018-08-31
+HFG_HOXA13-II	ClinGen	Definitive	ClinGen	MONDO:0007698	hand-foot-genital syndrome	2025-07-22
+HFG_HOXA13-II	G2P	Definitive	G2P	MONDO:0007698	hand-foot-genital syndrome	2023-05-24
+HFG_HOXA13-II	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0007698	hand-foot-genital syndrome	2023-02-10
+HFG_HOXA13-II	Orphanet	Supportive	Orphanet	MONDO:0007698	hand-foot-genital syndrome	2021-09-14
+HFG_HOXA13-II	PanelApp	Strong	PanelApp Australia	MONDO:0007698	hand-foot-genital syndrome	2025-01-17
+HFG_HOXA13-II	criTRia	Limited	criTRia	HFG-II	Hand-foot-genital syndrome 2	2025-08-18
+HFG_HOXA13-III	Ambry	Moderate	Ambry Genetics	MONDO:0007698	hand-foot-genital syndrome	2018-08-31
+HFG_HOXA13-III	ClinGen	Definitive	ClinGen	MONDO:0007698	hand-foot-genital syndrome	2025-07-22
+HFG_HOXA13-III	G2P	Definitive	G2P	MONDO:0007698	hand-foot-genital syndrome	2023-05-24
+HFG_HOXA13-III	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0007698	hand-foot-genital syndrome	2023-02-10
+HFG_HOXA13-III	Orphanet	Supportive	Orphanet	MONDO:0007698	hand-foot-genital syndrome	2021-09-14
+HFG_HOXA13-III	PanelApp	Strong	PanelApp Australia	MONDO:0007698	hand-foot-genital syndrome	2025-01-17
+HFG_HOXA13-III	criTRia	Limited	criTRia	HFG-III	Hand-foot-genital syndrome 3	2025-08-18
+HMNR7_VWA1	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0030977	neuronopathy, distal hereditary motor, autosomal recessive 7	2022-09-07
+HMNR7_VWA1	Orphanet	Supportive	Orphanet	MONDO:0013947	neuronopathy, distal hereditary motor, autosomal recessive 5	2021-09-14
+HMNR7_VWA1	PanelApp	Strong	PanelApp Australia	MONDO:0030977	neuronopathy, distal hereditary motor, autosomal recessive 7	2025-01-17
+HMNR7_VWA1	criTRia	Definitive	criTRia	HMNR7	Neuronopathy, distal hereditary motor, autosomal recessive 7	2025-08-14
+HPE5_ZIC2	Ambry	Definitive	Ambry Genetics	MONDO:0012322	holoprosencephaly 5	2018-08-31
+HPE5_ZIC2	G2P	Definitive	G2P	MONDO:0012322	holoprosencephaly 5	2015-07-22
+HPE5_ZIC2	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0012322	holoprosencephaly 5	2021-05-18
+HPE5_ZIC2	PanelApp	Strong	PanelApp Australia	MONDO:0012322	holoprosencephaly 5	2025-01-17
+HPE5_ZIC2	criTRia	Definitive	criTRia	HPE5	Holoprosencephaly-5	2026-05-24
+HSAN-VIII_PRDM12	G2P	Definitive	G2P	MONDO:0014662	congenital insensitivity to pain-hypohidrosis syndrome	2016-01-08
+HSAN-VIII_PRDM12	Illumina	Definitive	Illumina	MONDO:0015364	hereditary sensory and autonomic neuropathy	2021-01-22
+HSAN-VIII_PRDM12	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0014662	congenital insensitivity to pain-hypohidrosis syndrome	2023-06-23
+HSAN-VIII_PRDM12	Orphanet	Supportive	Orphanet	MONDO:0014662	congenital insensitivity to pain-hypohidrosis syndrome	2021-09-14
+HSAN-VIII_PRDM12	PanelApp	Strong	PanelApp Australia	MONDO:0014662	congenital insensitivity to pain-hypohidrosis syndrome	2025-01-17
+HSAN-VIII_PRDM12	criTRia	Moderate	criTRia	HSAN-VIII	Hereditary sensory and autonomic neuropathy type VIII	2025-08-14
+JBS_CBL	criTRia	Definitive	criTRia	JBS	Jacobsen syndrome (FRAX11B fragile site)	2025-08-12
+MRUPAV_PLIN4	Ambry	Moderate	Ambry Genetics	MONDO:0011155	vacuolar Neuromyopathy	2024-10-11
+MRUPAV_PLIN4	criTRia	Moderate	criTRia	MRUPAV	Myopathy with Rimmed Ubiquitin-Positive Autophagic Vacuolation, PLIN4-Related Myopathy	2025-08-11
+NIID_NOTCH2NLC	criTRia	Definitive	criTRia	NIID	Neuronal intranuclear inclusion disease, Alzheimer disease and parkinsonism phenotype, Oculopharyngodistal myopathy (OPDM) type 3, hereditary essential tremor type 6	2025-08-14
+NME_NAXE	ClinGen	Definitive	ClinGen	MONDO:0044970	mitochondrial disease	2024-02-22
+NME_NAXE	G2P	Strong	G2P	MONDO:0020781	encephalopathy, progressive, early-onset, with brain edema and/or leukoencephalopathy, 1	2017-02-16
+NME_NAXE	PanelApp	Strong	PanelApp Australia	MONDO:0020781	encephalopathy, progressive, early-onset, with brain edema and/or leukoencephalopathy, 1	2025-01-17
+NME_NAXE	criTRia	Limited	criTRia	NME	NAXE-related mitochondrial encephalopathy	2025-08-12
+OPDM1_LRP12	Ambry	Strong	Ambry Genetics	MONDO:0020793	oculopharyngodistal myopathy 1	2023-05-24
+OPDM1_LRP12	ClinGen	Moderate	ClinGen	MONDO:0020793	oculopharyngodistal myopathy 1	2024-05-14
+OPDM1_LRP12	criTRia	Strong	criTRia	OPDM1	Oculopharyngodistal myopathy type 1	2025-08-18
+OPDM2_GIPC1	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0030134	oculopharyngodistal myopathy 2	2021-01-04
+OPDM2_GIPC1	Orphanet	Supportive	Orphanet	MONDO:0025193	oculopharyngodistal myopathy	2021-09-14
+OPDM2_GIPC1	PanelApp	Limited	PanelApp Australia	MONDO:0030134	oculopharyngodistal myopathy 2	2025-01-17
+OPDM2_GIPC1	criTRia	Definitive	criTRia	OPDM2	Oculopharyngodistal myopathy type 2	2025-06-04
+OPDM4_RILPL1	Ambry	Limited	Ambry Genetics	MONDO:0030712	oculopharyngodistal myopathy 4	2023-05-24
+OPDM4_RILPL1	criTRia	Moderate	criTRia	OPDM4	Oculopharyngodistal myopathy type 4	2025-08-14
+OPDM5_ABCD3	criTRia	Moderate	criTRia	OPDM5	Oculopharyngodistal myopathy type 5	2026-04-29
+OPMD_PABPN1	Ambry	Definitive	Ambry Genetics	MONDO:0008116	oculopharyngeal muscular dystrophy	2018-08-31
+OPMD_PABPN1	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0008116	oculopharyngeal muscular dystrophy	2023-05-09
+OPMD_PABPN1	Orphanet	Supportive	Orphanet	MONDO:0008116	oculopharyngeal muscular dystrophy	2021-09-14
+OPMD_PABPN1	PanelApp	Strong	PanelApp Australia	MONDO:0958176	oculopharyngeal muscular dystrophy 1	2025-01-17
+OPMD_PABPN1	criTRia	Definitive	criTRia	OPMD	Oculopharyngeal muscular dystrophy	2025-08-14
+OPML1_NUTM2B-AS1	criTRia	Moderate	criTRia	OPML1	Oculopharyngeal myopathy with leukoencephalopathy 1	2025-08-18
+PRTS_ARX	ClinGen	Definitive	ClinGen	MONDO:0100148	X-linked complex neurodevelopmental disorder	2020-12-01
+PRTS_ARX	G2P	Definitive	G2P	MONDO:0100148	X-linked complex neurodevelopmental disorder	2025-01-21
+PRTS_ARX	Orphanet	Supportive	Orphanet	MONDO:0010654	Partington syndrome	2021-09-14
+PRTS_ARX	criTRia	Definitive	criTRia	PRTS	Partington syndrome	2025-08-18
+RCPS_EIF4A3	Ambry	Moderate	Ambry Genetics	MONDO:0009998	Richieri Costa-Pereira syndrome	2018-03-16
+RCPS_EIF4A3	G2P	Definitive	G2P	MONDO:0009998	Richieri Costa-Pereira syndrome	2023-05-24
+RCPS_EIF4A3	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0009998	Richieri Costa-Pereira syndrome	2018-12-15
+RCPS_EIF4A3	Orphanet	Supportive	Orphanet	MONDO:0009998	Richieri Costa-Pereira syndrome	2021-09-14
+RCPS_EIF4A3	PanelApp	Strong	PanelApp Australia	MONDO:0009998	Richieri Costa-Pereira syndrome	2025-01-17
+RCPS_EIF4A3	criTRia	Definitive	criTRia	RCPS	Richieri-Costa-Pereira syndrome	2025-06-02
+SBMA_AR	Ambry	Strong	Ambry Genetics	MONDO:0010735	Kennedy disease	2023-10-11
+SBMA_AR	ClinGen	Definitive	ClinGen	MONDO:0010735	Kennedy disease	2023-08-08
+SBMA_AR	G2P	Definitive	G2P	MONDO:0010735	Kennedy disease	2022-08-03
+SBMA_AR	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0010735	Kennedy disease	2021-04-16
+SBMA_AR	Orphanet	Supportive	Orphanet	MONDO:0010735	Kennedy disease	2021-09-14
+SBMA_AR	PanelApp	Strong	PanelApp Australia	MONDO:0010735	Kennedy disease	2025-01-17
+SCA10_ATXN10	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0011330	spinocerebellar ataxia type 10	2020-07-15
+SCA10_ATXN10	Orphanet	Supportive	Orphanet	MONDO:0011330	spinocerebellar ataxia type 10	2021-09-14
+SCA10_ATXN10	criTRia	Definitive	criTRia	SCA10	Spinocerebellar ataxia type 10	2025-08-12
+SCA12_PPP2R2B	Ambry	Moderate	Ambry Genetics	MONDO:0011439	spinocerebellar ataxia type 12	2024-08-19
+SCA12_PPP2R2B	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0011439	spinocerebellar ataxia type 12	2021-04-19
+SCA12_PPP2R2B	Orphanet	Supportive	Orphanet	MONDO:0011439	spinocerebellar ataxia type 12	2021-09-14
+SCA12_PPP2R2B	criTRia	Moderate	criTRia	SCA12	Spinocerebellar ataxia type 12	2025-08-11
+SCA17_TBP	Ambry	Strong	Ambry Genetics	MONDO:0011781	spinocerebellar ataxia type 17	2024-03-14
+SCA17_TBP	Lab MM	Definitive	Laboratory for Molecular Medicine	MONDO:0011781	spinocerebellar ataxia type 17	2020-04-14
+SCA17_TBP	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0011781	spinocerebellar ataxia type 17	2022-10-28
+SCA17_TBP	Orphanet	Supportive	Orphanet	MONDO:0011781	spinocerebellar ataxia type 17	2021-09-14
+SCA17_TBP	criTRia	Definitive	criTRia	SCA17	Spinocerebellar ataxia type 17	2025-08-18
+SCA1_ATXN1	Ambry	Moderate	Ambry Genetics	MONDO:0008119	spinocerebellar ataxia type 1	2018-02-20
+SCA1_ATXN1	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0008119	spinocerebellar ataxia type 1	2021-04-16
+SCA1_ATXN1	Orphanet	Supportive	Orphanet	MONDO:0008119	spinocerebellar ataxia type 1	2021-09-14
+SCA1_ATXN1	criTRia	Definitive	criTRia	SCA1	Spinocerebellar ataxia type 1	2025-08-12
+SCA27B_FGF14	Ambry	Moderate	Ambry Genetics	MONDO:0012247	spinocerebellar ataxia type 27	2018-07-30
+SCA27B_FGF14	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0008654	spinocerebellar ataxia 27A	2023-07-23
+SCA27B_FGF14	Orphanet	Supportive	Orphanet	MONDO:0012247	spinocerebellar ataxia type 27	2021-09-14
+SCA27B_FGF14	PanelApp	Strong	PanelApp Australia	MONDO:0012247	spinocerebellar ataxia type 27	2025-01-17
+SCA27B_FGF14	criTRia	Definitive	criTRia	SCA27B	Spinocerebellar ataxia 27B	2025-06-04
+SCA2_ATXN2	Ambry	Definitive	Ambry Genetics	MONDO:0008458	spinocerebellar ataxia type 2	2018-08-31
+SCA2_ATXN2	ClinGen	Definitive	ClinGen	MONDO:0008458	spinocerebellar ataxia type 2	2024-02-13
+SCA2_ATXN2	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0008458	spinocerebellar ataxia type 2	2021-12-13
+SCA2_ATXN2	Orphanet	Supportive	Orphanet	MONDO:0008458	spinocerebellar ataxia type 2	2021-09-14
+SCA31_BEAN1	Ambry	Limited	Ambry Genetics	MONDO:0007296	spinocerebellar ataxia type 31	2018-08-31
+SCA31_BEAN1	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0007296	spinocerebellar ataxia type 31	2021-04-16
+SCA31_BEAN1	Orphanet	Supportive	Orphanet	MONDO:0007296	spinocerebellar ataxia type 31	2021-09-14
+SCA31_BEAN1	criTRia	Definitive	criTRia	SCA31	Spinocerebellar ataxia type 31	2025-08-11
+SCA36_NOP56	Ambry	Definitive	Ambry Genetics	MONDO:0013594	spinocerebellar ataxia type 36	2020-03-04
+SCA36_NOP56	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0013594	spinocerebellar ataxia type 36	2021-04-19
+SCA36_NOP56	Orphanet	Supportive	Orphanet	MONDO:0013594	spinocerebellar ataxia type 36	2021-09-14
+SCA36_NOP56	criTRia	Definitive	criTRia	SCA36	Spinocerebellar ataxia type 36	2025-08-11
+SCA37_DAB1	Labcorp	Limited	Labcorp Genetics (formerly Invitae)	MONDO:0014410	spinocerebellar ataxia type 37	2021-05-07
+SCA37_DAB1	Orphanet	Supportive	Orphanet	MONDO:0014410	spinocerebellar ataxia type 37	2021-09-14
+SCA37_DAB1	PanelApp	Strong	PanelApp Australia	MONDO:0014410	spinocerebellar ataxia type 37	2025-01-17
+SCA37_DAB1	criTRia	Strong	criTRia	SCA37	Spinocerebellar ataxia type 37	2025-08-18
+SCA3_ATXN3	Ambry	Strong	Ambry Genetics	MONDO:0007182	Machado-Joseph disease	2018-06-29
+SCA3_ATXN3	Lab MM	Definitive	Laboratory for Molecular Medicine	MONDO:0007182	Machado-Joseph disease	2020-04-22
+SCA3_ATXN3	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0007182	Machado-Joseph disease	2021-04-19
+SCA3_ATXN3	Orphanet	Supportive	Orphanet	MONDO:0017174	Machado-Joseph disease type 1	2021-09-14
+SCA3_ATXN3	criTRia	Definitive	criTRia	SCA3	Spinocerebellar ataxia type 3/Machado-Joseph disease	2025-08-12
+SCA4_ZFHX3	Ambry	Moderate	Ambry Genetics	MONDO:0010847	spinocerebellar ataxia type 4	2024-09-06
+SCA4_ZFHX3	PanelApp	Strong	PanelApp Australia	MONDO:0010847	spinocerebellar ataxia type 4	2025-01-17
+SCA4_ZFHX3	criTRia	Definitive	criTRia	SCA4	Spinocerebellar ataxia 4	2025-08-18
+SCA51_THAP11	criTRia	Definitive	criTRia	SCA51	Spinocerebellar ataxia 51	2025-08-18
+SCA6_CACNA1A	Ambry	Strong	Ambry Genetics	MONDO:0008457	spinocerebellar ataxia type 6	2018-06-26
+SCA6_CACNA1A	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0008457	spinocerebellar ataxia type 6	2021-10-18
+SCA6_CACNA1A	Orphanet	Supportive	Orphanet	MONDO:0008457	spinocerebellar ataxia type 6	2021-09-14
+SCA6_CACNA1A	PanelApp	Strong	Genomics England PanelApp	MONDO:0008457	spinocerebellar ataxia type 6	2021-02-18
+SCA6_CACNA1A	criTRia	Definitive	criTRia	SCA6	Spinocerebellar ataxia type 6	2025-08-12
+SCA7_ATXN7	Ambry	Moderate	Ambry Genetics	MONDO:0008120	spinocerebellar ataxia type 7	2018-02-20
+SCA7_ATXN7	G2P	Definitive	G2P	MONDO:0016163	spinocerebellar ataxia 7	2017-08-14
+SCA7_ATXN7	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0016163	spinocerebellar ataxia 7	2021-04-16
+SCA7_ATXN7	Orphanet	Supportive	Orphanet	MONDO:0008120	spinocerebellar ataxia type 7	2021-09-14
+SCA7_ATXN7	criTRia	Definitive	criTRia	SCA7	Spinocerebellar ataxia type 7	2025-08-12
+SCA8_ATXN8OS	Ambry	Moderate	Ambry Genetics	MONDO:0012116	spinocerebellar ataxia type 8	2023-07-27
+SCA8_ATXN8OS	Orphanet	Supportive	Orphanet	MONDO:0012116	spinocerebellar ataxia type 8	2021-09-14
+SCA8_ATXN8OS	criTRia	Definitive	criTRia	SCA8	Spinocerebellar ataxia type 8	2025-08-12
+SD5_HOXD13	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0008513	synpolydactyly type 1	2022-09-09
+SD5_HOXD13	Orphanet	Supportive	Orphanet	MONDO:0008513	synpolydactyly type 1	2021-09-14
+SD5_HOXD13	PanelApp	Strong	PanelApp Australia	MONDO:0008513	synpolydactyly type 1	2025-01-17
+SD5_HOXD13	criTRia	Definitive	criTRia	SD5	Syndactyly	2025-08-18
+TOF_TBX1	Ambry	Definitive	Ambry Genetics	MONDO:0016581	conotruncal heart malformations	2018-08-29
+TOF_TBX1	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0016581	conotruncal heart malformations	2021-08-20
+TOF_TBX1	criTRia	Limited	criTRia	TOF	Tetralogy of Fallot	2025-08-18
+VACTERLX_ZIC3	Ambry	Moderate	Ambry Genetics	MONDO:0010752	VACTERL association, X-linked, with or without hydrocephalus	2018-08-31
+VACTERLX_ZIC3	G2P	Definitive	G2P	MONDO:0010752	VACTERL association, X-linked, with or without hydrocephalus	2023-05-24
+VACTERLX_ZIC3	PanelApp	Strong	PanelApp Australia	MONDO:0010752	VACTERL association, X-linked, with or without hydrocephalus	2025-01-17
+VACTERLX_ZIC3	criTRia	Limited	criTRia	VACTERLX	X-linked VACTERL syndrome	2025-08-18
+XDP_TAF1	Ambry	Strong	Ambry Genetics	MONDO:0010747	X-linked dystonia-parkinsonism	2024-11-20
+XDP_TAF1	Labcorp	Limited	Labcorp Genetics (formerly Invitae)	MONDO:0010747	X-linked dystonia-parkinsonism	2021-04-16
+XDP_TAF1	Orphanet	Supportive	Orphanet	MONDO:0010747	X-linked dystonia-parkinsonism	2021-09-14
+XDP_TAF1	PanelApp	Strong	PanelApp Australia	MONDO:0010747	X-linked dystonia-parkinsonism	2025-01-17
+XDP_TAF1	criTRia	Definitive	criTRia	XDP	X-linked dystonia-parkinsonism (XDP) a.k.a. Dystonia 3, torsion, X-linked (DYT3)	2025-08-14
+XLID_SOX3	Ambry	Limited	Ambry Genetics	MONDO:0010712	panhypopituitarism, X-linked	2020-01-09
+XLID_SOX3	ClinGen	Moderate	ClinGen	MONDO:0800474	SOX3-related X-linked pituitary hormone deficiency with or without intellectual developmental disorder	2026-06-15
+XLID_SOX3	G2P	Definitive	G2P	MONDO:0010252	intellectual disability, X-linked, with panhypopituitarism	2015-07-22
+XLID_SOX3	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0010712	panhypopituitarism, X-linked	2021-04-16
+XLID_SOX3	Orphanet	Supportive	Orphanet	MONDO:0019032	X-linked intellectual disability with isolated growth hormone deficiency	2021-09-14
+XLID_SOX3	PanelApp	Limited	PanelApp Australia	MONDO:0010712	panhypopituitarism, X-linked	2025-01-17
+XLID_SOX3	criTRia	Limited	criTRia	XLID, PHPX	X-linked intellectual developmental disorder with isolated growth hormone deficiency; X-linked panhypopituitarism (PHPX)	2026-05-14

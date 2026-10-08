@@ -1,0 +1,5 @@
+Score_Perturbation	Total_Loci	Stable_Loci	Shifted_Loci	Stability_Percentage	Details_of_Reclassified_Loci
+-1 pt	65	54	11	83.1%	Definitive -> Moderate (n=7: FRA2A_AFF3, PRTS_ARX, SCA8_ATXN8OS, SCA31_BEAN1, FAME3_MARCHF6, CCD_RUNX2, FAME1_SAMD12); Limited -> No Known Relationship (n=2: FAME8_RAI1, CPUM_TYMS); Strong -> Moderate (n=2: OPDM1_LRP12, FAME2_STARD7)
+-0.5 pt	65	62	3	95.4%	Definitive -> Moderate (n=3: SCA8_ATXN8OS, FAME3_MARCHF6, FAME1_SAMD12)
++0.5 pt	65	63	2	96.9%	Moderate -> Definitive (n=1: MRUPAV_PLIN4); Moderate -> Strong (n=1: HSAN-VIII_PRDM12)
++1 pt	65	62	3	95.4%	Limited -> Moderate (n=1: FAME4_YEATS2); Moderate -> Definitive (n=1: MRUPAV_PLIN4); Moderate -> Strong (n=1: HSAN-VIII_PRDM12)
