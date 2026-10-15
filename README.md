@@ -64,7 +64,7 @@ A GenCC classification is assigned to a locus only when its disease ID (MONDO, O
 
 ### Discordance
 
-A locus is discordant when one classification is high (Definitive, Strong or Moderate) and another is low (Limited, Contradictory or No Known); Supportive counts as neither. "vs criTRia" means criTRia is on the opposite side from at least one GenCC group, and "within GenCC" means GenCC groups disagree among themselves. Both flags are defined in `scripts/discordance.R` and used for Figure 2 and Supplemental File X. The scenario and rationale text in `scripts/02_discordance.R` is written by hand and should be checked when classifications change.
+A locus is discordant when one classification is high (Definitive, Strong or Moderate) and another is low (Limited, Contradictory or No Known); Supportive counts as neither. "vs criTRia" means criTRia is on the opposite side from at least one GenCC group, and "within GenCC" means GenCC groups disagree among themselves. Both flags are defined in `scripts/discordance.R` and used for Supplemental File X; Figure 2 has a single Conflict column that flags a locus if either is true. The scenario and rationale text in `scripts/02_discordance.R` is written by hand and should be checked when classifications change.
 
 ### Manually reviewed comparisons not matched
 

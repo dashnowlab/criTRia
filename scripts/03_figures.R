@@ -173,26 +173,29 @@ gene_order <- data %>%
   pull(Locus_ID)
 data$Locus_ID <- factor(data$Locus_ID, levels = gene_order)
 
-# Discordance flags (see discordance.R)
+# Discordance flags (see discordance.R): a locus is flagged if any two groups
+# disagree, whether criTRia vs GenCC or GenCC groups among themselves
 source("scripts/discordance.R")
-flag_groups <- c("vs criTRia", "Within GenCC")
 conflict_data <- discordance_flags(data) %>%
-  rename(`vs criTRia` = vs_criTRia, `Within GenCC` = within_GenCC)
+  mutate(conflict = factor(vs_criTRia | within_GenCC, levels = c(TRUE, FALSE), labels = c("Yes", "No")))
 
 n_groups <- nlevels(data$Group)
-n_flags <- sapply(flag_groups, function(f) sum(conflict_data[[f]]))
-data$Group <- factor(data$Group, levels = c(levels(data$Group), flag_groups))
+n_conflict <- sum(conflict_data$conflict == "Yes")
+data$Group <- factor(data$Group, levels = c(levels(data$Group), "Conflict"))
 
 conflict_col <- conflict_data %>%
-  select(Locus_ID, all_of(flag_groups)) %>%
-  pivot_longer(all_of(flag_groups), names_to = "Group", values_to = "flagged") %>%
   mutate(
     Locus_ID = factor(Locus_ID, levels = levels(data$Locus_ID)),
-    Group = factor(Group, levels = levels(data$Group)),
-    conflict = ifelse(flagged, as.character(Group), "No")
+    Group = factor("Conflict", levels = levels(data$Group))
   )
 
+# Grid of every locus x group cell, drawn behind the scores so the
+# border shows only around empty cells
+all_cells <- expand.grid(Locus_ID = levels(data$Locus_ID), Group = levels(data$Group)[1:n_groups])
+tile_border <- "grey90"
+
 heatmapPlot <- ggplot(data, aes(y = Locus_ID, x = Group)) +
+  geom_tile(data = all_cells, fill = "white", color = tile_border, linewidth = 0.3) +
   geom_tile(aes(fill = categorical_score)) +
   scale_fill_manual(values = my_colors, name = "Categorical Score") +
   new_scale_fill() +
@@ -201,55 +204,56 @@ heatmapPlot <- ggplot(data, aes(y = Locus_ID, x = Group)) +
     aes(y = Locus_ID, x = Group, fill = conflict)
   ) +
   scale_fill_manual(
-    values = c("vs criTRia" = "#E15759", "Within GenCC" = "#B07AA1", "No" = "#F5F5F5"),
+    values = c("Yes" = "#E15759", "No" = "#F5F5F5"),
     name = "Evidence Tier\nConflict"
   ) +
   geom_vline(xintercept = n_groups + 0.5, color = "grey50", linewidth = 0.5, linetype = "dashed") +
   scale_x_discrete(
-    labels = function(x) ifelse(x %in% flag_groups, sub(" ", "\n", x), x),
-    sec.axis = dup_axis(labels = c(counts, n_flags), name = "Count")
+    position = "top",
+    labels = paste0(levels(data$Group), "\n(n=", c(counts, n_conflict), ")")
   ) +
-  labs(title = "criTRia Vs. GenCC Scoring", x = "Scoring Group", y = "Disease and Gene") +
+  labs(title = "criTRia Vs. GenCC Scoring", x = NULL, y = "Disease and Gene") +
   theme_minimal() +
   theme(
     plot.title = element_text(hjust = 0.5, size = 15, face = "bold"),
     axis.text = element_text(size = 12),
+    axis.text.x.top = element_text(face = "bold"),
+    axis.title.y = element_text(size = 15),
+    panel.grid = element_blank(),
     legend.position = "none"
   )
 
-# Tier hierarchy legend: colored dots with Supportive range box (Limited–Definitive)
+# Tier hierarchy legend, laid out in a row along the bottom: colored dots
+# with a Supportive range box spanning Definitive to Limited
 tier_legend_tiers <- c("Definitive", "Strong", "Moderate", "Limited", "Contradictory", "No Known")
 tier_legend_df <- data.frame(
-  category = factor(tier_legend_tiers, levels = rev(tier_legend_tiers)),
-  x = 0
+  category = factor(tier_legend_tiers, levels = tier_legend_tiers),
+  x = c(1.6, 3.6, 5.6, 7.6, 9.9, 12.2),
+  y = 1
 )
+supportive_xmin <- tier_legend_df$x[1] - 0.3
+supportive_xmax <- tier_legend_df$x[4] + 1.2
 
-tierLegend <- ggplot(tier_legend_df, aes(x = x, y = category)) +
+tierLegend <- ggplot(tier_legend_df, aes(x = x, y = y)) +
   annotate("rect",
-           xmin = 0.4, xmax = 1.7,
-           ymin = 2.5, ymax = 6.5,
+           xmin = supportive_xmin, xmax = supportive_xmax,
+           ymin = 0.75, ymax = 1.25,
            fill = "#D6EAF8", color = NA) +
-  geom_point(aes(color = category), size = 5) +
-  scale_color_manual(values = my_colors[tier_legend_tiers], guide = "none") +
   annotate("text",
-           x = 0.25, y = 4.5,
-           label = "Supportive",
-           color = "black", size = 3.5, hjust = -.15) +
-  scale_x_continuous(limits = c(-0.5, 2.0)) +
-  labs(title = "Categorical Score") +
-  theme_minimal() +
-  theme(
-    plot.title  = element_text(size = 13, face = "bold", hjust = 10),
-    axis.title  = element_blank(),
-    axis.text.x = element_blank(),
-    axis.ticks  = element_blank(),
-    axis.text.y = element_text(size = 11, face = "bold"),
-    panel.grid  = element_blank()
-  )
+           x = (supportive_xmin + supportive_xmax) / 2, y = 1.38,
+           label = "Supportive", color = "black", size = 4.2, fontface = "bold") +
+  geom_point(aes(color = category), size = 6) +
+  geom_text(aes(x = x + 0.15, label = category), hjust = 0, size = 4.2, fontface = "bold") +
+  annotate("text", x = tier_legend_df$x[1] - 0.6, y = 1,
+           label = "Categorical Score", hjust = 1, size = 4.8, fontface = "bold") +
+  scale_color_manual(values = my_colors[tier_legend_tiers], guide = "none") +
+  scale_x_continuous(limits = c(-2.2, max(tier_legend_df$x) + 1.4)) +
+  scale_y_continuous(limits = c(0.65, 1.5)) +
+  theme_void()
 
 combinedHeatmap <- ggdraw() +
-  draw_plot(heatmapPlot,  x = 0,    y = 0,    width = 0.83, height = 1) +
-  draw_plot(tierLegend,   x = 0.83, y = 0.72, width = 0.17, height = 0.15)
+  draw_plot(heatmapPlot, x = 0,    y = 0.05, width = 1,   height = 0.95) +
+  draw_plot(tierLegend,  x = 0.02, y = 0,    width = 0.96, height = 0.05)
 ggsave('paper/fig2_heatmap.pdf', plot = combinedHeatmap, height = 20, width = 16)
 ggsave('paper/fig2_heatmap.png', plot = combinedHeatmap, height = 20, width = 16)
 
