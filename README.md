@@ -18,6 +18,8 @@ Every file in `paper/` goes into the manuscript, and nothing else does.
 | Supplemental File 3 (criTRia and GenCC classifications) | `paper/supp3_dataset.tsv` | `scripts/01_download_and_match.py` |
 | Supplemental File 4 (criTRia curations) | `paper/supp4_criTRia_curations.tsv` | `scripts/01_download_and_match.py` |
 | Supplemental File X (discordant loci) | `paper/suppX_discordant_loci.tsv` | `scripts/02_discordance.R` |
+| Supplemental File X (±1 point sensitivity analysis) | `paper/suppX_sensitivity_analysis.tsv` | `scripts/04_sensitivity.R` |
+| Figure X (inter-curator agreement) | `paper/figX_curator_agreement.pdf`, `paper/figX_curator_agreement.png` | `scripts/05_curator_agreement.R` |
 
 Supplemental Files 1 (SOP) and 2 (LLM prompt) are not kept in this repository.
 
@@ -29,7 +31,7 @@ Rebuild everything, in order, with:
 ./run_all.sh
 ```
 
-Requires Python 3 and R with tidyverse, ggnewscale, cowplot, gt, UpSetR and data.table.
+Requires Python 3 with pandas, openpyxl, requests, jsonschema and jsbeautifier, and R with tidyverse, ggnewscale, cowplot, gt, UpSetR, data.table, ggrepel and patchwork.
 
 ## Layout
 
@@ -39,11 +41,15 @@ scripts/
   01_download_and_match.py   download GenCC, STRchive and criTRia data; match GenCC diseases to loci
   02_discordance.R           discordance matrix and discordant loci table
   03_figures.R               Figure 2 and exploratory figures
-  04_sensitivity.R           score-perturbation sensitivity analysis (exploratory)
+  04_sensitivity.R           ±1 point score-perturbation sensitivity analysis
+  import_curations.py        import curations from a curator's Google Sheet into criTRia-curations JSON
+  compare_curators.py        one row per locus completed by two curators: scores, classifications, citations
+  05_curator_agreement.R     inter-curator agreement statistics and Figure X
   discordance.R              discordance flags, shared by 02 and 03
 data/
   raw/          downloaded inputs (dated GenCC snapshot)
-  processed/    intermediate outputs: gene_disease_matches.tsv, discordance_matrix.tsv
+  processed/    intermediate outputs: gene_disease_matches.tsv, discordance_matrix.tsv, sensitivity_analysis_summary.tsv
+  curators/     imported curator curations, curator-comparison.tsv, curator-agreement.tsv
 paper/          outputs used in the manuscript (see Paper items)
 exploratory/    outputs not used in the manuscript
 ```
