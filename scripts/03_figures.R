@@ -173,11 +173,12 @@ gene_order <- data %>%
   pull(Locus_ID)
 data$Locus_ID <- factor(data$Locus_ID, levels = gene_order)
 
-# Discordance flags (see discordance.R): a locus is flagged if any two groups
-# disagree, whether criTRia vs GenCC or GenCC groups among themselves
+# Discordance flags (see discordance.R): a locus is flagged if criTRia is on the
+# opposite side from at least one GenCC group. Disagreement among GenCC groups
+# alone is not flagged; it is reported in Supplemental File X.
 source("scripts/discordance.R")
 conflict_data <- discordance_flags(data) %>%
-  mutate(conflict = factor(vs_criTRia | within_GenCC, levels = c(TRUE, FALSE), labels = c("Yes", "No")))
+  mutate(conflict = factor(vs_criTRia, levels = c(TRUE, FALSE), labels = c("Yes", "No")))
 
 n_groups <- nlevels(data$Group)
 n_conflict <- sum(conflict_data$conflict == "Yes")
