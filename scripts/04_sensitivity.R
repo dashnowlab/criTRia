@@ -1,9 +1,10 @@
 # 04_sensitivity.R
-# Score perturbation sensitivity analysis across the criTRia-curated loci.
-# Not used in the paper. Run from the repository root (see run_all.sh).
+# Score perturbation sensitivity analysis across the criTRia-curated loci: how many
+# classifications change if every total score is one point lower or higher.
+# Run from the repository root (see run_all.sh).
 # Input:   paper/supp4_criTRia_curations.tsv
-# Outputs: exploratory/sensitivity_analysis_summary.tsv
-#          exploratory/sensitivity_analysis_per_locus.tsv
+# Outputs: paper/suppX_sensitivity_analysis.tsv (Supplemental File X, one row per locus)
+#          data/processed/sensitivity_analysis_summary.tsv
 
 suppressPackageStartupMessages({
   library(readr)
@@ -55,7 +56,9 @@ if (length(mismatched) > 0) {
 }
 
 # 3. Calculate Perturbed Classifications
-deltas <- c(-1.0, -0.5, 0.5, 1.0)
+# Every total score is shifted down and up by one point, about the median difference between two
+# curators (see 05_curator_agreement.R). A locus is sensitive if either shift changes its classification.
+deltas <- c(-1, 1)
 
 # Build per-locus data frame
 per_locus_df <- critria %>%
@@ -72,10 +75,6 @@ per_locus_df <- critria %>%
 # Compute new score and new tier for each delta
 for (d in deltas) {
   delta_str <- ifelse(d > 0, paste0("+", d), as.character(d))
-  score_col <- paste0("Score_", delta_str)
-  class_col <- paste0("Class_", delta_str)
-  shift_col <- paste0("Shift_", delta_str)
-  
   scores_d <- pmax(0, per_locus_df$Original_Score + d)
   classes_d <- mapply(
     classify_criTRia,
@@ -85,63 +84,54 @@ for (d in deltas) {
     per_locus_df$Original_Classification,
     USE.NAMES = FALSE
   )
-  
-  shifts_d <- ifelse(classes_d == per_locus_df$Original_Classification, "No Shift", paste0(per_locus_df$Original_Classification, " -> ", classes_d))
-  
-  per_locus_df[[score_col]] <- scores_d
-  per_locus_df[[class_col]] <- classes_d
-  per_locus_df[[shift_col]] <- shifts_d
+  per_locus_df[[paste0("Score_", delta_str)]] <- scores_d
+  per_locus_df[[paste0("Class_", delta_str)]] <- classes_d
 }
+per_locus_df <- per_locus_df %>%
+  mutate(Sensitive = `Class_-1` != Original_Classification | `Class_+1` != Original_Classification)
 
 # 4. Generate Summary Table
-# Grouped by Delta, count total loci, loci shifted, stable count, stability percentage, and specific tier shifts
-summary_list <- list()
-
-for (d in deltas) {
-  delta_str <- ifelse(d > 0, paste0("+", d), as.character(d))
-  class_col <- paste0("Class_", delta_str)
-  shift_col <- paste0("Shift_", delta_str)
-  
-  total_loci <- nrow(per_locus_df)
-  shifts <- per_locus_df %>% filter(.data[[shift_col]] != "No Shift")
-  n_shifted <- nrow(shifts)
-  n_stable <- total_loci - n_shifted
-  pct_stable <- round((n_stable / total_loci) * 100, 1)
-  
-  # Format specific shifts summary
-  if (n_shifted > 0) {
-    shift_details <- shifts %>%
-      group_by(.data[[shift_col]]) %>%
-      summarise(n = n(), loci = paste(Locus_ID, collapse = ", "), .groups = "drop") %>%
-      mutate(desc = paste0(.data[[shift_col]], " (n=", n, ": ", loci, ")")) %>%
-      pull(desc) %>%
-      paste(collapse = "; ")
-  } else {
-    shift_details <- "None (100% concordance)"
-  }
-  
-  summary_list[[length(summary_list) + 1]] <- tibble(
-    Score_Perturbation = paste0(delta_str, " pt"),
-    Total_Loci = total_loci,
-    Stable_Loci = n_stable,
-    Shifted_Loci = n_shifted,
-    Stability_Percentage = paste0(pct_stable, "%"),
-    Details_of_Reclassified_Loci = shift_details
+# One row each for -1, +1 and either (+/-1): number of loci unchanged and changed, with the changes listed
+describe_shifts <- function(to) {
+  from <- per_locus_df$Original_Classification
+  changed <- from != to
+  if (!any(changed)) return("None")
+  tibble(shift = paste0(from, " -> ", to), locus = per_locus_df$Locus_ID)[changed, ] %>%
+    group_by(shift) %>%
+    summarise(n = n(), loci = paste(locus, collapse = ", "), .groups = "drop") %>%
+    mutate(desc = paste0(shift, " (n=", n, ": ", loci, ")")) %>%
+    pull(desc) %>%
+    paste(collapse = "; ")
+}
+summarise_shift <- function(label, changed, details) {
+  tibble(
+    Score_Perturbation = label,
+    Total_Loci = length(changed),
+    Stable_Loci = sum(!changed),
+    Shifted_Loci = sum(changed),
+    Stability_Percentage = paste0(round(mean(!changed) * 100, 1), "%"),
+    Details_of_Reclassified_Loci = details
   )
 }
+summary_df <- bind_rows(
+  summarise_shift("-1 pt", per_locus_df$`Class_-1` != per_locus_df$Original_Classification,
+                  describe_shifts(per_locus_df$`Class_-1`)),
+  summarise_shift("+1 pt", per_locus_df$`Class_+1` != per_locus_df$Original_Classification,
+                  describe_shifts(per_locus_df$`Class_+1`)),
+  summarise_shift("+/-1 pt (either)", per_locus_df$Sensitive,
+                  paste(per_locus_df$Locus_ID[per_locus_df$Sensitive], collapse = ", "))
+)
 
-summary_df <- bind_rows(summary_list)
+# 5. Output TSV Files
+per_tsv <- "paper/suppX_sensitivity_analysis.tsv"
+sum_tsv <- "data/processed/sensitivity_analysis_summary.tsv"
 
-# 5. Output TSV Files to current directory
-sum_tsv <- "exploratory/sensitivity_analysis_summary.tsv"
-per_tsv <- "exploratory/sensitivity_analysis_per_locus.tsv"
-
-write_tsv(summary_df, sum_tsv)
 write_tsv(per_locus_df, per_tsv)
+write_tsv(summary_df, sum_tsv)
 
 cat("Generated Sensitivity Analysis TSV deliverables:\n")
-cat(" -", sum_tsv, "\n")
-cat(" -", per_tsv, "\n\n")
+cat(" -", per_tsv, "\n")
+cat(" -", sum_tsv, "\n\n")
 
 # Display Summary in Console
 cat("=== Score Perturbation Sensitivity Analysis Summary ===\n\n")

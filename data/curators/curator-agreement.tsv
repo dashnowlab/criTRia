@@ -1,0 +1,32 @@
+statistic	measure	subset	n	estimate	ci_lower	ci_upper	ci_method
+ICC(1,1)	total_score	all	30	0.892	0.787	0.947	F-test
+ICC(A,1)	total_score	all	30	0.891	0.784	0.947	F-test
+ICC(1,1)	genetic_score	all	30	0.863	0.734	0.932	F-test
+ICC(A,1)	genetic_score	all	30	0.862	0.73	0.932	F-test
+ICC(1,1)	experimental_score	all	30	0.663	0.406	0.823	F-test
+ICC(A,1)	experimental_score	all	30	0.661	0.397	0.823	F-test
+Mean difference	total_score	all	30	0.06	-0.831	0.951	t-test
+95% limits of agreement	total_score	all	30	NA	-4.618	4.738	Bland-Altman (mean ± 1.96 SD)
+Median absolute difference	total_score	all	30	1	NA	NA	NA
+Maximum absolute difference	total_score	all	30	7	NA	NA	NA
+Within 1.5 points (proportion)	total_score	all	30	0.7	NA	NA	NA
+ICC(1,1)	total_score	no_manual_override	27	0.905	0.805	0.955	F-test
+ICC(A,1)	total_score	no_manual_override	27	0.905	0.804	0.955	F-test
+ICC(1,1)	genetic_score	no_manual_override	27	0.884	0.763	0.945	F-test
+ICC(A,1)	genetic_score	no_manual_override	27	0.883	0.76	0.945	F-test
+ICC(1,1)	experimental_score	no_manual_override	27	0.632	0.342	0.813	F-test
+ICC(A,1)	experimental_score	no_manual_override	27	0.629	0.332	0.813	F-test
+Mean difference	total_score	no_manual_override	27	0.252	-0.57	1.073	t-test
+95% limits of agreement	total_score	no_manual_override	27	NA	-3.818	4.322	Bland-Altman (mean ± 1.96 SD)
+Median absolute difference	total_score	no_manual_override	27	1	NA	NA	NA
+Maximum absolute difference	total_score	no_manual_override	27	4.5	NA	NA	NA
+Within 1.5 points (proportion)	total_score	no_manual_override	27	0.704	NA	NA	NA
+Weighted kappa (linear)	final_contradictory	all	30	0.821	0.641	0.944	Percentile bootstrap (10000)
+Weighted kappa (quadratic)	final_contradictory	all	30	0.888	0.743	0.975	Percentile bootstrap (10000)
+Exact agreement	final_contradictory	all	30	0.8	0.633	0.933	Percentile bootstrap (10000)
+Weighted kappa (linear)	final_disputed_refuted_separate	all	30	0.811	0.643	0.932	Percentile bootstrap (10000)
+Weighted kappa (quadratic)	final_disputed_refuted_separate	all	30	0.894	0.76	0.971	Percentile bootstrap (10000)
+Exact agreement	final_disputed_refuted_separate	all	30	0.767	0.6	0.9	Percentile bootstrap (10000)
+Weighted kappa (linear)	calculated	all	30	0.762	0.566	0.911	Percentile bootstrap (10000)
+Weighted kappa (quadratic)	calculated	all	30	0.833	0.656	0.951	Percentile bootstrap (10000)
+Exact agreement	calculated	all	30	0.767	0.6	0.9	Percentile bootstrap (10000)

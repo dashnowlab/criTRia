@@ -1,0 +1,1590 @@
+[
+  {
+    "Disease_ID": "OPDM5",
+    "Gene": "ABCD3",
+    "Locus_ID": "OPDM5_ABCD3",
+    "Inheritance": "AD",
+    "Curator": "Zinser, Gabriel",
+    "Contributors": null,
+    "Date": "10/08/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 6,
+        "Citation": "pmid:39068203",
+        "Evidence detail": "8 probands, 6 with inheritance data (8*0.5 + 6*0.5)"
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 1,
+        "Citation": "pmid:39068203; pmid:38876750",
+        "Evidence detail": "negative expansion size/age of onset correlation in males (p=0.0063), no correlation in females, Expansions 1.9x larger in affected females (p=0.0295), 52.8% penetrance by transmission from affected fathers vs 22.6% from affected mothers (p=0.011), largest expansions hypermethylated in females. 1 point because onset correlation is in males only with small n"
+      },
+      {
+        "Evidence type": "Segregation",
+        "Score": 0.5,
+        "Citation": "pmid:39068203",
+        "Evidence detail": "Combined multipoint linkage AUS1 (5 affected) + AUS2 (4 affected), AD model: max LOD 2.98 at rs1801265, which is lower than common significance ≥3"
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 0,
+        "Citation": "pmid:39068203",
+        "Evidence detail": "Detection method differs: cases sized by ONT, controls by short read + EH"
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 1,
+        "Citation": "pmid:39068203; pmid:38876750",
+        "Evidence detail": "Altered expression in disease relevant tissue. Skeletal muscle RNA seq OPDM vs 130 neuromuscular datasets shows highest ABCD3 counts in OPDM individuals.Default 0.5 + 0.5 for RNA-seq plus orthogonal qPCR. Significant over-expression outlier only for AUS3-I. n=3."
+      },
+      {
+        "Evidence type": "Patient cells",
+        "Score": 1,
+        "Citation": "pmid:39068203",
+        "Evidence detail": "HCR RNA-FISH on fibroblasts from UK2-III:1 shows increased cytoplasmic and nuclear ABCD3 transcript signal vs 3 age-matched controls. Cultured AUS1-V:3 fibroblasts show ultra-rare intranuclear p62 inclusions. Muscle FISH shows increased nuclear ABCD3 signal in myonuclei"
+      }
+    ]
+  },
+  {
+    "Disease_ID": "PRTS",
+    "Gene": "ARX",
+    "Locus_ID": "PRTS_ARX",
+    "Inheritance": "XR",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/7/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 5.5,
+        "Citation": "pmid:11889467; pmid:26029707; pmid:21204215",
+        "Evidence detail": "PMID 11889467: Australian and Belgian PRTS families (1.0 + 1.0), PMID 26029707: Families H and I (1.0 + 1.0). PMID 21204215: Patient 3 (1.0). All with inheritence data. PMID 21204215: Patient 1 (0.5)"
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 1.5,
+        "Citation": "pmid:26029707; pmid:20506206",
+        "Evidence detail": "Severity correlates with PA2 length. Glycine interruption milder"
+      },
+      {
+        "Evidence type": "Segregation",
+        "Score": 0,
+        "Citation": "pmid:21204215",
+        "Evidence detail": "Linkage in NS-XLMR family but phenotype not PRTS"
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 1,
+        "Citation": "pmid:11889467",
+        "Evidence detail": "Absent in 300 controls with same method, but no statistical test"
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Biochemical function",
+        "Score": 1,
+        "Citation": "pmid:20506206; pmid:23246292",
+        "Evidence detail": "Gene level. Homeodomain TF. DNA binding, repression, activates KDM5C"
+      },
+      {
+        "Evidence type": "Protein interaction",
+        "Score": 0.5,
+        "Citation": "pmid:20506206",
+        "Evidence detail": "Gene-level. TLE1, importin 1, but no PA2-specific data"
+      },
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 0.5,
+        "Citation": "pmid:11889467; pmid:20506206",
+        "Evidence detail": "Expression in brain only"
+      },
+      {
+        "Evidence type": "Non-patient cells",
+        "Score": 0.5,
+        "Citation": "pmid:23246292",
+        "Evidence detail": "dup24 in SH-SY5Y mildly reduced KDM5C activation and DNA binding"
+      },
+      {
+        "Evidence type": "Non-human model organism",
+        "Score": 2,
+        "Citation": "pmid:28602636",
+        "Evidence detail": "PA2 dup24 knock-in mouse caused seizures, learning deficits, anxiety, reduced sociability"
+      }
+    ]
+  },
+  {
+    "Disease_ID": "DM2",
+    "Gene": "CNBP",
+    "Locus_ID": "DM2_CNBP",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/10/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 6,
+        "Citation": "pmid:11486088; pmid:36018009",
+        "Evidence detail": "PMID 11486088: 6 families with functional evidence for one family (5*0.5 + 1*1.0). Linkage used for segregation instead. PMID:36018009: 6 unrelated probands (6*0.5)."
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 1,
+        "Citation": "pmid:32851192; pmid:11486088",
+        "Evidence detail": "PMID 32851192 found interruptions correlate with milder phenotype. PMID 11486088 found no significant correlation between repeat size and age of onset, while PMID 38467784 found no correlation between length and severity or penetrance in multiple studies"
+      },
+      {
+        "Evidence type": "Segregation",
+        "Score": 1.5,
+        "Citation": "pmid:11486088",
+        "Evidence detail": "Significant LODs: MN1 6.9, MN10 8.2, F134 10.4. TDT across 64 trios gives P≤ 10^-6 for CL3N58"
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 3,
+        "Citation": "pmid:11486088",
+        "Evidence detail": "Same method (PCR + Southern) for cases and controls. 26 unrelated probands expanded vs 0/1,360 control chromosomes. Controls are not matched and no p-value"
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Protein interaction",
+        "Score": 1,
+        "Citation": "pmid:22140091; pmid:39643839",
+        "Evidence detail": "CCUG-expanded RNA binds and sequesters MBNL1. RBFOX1 binds CCUG but not CUG and competes with MBNL1"
+      },
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 1,
+        "Citation": "pmid:22140091; pmid:11486088",
+        "Evidence detail": "CaV1.1 exon 29 and SERCA1 exon 22 skipping in DM2 muscle vs normal and FSHD controls. CNBP is expressed throughout and most abundant in heart and skeletal muscle, which are the affected tissues in DM2"
+      },
+      {
+        "Evidence type": "Non-patient cells",
+        "Score": 0.5,
+        "Citation": "pmid:39643839",
+        "Evidence detail": "in vitro large CCUG constructs form nuclear foci enriched for CCUG, while pre-mRNA processing and CNBP levels are normal"
+      },
+      {
+        "Evidence type": "Non-human model organism",
+        "Score": 2,
+        "Citation": "pmid:28623239",
+        "Evidence detail": "Drosophila CCUG expansion model with RNA foci similar to in DM2, mis-splicing, and muscle/eye/heart defects"
+      },
+      {
+        "Evidence type": "Rescue in non-human model organism",
+        "Score": 2,
+        "Citation": "pmid:39643839",
+        "Evidence detail": "RBFOX1 expression corrects missplicing and rescues defects in the Drosophila DM2 model"
+      },
+      {
+        "Evidence type": "Rescue in patient cells",
+        "Score": 0,
+        "Citation": "pmid:22140091",
+        "Evidence detail": "Splicing differences used in regulatory impact"
+      }
+    ]
+  },
+  {
+    "Disease_ID": "SCA37",
+    "Gene": "DAB1",
+    "Locus_ID": "SCA37_DAB1",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/10/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 6,
+        "Citation": "pmid:28686858; pmid:29939198",
+        "Evidence detail": "PMID 28686858: 3 affected families with linkage analysis, 1 additional with segregation, and 2 further pedigrees found by hapolotype screening (6 * 1.0). PMID 29939198 had 4 additional families (4*0.5)"
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 1,
+        "Citation": "pmid:28686858; pmid:29939198",
+        "Evidence detail": "In PMID 28686858, larger ATTTC insertion gives earlier onset (P<0.001), which is replicated in Spanish males, but not females, in PMID 29939198."
+      },
+      {
+        "Evidence type": "Segregation",
+        "Score": 1.5,
+        "Citation": "pmid:28686858",
+        "Evidence detail": "Significant LODs at 1p32: 5.1, 4.4, and 2.2. Insertion segregates with disease in all 6 Portuguese families."
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 2,
+        "Citation": "pmid:28686858",
+        "Evidence detail": "Insertion in all affected (41 SCA37 subjects, 6 families) vs 0/520 Portuguese ancestry matched  control chromosomes and 0/904 chromosomes from 452 neurodegenerative patients, typed with the same method"
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Biochemical function",
+        "Score": 0.5,
+        "Citation": "pmid:28686858; pmid:29939198",
+        "Evidence detail": "DAB1 is the reelin signal adaptor. after reelin binding it is tyrosine-phosphorylated by SRC/FYN and activates PI3K/AKT, ERK and CRK/CRKL"
+      },
+      {
+        "Evidence type": "Protein interaction",
+        "Score": 0.5,
+        "Citation": "pmid:28686858; pmid:29939198",
+        "Evidence detail": "N-terminal PID/PTB domain binds reelin receptors VLDLR/APOER2"
+      },
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 1.5,
+        "Citation": "pmid:28686858; pmid:29939198",
+        "Evidence detail": "Transcripts spanning the insertion intron are highest in adult cerebellum and fetal brain. DAB1 protein present in human/mouse cerebellum, but absent in fibroblasts. Altered expression/splicing in SCA37 post-mortem cerebellum. Only one control"
+      },
+      {
+        "Evidence type": "Patient cells",
+        "Score": 1,
+        "Citation": "pmid:29939198",
+        "Evidence detail": "Post-mortem cerebellum from 2 SCA37 siblings sjowed Purkinje loss, ectopic Purkinje cells, and ubiquitinated perisomatic granules staining for DAB1. Further expression data scored in regulatory impact."
+      },
+      {
+        "Evidence type": "Non-patient cells",
+        "Score": 0.5,
+        "Citation": "pmid:28686858",
+        "Evidence detail": "Cell line transfected with ins(ATTTC)58 construct vs N(ATTTT)7 and N(ATTTT)139. Nuclear RNA foci only with the ATTTC insertion"
+      },
+      {
+        "Evidence type": "Non-human model organism",
+        "Score": 1,
+        "Citation": "pmid:28686858",
+        "Evidence detail": "Zebrafish embryos injected with (AUUUC)58 RNA vs (AUUUU)7, (AUUUU)139 and control RNA. Increased mortality. Downgraded from default because it is not ataxia/cerebellar pathology, so it does not mimic diseased tissue."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "DMD",
+    "Gene": "DMD",
+    "Locus_ID": "DMD_DMD",
+    "Inheritance": "XR",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/12/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": "Refuted",
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 0,
+        "Citation": "pmid:27417533",
+        "Evidence detail": "One greek family with intron 62 GAA expanded to 59-82 pure GaA with 5’ AAA loss. Expansion in unaffected grandmother and aunt. Authors say causality unresolved."
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 0,
+        "Citation": "pmid:40140942",
+        "Evidence detail": "Pathogenic range genotypes in 4.705% of males and 0.089% of females from gnomAD, with 8.198% of females as carriers. In HPRC, pathogenic genotypes occurred in 3.85% of males and 4.17% of females with 12.5% of females as carriers. This is more than expected if the genotypes were truly pathogenic."
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 0,
+        "Citation": "pmid:27417533",
+        "Evidence detail": "Same PCR method: absent from 173 chromosomes of 125 ethnically matched controls, 79 del/dup-negative BMD–like males and 14 DMD/BMD carriers. Only one case family."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 0.5,
+        "Citation": "pmid:35168641",
+        "Evidence detail": "Dystrophin expressed in disease-relevant tissues: skeletal muscle, cardiac muscle, and brain tissue."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "DM1",
+    "Gene": "DMPK",
+    "Locus_ID": "DM1_DMPK",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/22/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 6,
+        "Citation": "pmid:1310900; pmid:27991661",
+        "Evidence detail": "PMID 1310900: Fig 7 Family with segregation, DMH5, DMH1, and DMH6 (1.0 + 3*0.5).  The other 11 DM samples have no phenotype and aren;t scored. PMID 27991661: Braida and Musova Family A both with segregation, Musova B, C, and Santoro patients 1-5 (2*1.0 + 7*0.5)."
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 2,
+        "Citation": "pmid:1310900; pmid:27991661; pmid:32851192; pmid:31159885",
+        "Evidence detail": "Length correlates inversely with onset and positively with severity as minimally affected carriers have 50-61 CTG, while severe patients have kb0scale expansions.  the congenital form is almost always maternally transmitted, and a premutation range of 35-49 is defined. Interruptions in 3-5% of expansions stabilize the repeat and give milder or atypical phenotypes."
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 3,
+        "Citation": "pmid:20635151",
+        "Evidence detail": "Same method for cases and controls (flourescent PCR + TP-PCR) 45/50 clinically diagnosed patients vs 0/400 healthy controls. No overlap. No p-value, and controls not matched."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Biochemical function",
+        "Score": 0.5,
+        "Citation": "pmid:1310900",
+        "Evidence detail": "Gene level evidence: The transcript encodes a protein kinase that shares 11 kinase domains with cAMP-dependent kinases"
+      },
+      {
+        "Evidence type": "Protein interaction",
+        "Score": 0.5,
+        "Citation": "pmid:39932794",
+        "Evidence detail": "CUGexp RNA sequesters MBNL1 and MBNL2, and exogenous MBNL colocalises with CUGexp foci in mouse heart"
+      },
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 1,
+        "Citation": "pmid:27991661",
+        "Evidence detail": "In muscle from DM1 patients with CCG expansions, ribonuclear foci colocalise with MBNL1 and developmentally regulated genes are mis-spliced, like in classic DM1."
+      },
+      {
+        "Evidence type": "Non-human model organism",
+        "Score": 2,
+        "Citation": "pmid:39932794",
+        "Evidence detail": "In mouse model: heart-specific, dox-inducible expression of 960 interrupted CUG repeats in the human DMPK 3'UTR caused reduced contractility, hypertrophy, RNA foci with MBNL, and mis-splicing and gene-expression changes on RNA-seq"
+      },
+      {
+        "Evidence type": "Rescue in non-human model organism",
+        "Score": 2,
+        "Citation": "pmid:39932794",
+        "Evidence detail": "In mouse model: AAV9 MBNL1, MBNL2 or both partially rescue conduction, contractility, hypertrophy, splicing and gene expression. Switching off CUGexp caused a near complete reversal"
+      },
+      {
+        "Evidence type": "Rescue in cell culture",
+        "Score": 1,
+        "Citation": "pmid:16027111",
+        "Evidence detail": "A GFP reporter carrying DMPK 3’ UTR with 85 CUG repeats stays trapped in the nucleus. Knocking down hnRMP H with siRNA restores GFP expression in HEK293T cells and primary myoblasts. Confirmed with Northern blot."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "OPDM2",
+    "Gene": "GIPC1",
+    "Locus_ID": "OPDM2_GIPC1",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/13/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 6,
+        "Citation": "pmid:32413282; pmid:33374016",
+        "Evidence detail": "PMID 32413282: Family 1 with inheritance, F7-1, F8-1, and 7 unrelated probands (1.0 + 9(0.5). PMID 33374016: Family 1 with inheritance data, F2, F3, and F4 (1.0 + 3*0.5)."
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 1,
+        "Citation": "pmid:33374016; pmid:32413282",
+        "Evidence detail": "Weak inverse correlation only when chinese cohorts were pooled. Within families in PMID 33374016, the shorter allele gave later onset and milder disease. Meiotic instability in both directions."
+      },
+      {
+        "Evidence type": "Segregation",
+        "Score": 1.5,
+        "Citation": "pmid:32413282; pmid:33374016",
+        "Evidence detail": "LOD 4.21 at 19p13.2-q13.12 in PMID 32413282 family 1 and LOD3.3 at 19p13.11-p13.2 in PMID 33374016"
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 5,
+        "Citation": "pmid:32413282; pmid:33374016",
+        "Evidence detail": "PMID 32413282: Ancestry matched with same RP-PCR 12/24 OPDM vs 0/1,000 Chinese controls. No p value and not age matched. PMID 33374016: 14/27 pedigrees vs 0/188. Same RP-PCR. No statistical test."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Biochemical function",
+        "Score": 0.5,
+        "Citation": "pmid:32413282",
+        "Evidence detail": "Gene level. GIC1 is a PDZ-domain scaffold that regulates vesicular trafficking and negatively modulates Plexind1 signalling in vascular development"
+      },
+      {
+        "Evidence type": "Protein interaction",
+        "Score": 0,
+        "Citation": "pmid:32413282",
+        "Evidence detail": "GIPC1-p62 colocalisation in patient muscle scored under Patient Cells instead"
+      },
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 1,
+        "Citation": "pmid:32413282; pmid:35152460",
+        "Evidence detail": "Altered expression plus disease-tissue expression: GIPC1 mRNA increased in patient skeletal muscle vs age-matched controls while protein is unchanged. Methylation around the repeat. In expansions, GIPC1 mRNA and protein decreased in fibroblasts but increased in OPDM2 muscle."
+      },
+      {
+        "Evidence type": "Patient cells",
+        "Score": 1.5,
+        "Citation": "pmid:32413282; pmid:39418922; pmid:35152460",
+        "Evidence detail": "Multiple patient tissues. In muscle, GIPC1 partially colocalises with p62 in rimmed vacuoles and intranuclear inclusions. In skin, p62+ intranuclear inclusions in sweat gland cells, adipocytes, fibroblasts and Schwann cells. In fibroblasts, p62/ubiquitin+ intranuclear inclusions."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "RCPS",
+    "Gene": "EIF4A3",
+    "Locus_ID": "RCPS_EIF4A3",
+    "Inheritance": "AR",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/22/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 6,
+        "Citation": "pmid:24360810",
+        "Evidence detail": "17 unrelated families + 3 individuals (0.5*20). 21 homozygous and 3 compound heterozygous. All 31 tested parents were heterozygous. Disease segregated with expanded allele."
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 1.5,
+        "Citation": "pmid:24360810; pmid:29112243",
+        "Evidence detail": "Pathogenic alleles are CACA-20 + (CGCA-20)12-13 + CACA-20 + CA-18. The CGCA-20 motif is only in 1/140 control alleles, and 97% of controls are (CACA-20)2-9 + CA-18 + CACA-20 + CA-18. 14-repeat carriers have a milder phenotype than 16-repeat carriers."
+      },
+      {
+        "Evidence type": "Segregation",
+        "Score": 1.5,
+        "Citation": "pmid:24360810",
+        "Evidence detail": "Max LOD 9.533 at theta=0 (rs2289534) at 17q25.3. Recombinants refile interval to 122 kb containing EIF4A3. Expansion segregates under AR model."
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 2,
+        "Citation": "pmid:24360810",
+        "Evidence detail": "Expanded allele in all 25 affected vs 0/520 Brazilian control individuals. PCR of exon ⅕’ UTR was used in controls and cases. Controls from the same country but not ancestry matched. No p-value, and cases share a founder haplotype."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Patient cells",
+        "Score": 1.5,
+        "Citation": "pmid:28334780",
+        "Evidence detail": "iPSCs from 3 RCPS patients vs 3 controls. iPSC-derived neural crest cells: EIF4A3 mRNA ~70% and protein ~50% lower. Reduced migration in wound-healing assay. Derived mesenchymal stem-like cells: higher SOX9 and lower ACAN on chondrogenic induction. Two distinct cell types, but both derived from iPSCs."
+      },
+      {
+        "Evidence type": "Non-human model organism",
+        "Score": 4,
+        "Citation": "pmid:24360810; pmid:28334780",
+        "Evidence detail": "Gene level. PMID 24360810: EIF4A3 Zebrafish morphants: 2 translation-blocking, 1 splice-blocking MO, each with mismatch control. Small eyes and anterior brain apoptosis at 24 hpf, and facial deficits with reduced neural crest markers mirroring the RCPS mandible. Knockdown weather than the repeat. PMID 28334780: Mouse EIF4A3 haplounsifficiency. Ubiquitous (CMV-Cre): ~50% EIF4A3 protein, developmental delay, and facial deficits. Lethality by E12.5. Wnt1-Cre: 100% penetrant craniofacial deficits matching RCPS mandible and clavicle phenotypes."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "SCA27B",
+    "Gene": "FGF14",
+    "Locus_ID": "SCA27B_FGF14",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/15/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 6,
+        "Citation": "pmid:36516086; pmid:39263992",
+        "Evidence detail": "PMID 36516086: families 1,2, and 3 with inheritance data (3*1.0). 3 additional Indian index patients (3*0.5). PMID 39263992: 57 SCA27B patients from 4 US centres outside the screened cohort."
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 2,
+        "Citation": "pmid:36493768; pmid:36516086",
+        "Evidence detail": "Length vs age of onset onset inverse correlation replicated in several cohorts. Size associated with penetrance. Only pure GAA is pathogenic. GAAGGA and (GAA)4(GCA) expansions found in controls, and GAAGGA does not segregate. Germline instability."
+      },
+      {
+        "Evidence type": "Computational",
+        "Score": 1,
+        "Citation": "pmid:36493768; pmid:36516086",
+        "Evidence detail": "Population polymorphism plus population-specific GAAGGA and GAAGAAGAAGAAGCA motifs. Gene constraint: pLI 0.91, LoF o.e 0.08, consistent with haploinsufficiency."
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 6,
+        "Citation": "pmid:36516086; pmid:36493768; pmid:38886208",
+        "Evidence detail": "PMID 36516086: 40/66 patients vs 3/209 controls in French-Canadian cohort, and 42/228 patients vs 5/199 controls in German cohort. Same LR-PCR. PMID 36493768: Australian pure (GAA)>250 13/95 in patients vs 2/311 in controls. Same LR-PCR. In both studies, p<0.001. In PMID 38886208, 53/256 late onset ataxia patients vs 0/643 controls in Italian cohort."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Non-human model organism",
+        "Score": 1.5,
+        "Citation": "pmid:12123606",
+        "Evidence detail": "Fgf14 knockout mouse: ataxic gait, poor accelerating rotarod, hindlimb clasping, paroxysmal hyperkinetic dyskinesia from 3 weeks. Downgraded because homozygous null does not directly model heterozygous partial loss."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "BPES",
+    "Gene": "FOXL2",
+    "Locus_ID": "BPES_FOXL2",
+    "Inheritance": "AD/AR",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/27/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 6,
+        "Citation": "pmid:12529855",
+        "Evidence detail": "Only polyAla tract expansions scored. PMID 12529855: 3 families with inheritance, 1 de novo, 1 additional sporadic proband (4*1.0 + 0.5). PMID 31077882: 4 de novo probands (1.0 * 4)"
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 1,
+        "Citation": "pmid:17089161; pmid:12529855",
+        "Evidence detail": "Length vs dominance. +5 Ala is recessive with normal heterozygotes while +10 Ala is fully penetrant in heterozygotes."
+      },
+      {
+        "Evidence type": "Computational",
+        "Score": 1,
+        "Citation": "pmid:33875939; pmid:12529855",
+        "Evidence detail": "14-Ala tract strictly conserved in human, mouse, rat, goat. Predicted as pathogenic by MutationTaster, PolyPhen-2, and SIFT"
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 1,
+        "Citation": "pmid:12529855",
+        "Evidence detail": "No polyAla expansion in 200 control chromosomes using the same sequencing method. No statistical test, controls not ancestry-matched, few cases."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Biochemical function",
+        "Score": 1,
+        "Citation": "pmid:22926839; pmid:18158309",
+        "Evidence detail": "FOXL2 forkhead TF WT represses StAR promoter and activates GRAS and DK3 promoters"
+      }
+    ]
+  },
+  {
+    "Disease_ID": "HFG-III",
+    "Gene": "HOXA13",
+    "Locus_ID": "HFG_HOXA13-III",
+    "Inheritance": "AD",
+    "Curator": "Gabriel ZInser",
+    "Contributors": null,
+    "Date": "10/15/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 4,
+        "Citation": "pmid:10839976; pmid:15385446; pmid:17935235; pmid:23532960",
+        "Evidence detail": "Only tract-3 probands scored. PMID 10839976: Family 4 with inheritance (1.0). PMID 15385446: Family A and B (2*0.5). PMID 17935235: Family with inheritance (1.0). PMID 23532960: Patient 1 de novo on maternal haplotype (1.0)."
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 0.5,
+        "Citation": "pmid:15385446; pmid:17935235; pmid:23532960",
+        "Evidence detail": "Expansions +6 to +14 give similar HFGS with no length-severity or onset correlation. larger expansions may give more GU disease, but it is not powered. No anticipation."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Biochemical function",
+        "Score": 0.5,
+        "Citation": "pmid:23532960",
+        "Evidence detail": "Gene-level. WT HOXA13 transactivates an EphA7 cis-regulatory element"
+      },
+      {
+        "Evidence type": "Protein interaction",
+        "Score": 0.5,
+        "Citation": "pmid:17935235",
+        "Evidence detail": "Toxic interaction: +10 and +14 HOXA13 sequester co-expressed WT HOXA13"
+      },
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 0,
+        "Citation": "pmid:15385446",
+        "Evidence detail": "Ala28 mouse limb buds: normal Hoxa13 RNA level, splicing and in situ pattern, so no points"
+      },
+      {
+        "Evidence type": "Non-patient cells",
+        "Score": 0.5,
+        "Citation": "pmid:17935235",
+        "Evidence detail": "WT nuclear +10 and +14 form cytoplasmic aggregate. geldanamycin lowers mutant but not WT protein. One cell line only."
+      },
+      {
+        "Evidence type": "Non-human model organism",
+        "Score": 2,
+        "Citation": "pmid:15385446",
+        "Evidence detail": "Hoxa13-III Ala28 knock-in. heterozygotes have short hindfoot digit I/nail and occasional 2-3 syndactyly. Homozygotes have digit 1 loss and die before bitrth."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "OPDM1",
+    "Gene": "LRP12",
+    "Locus_ID": "OPDM1_LRP12",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/15/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 6,
+        "Citation": "pmid:34047774",
+        "Evidence detail": "59 Japanese families confirmed with Southern blot (0.5*59)"
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 1.5,
+        "Citation": "pmid:34047774; pmid:37339631",
+        "Evidence detail": "Length vs onset inverse correlation (p<0.001), anticipation in PMID 34047774 family 2. Length vs phenotype correlation as 61-100 CGG gives ALS/PMA rish while >100 gives OPDM. carriers of 101 and >300 repeats anre asymptomatic with proposed methylation silencing."
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 2,
+        "Citation": "pmid:31332380",
+        "Evidence detail": "Expansion in 2/107 OPDM patients: 13/34 with rimmed vacioles and 0/19 clinically similar patients without rimmed vacuoles. Expansion in 2/1,000 controls. Same anscestry and detection method (RP-PCR). No reported p value, controls not age/sex matched."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Protein interaction",
+        "Score": 0.5,
+        "Citation": "pmid:37339631",
+        "Evidence detail": "MBNL1 colocalizes with LRP12-positive intranuclear inclusions in OPDM muscle but not in LRP12-ALS or control muscle, which implies toxic MBNL1 sequestration"
+      },
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 0.5,
+        "Citation": "pmid:37339631",
+        "Evidence detail": "Nanopore shows increased 5mC below the repeat in OPDM F1-III-1 (197 repeats) and F2-III-1 (101 repeats, asymptic). LRP12 mRNA and protein not significantly changed in OPDM muscle vs controls."
+      },
+      {
+        "Evidence type": "Patient cells",
+        "Score": 1.5,
+        "Citation": "pmid:37339631",
+        "Evidence detail": "OPDM muscle biopsies show nuclear CCG RNA foci in 11.7% of patient nuclei and 0% in controls. iPSC motor neurons show nuclear RNA foci in 14% of patient nucleu vs 0 in controls/ p<0.01 for both."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "CHNG3",
+    "Gene": "MIR7-2",
+    "Locus_ID": "CHNG3_MIR7-2",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/15/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 6,
+        "Citation": "pmid:38714869",
+        "Evidence detail": "12 unrelated families with either a heterozygous motif deletion or a T>G substitution in repeat 3 confirmed by WGS/Sanger. Family 14 de novo, families 24, 25, 26, 30, 35, 60 with inheritance info (0.5*5 + 1.0*7)."
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 1,
+        "Citation": "pmid:38714868; pmid:38714869",
+        "Evidence detail": "A single T>G interruption in repeat 3 gives the same phenotype as the 4>3 contraction. (TTTG)5 is in population databases with no documented disease link. One homozygous 3/3 adult had higher TSH than heterozygotes. Fully penetrant mutation. Repeat stable."
+      },
+      {
+        "Evidence type": "Computational",
+        "Score": 0.5,
+        "Citation": "pmid:38714869",
+        "Evidence detail": "Locus sits in predicted thyroid encancer (SCREEN EH38E3153006)"
+      },
+      {
+        "Evidence type": "Segregation",
+        "Score": 1.5,
+        "Citation": "pmid:38714868",
+        "Evidence detail": "Japanese Family A multipoint LOD 4.8, 3.2 Mb at 15q26.1"
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 2,
+        "Citation": "pmid:38714868",
+        "Evidence detail": "The Japanese CH cohort had 137/989 with the contraction or SNV vs 3/38,722 controls from 38KJPN (p<1e-300), which was ancestry matched, however the detection method differs. The controls were sequenced using WGS while the CH cohort was screened using PCR + Sanger. The discovery cohort of 25 patients (11 families) had identical detection methodology to its controls and 8/11 families had the deletion variant, however."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Biochemical function",
+        "Score": 0.5,
+        "Citation": "pmid:38714869",
+        "Evidence detail": "Gene level. MIR7-5P is an antiproliferative miRNA targeting EGFR, IGF1R and PI3K/AKT/mTOR, and lowers thyroid cell proliferation"
+      },
+      {
+        "Evidence type": "Protein interaction",
+        "Score": 0.5,
+        "Citation": "pmid:38714869",
+        "Evidence detail": "In a patient thyroid Fiber-seq, the mutation turns a weakly bound site into a stable 30-60 bp TF footprint. Predicted adjacent FOXE1 motifs with altered spacing"
+      },
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 1.5,
+        "Citation": "pmid:38714869; pmid:38714868",
+        "Evidence detail": "In patient thyroid but not fibroblasts/leukocytes, haplotype-specific activation of a codependent enhancer cluster with hypo-CpG methylation. Cis overexpression of pre-MIR7-2/MIR1179 35 kb downstream. Counting differential expression in Patient Cells category."
+      },
+      {
+        "Evidence type": "Patient cells",
+        "Score": 1,
+        "Citation": "pmid:38714869",
+        "Evidence detail": "In the thyroid from 2 patients: 1,166 differentially expressed genes. MIR7-5P targets most enriched among downregulated genes (GSEA)."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "ALS",
+    "Gene": "NIPA1",
+    "Locus_ID": "ALS_NIPA1",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/16/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": "Disputed",
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 0,
+        "Citation": null,
+        "Evidence detail": "No individual proband correlation since this is a risk allele. Papers are case-control instead"
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 0,
+        "Citation": "pmid:22378146; pmid:30342764; pmid:31286297",
+        "Evidence detail": "In PMID 22378146, expanded alleles give earlier onset ( p=4.6e-3) and shorter survival (p=4.2e-4), however neither survival or onset correlation was replicated in 1,954 patients in PMID 30342764. In PMID 31286297, no significant effect of allele length was found on ALS susceptibility."
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 4,
+        "Citation": "pmid:22378146; pmid:30342764",
+        "Evidence detail": "In PMID 22378146, 2,292 ALS patients and 2,777 controls were compared using the same fragment analysis methodology. Age.sex matched and regression adjusted. Indpependently replicated in PMID 30342764."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Protein interaction",
+        "Score": 0.5,
+        "Citation": "pmid:22378146",
+        "Evidence detail": "Gene-leve only. NIPAI binds BMPRII and promotes endocytic degradation"
+      }
+    ]
+  },
+  {
+    "Disease_ID": "OPML1",
+    "Gene": "NUTM2B-AS1",
+    "Locus_ID": "OPML1_NUTM2B-AS1",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/16/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 4,
+        "Citation": "pmid:31332380; pmid:39308795",
+        "Evidence detail": "PMID 31332380: Single Japanese family with inheritance data (1.0). 4/4 tested affected had the expansion, while 7/7 tested unaffected did not. PMID 39308795: 3 unrelated families with repeat expansions that segregatw with disease (3*1.0)."
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 0,
+        "Citation": "pmid:31332380",
+        "Evidence detail": "Southern blot shows a smear which indicates somatic instability. No length vs onset/severity or anticipation data."
+      },
+      {
+        "Evidence type": "Segregation",
+        "Score": 0,
+        "Citation": "pmid:31332380",
+        "Evidence detail": "max LOD 1.94"
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 0.5,
+        "Citation": "pmid:31332380",
+        "Evidence detail": "Bidirectional transcription detected in control brain and muscle, which are disease tissues"
+      },
+      {
+        "Evidence type": "Patient cells",
+        "Score": 1,
+        "Citation": "pmid:38159879",
+        "Evidence detail": "In patient muscle: myopathic changes + rimmed vacuoles in ¾. P62+ intranuclear inclusions with fulamentous aggregates on EM LC3B, NMR1, and RNA-binding proteins hnRNPA1, hnRNPA2B1, and MBNL1 colocalise in inclusions. Swollen mitochondria."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "MRUPAV",
+    "Gene": "PLIN4",
+    "Locus_ID": "MRUPAV_PLIN4",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/16/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 6,
+        "Citation": "pmid:32451610; pmid:35499779; pmid:40693562",
+        "Evidence detail": "In PMID 32451610: Italian family with inheritance info and proteomics data (1.5). In PMID 35499779: 2 families with inheritance info (1+1). In PMID 40693562:1 family with inheritance and expression data, and 1 additional family with inheritance (1.5+1.0)."
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 0.5,
+        "Citation": "pmid:35499779; pmid:40693562",
+        "Evidence detail": "In PMID 35499779, the 50x family has an earlier onset and more severe disease than 40x. Only 2 families and no statistics. In PMID 40693562, no size-severity relation in 37-40x and high intrafamilial variability. No anticipation."
+      },
+      {
+        "Evidence type": "Segregation",
+        "Score": 1.5,
+        "Citation": "pmid:35499779; pmid:15236412",
+        "Evidence detail": "F1 max LOD 3.31 in PMID 35499779 and F2 max LOD 3.74 in PMID 15236412"
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 0.5,
+        "Citation": "pmid:32451610",
+        "Evidence detail": "1 kb PCR band absent from 60 ethnic controls with the same PCR methodology as cases. Only one family for cases."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Biochemical function",
+        "Score": 0.5,
+        "Citation": "pmid:32451610; pmid:40693562",
+        "Evidence detail": "Gene-level. Perilipin-4 coats lipid droplets with an ampipathix helix made of the repeat"
+      },
+      {
+        "Evidence type": "Protein interaction",
+        "Score": 0.5,
+        "Citation": "pmid:35499779",
+        "Evidence detail": "In patient muscle, perilipin-4 co-localizes with FK2, p62/SQSTM1, NBR1 and LC3B. This suggests aggregation with aggrephagy receptors."
+      },
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 0.5,
+        "Citation": "pmid:40693562",
+        "Evidence detail": "PLIN4 is the main perilipin in skeletal muscle, subsarcolemmal in type I fibers, which matches the affected fiber type in disease.  No altered expression in patient muscle detected with RNA-seq."
+      },
+      {
+        "Evidence type": "Patient cells",
+        "Score": 1,
+        "Citation": "pmid:36151849",
+        "Evidence detail": "perilipin-4/p62/ubiquitin deposits in patient muscle. lipid droplet co-deposition with perilipin-4/p62."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "CPEO",
+    "Gene": "POLG",
+    "Locus_ID": "CPEO_POLG",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/28/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": "Refuted",
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 0,
+        "Citation": "pmid:10196696; pmid:20803511",
+        "Evidence detail": "PMID 10196696: 17 PEO patients. Swedish adPEO with anticipation. ALl within normal 5-13 CAG, no expansion. PMID 20803511: PEO+ataxia explained by POLG point mutations (7/15)."
+      },
+      {
+        "Evidence type": "Computational",
+        "Score": 0,
+        "Citation": "pmid:10196696",
+        "Evidence detail": "Low polymprohism (disputes)"
+      },
+      {
+        "Evidence type": "Segregation",
+        "Score": 0,
+        "Citation": "pmid:10196696",
+        "Evidence detail": "15q linkage excluded in Finnish/Italian/Swedish adPEO families unlinked to 3p/10q (disputes)"
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 0,
+        "Citation": "pmid:10196696",
+        "Evidence detail": "17 PEO patients vs 134 healthy controls with the same sequencing method. No distribution difference or PEO specific allele. No enrichment."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Biochemical function",
+        "Score": 0,
+        "Citation": "pmid:24491464",
+        "Evidence detail": "mtDNA polymerase is relevant to mtDNA deletion PEO, but removing the CAG tract in HEK293T does not alter polymerase function."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "SCA12",
+    "Gene": "PPP2R2B",
+    "Locus_ID": "SCA12_PPP2R2B",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/16/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 4.5,
+        "Citation": "pmid:10581021; pmid:11198281; pmid:25634432",
+        "Evidence detail": "PMID 10581021: family with inheritence data (1.0). PMID 11198281: Family with inheritence data (1.0). PMID 25634432: two families with inheritance data, one additional family (1.0+1.0+0.5)"
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 0,
+        "Citation": "pmid:10581021",
+        "Evidence detail": "No length-onset correlation"
+      },
+      {
+        "Evidence type": "Segregation",
+        "Score": 1.5,
+        "Citation": "pmid:10581021",
+        "Evidence detail": "LOD 4.61 at theta=0 in family R"
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 2,
+        "Citation": "pmid:10581021; pmid:11198281",
+        "Evidence detail": "PMID 10581021: Same PCR assay in cases and controls. 0/394 expanded in normal and 0/1,099 in neuro-disease controls. 10/10 in living affected in the same family as 1/8 in unaffected. (PMID:10581021). All cases in study come from same family. In PMID 11198281: 1/145 ADCA families, 0/102 AR/sporadic ataxia, 0/257 French+Indian controls. Again, one family."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Biochemical function",
+        "Score": 0.5,
+        "Citation": "pmid:18940801",
+        "Evidence detail": "Gene-level. Bbeta2, a PPP2R2B splice form, is a neuron-specific PP2A regulatory subunit that targets PP2A to the outer mitochondrial membrane and drives mitochondrial fission."
+      },
+      {
+        "Evidence type": "Protein interaction",
+        "Score": 0.5,
+        "Citation": "pmid:18940801",
+        "Evidence detail": "Gene-level. Toxicity needs Bbeta2 binding to the PP2A A/C core and mitochondrial targeting"
+      },
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 0.5,
+        "Citation": "pmid:10581021",
+        "Evidence detail": "Expression data. 5’-RACE on fetal and cerebellar cDNA puts transcription start sites upstream of the CAG, so the repeat lies in a transcribed 5'UTR of a brain-specific gene. No altered expression tested in disease tissue."
+      },
+      {
+        "Evidence type": "Patient cells",
+        "Score": 0,
+        "Citation": "pmid:10581021",
+        "Evidence detail": "No PPP2R2B RNA/protein in patient or control LCLs and no polyQ"
+      }
+    ]
+  },
+  {
+    "Disease_ID": "HSAN-VIII",
+    "Gene": "PRDM12",
+    "Locus_ID": "HSAN-VIII_PRDM12",
+    "Inheritance": "AR",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/17/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 2,
+        "Citation": "pmid:26005867",
+        "Evidence detail": "Family A and J with inheritance data (1.0*2). All other families not scored due to different mutations than the polyA tract expansion."
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 0.5,
+        "Citation": "pmid:26005867",
+        "Evidence detail": "The 18 Ala from family J had milder phenotypes than the 19 Ala from family A. Only 2 families so no significant correlation can be stated. No statistics."
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 0.5,
+        "Citation": "pmid:26005867",
+        "Evidence detail": "Expanded alleles absent from 176 controls. Control genotyping method not described, so it is unclear if the methodology between cases and controls differs."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Biochemical function",
+        "Score": 0.5,
+        "Citation": "pmid:26005867",
+        "Evidence detail": "Gene-level. PRDM12 is a PR-domain transcriptional regulator lacking intrinsic methyltransferase activity"
+      },
+      {
+        "Evidence type": "Protein interaction",
+        "Score": 0.5,
+        "Citation": "pmid:26005867",
+        "Evidence detail": "Gene-level. Prdm12 co-IPs with G9a (EHMT2) in COS-7. Zinc finger reduces binding."
+      },
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 0.5,
+        "Citation": "pmid:26005867",
+        "Evidence detail": "Expression in disease tissue. Mouse Prdm12 in neural folds and DRG neurons. Only DRG in human adult tissues. A >1000 fold induction during iPSC/hESC nociceptor differentiation."
+      },
+      {
+        "Evidence type": "Non-patient cells",
+        "Score": 1,
+        "Citation": "pmid:26005867",
+        "Evidence detail": "18 and 19 Ala constructs had reduced PRDM12 protein in COS7, which was restored by MC132. Nuclear and cytoplasmic aggregates in HEK293T"
+      },
+      {
+        "Evidence type": "Non-human model organism",
+        "Score": 1,
+        "Citation": "pmid:26005867",
+        "Evidence detail": "Xenopus Prdm12 morphant has irregular cranial sensory placode markers, while other placodes were normal"
+      }
+    ]
+  },
+  {
+    "Disease_ID": "CJD",
+    "Gene": "PRNP",
+    "Locus_ID": "CJD_PRNP",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/24/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 4,
+        "Citation": "pmid:1683708; pmid:37379724",
+        "Evidence detail": "Only OPRI mutations counted. PMID 1683708: 3 unrelated families with inheritance (1.0 * 3). PMID 37379724: 1 proband with 5-OPRI, Met/Met129, neuropath-confirmed prion disease."
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 2,
+        "Citation": "pmid:29887139",
+        "Evidence detail": "Inverse repeat-length vs age-of-onset duration across 1-7 PRI + a de novo 7-OPRI insertion"
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 2,
+        "Citation": "pmid:1683708; pmid:37379724",
+        "Evidence detail": "PMID 1683708: Pathogenic OPRIs absent in 204 normal controls + 159 relatives, with the same detection method of PCR/sequencing. In PMID 37379724: no pathogenic PORI in 475 controls. No formal p-value."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Biochemical function",
+        "Score": 1,
+        "Citation": "pmid:18366654",
+        "Evidence detail": "Repeat-expanded PrP ORD increases aggregation propensity and fiber-formation kinetics and cros-seeds WT. Multiple assays."
+      },
+      {
+        "Evidence type": "Non-human model organism",
+        "Score": 2,
+        "Citation": "pmid:1683708",
+        "Evidence detail": "Brain suspension from all 3 OPRI families transmitted spongiform encephalopathy to multiple primate species"
+      }
+    ]
+  },
+  {
+    "Disease_ID": "FAME8",
+    "Gene": "RAI1",
+    "Locus_ID": "FAME8_RAI1",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/18/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 1,
+        "Citation": "pmid:37994247",
+        "Evidence detail": "Single family with inheritence data (1.0)"
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 1.5,
+        "Citation": "pmid:37994247",
+        "Evidence detail": "TTTCA absent in all 200 controls, but present in 1 case family"
+      }
+    ],
+    "experimental_evidence_details": []
+  },
+  {
+    "Disease_ID": "OPDM4",
+    "Gene": "RILPL1",
+    "Locus_ID": "OPDM4_RILPL1",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/20/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 6,
+        "Citation": "pmid:35148830; pmid:37923380",
+        "Evidence detail": "PMID 35148830: F1 with inheritance data, S1 simplex 0.5 (1.0+0.5). pmid:37923380: 11 additional probands (11*0.5)"
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 0,
+        "Citation": "pmid:35700120; pmid:37864208",
+        "Evidence detail": "No size vs onset correlation"
+      },
+      {
+        "Evidence type": "Segregation",
+        "Score": 0.5,
+        "Citation": "pmid:35700120",
+        "Evidence detail": "LOD 2.40. Below standard significance of 3."
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 2,
+        "Citation": "pmid:35148830",
+        "Evidence detail": "11/22 OPDM cases vs 0/200 controls, with the same RP-PCR + AL-PCR. Ancestry matched, but no statistic and not age matched."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 1,
+        "Citation": "pmid:35700120; pmid:37864208; pmid:35148830",
+        "Evidence detail": "Repeat is in a transcribed region, alternative upstream TSS from CAGE-seq, ESTs, and muscle RNA-seq. Strand-specific RNA-seq shows both sense and antisense transcription through the repeat in patient muscle. Ultralong alleles hypermethylate the CpG island, but patient alleles do not. PILPL1 mRNA/protein unchanged in patient muscle."
+      },
+      {
+        "Evidence type": "Patient cells",
+        "Score": 1,
+        "Citation": "pmid:35148830; pmid:35700120; pmid:39044557",
+        "Evidence detail": "In patient muscle cells: anti-glycine + p62 in intranuclear inclusions with increased glycine signal. Expanded RILPL1 RNA foci sequester MBNL1 with p62. RNA foci colocalize with p62. In non-muscle cells: filamentous intranuclear inclusions in skin fibroblasts on EM. p62+, glycine+, and polyA-R1+ inclusions in adipocytes and fibrocytes."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "XLID,PHPX",
+    "Gene": "SOX3",
+    "Locus_ID": "XLID_SOX3",
+    "Inheritance": "XR",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/27/2026",
+    "Description": "Diseases curated: XLID, PHPX",
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 2,
+        "Citation": "pmid:12428212; pmid:15800844",
+        "Evidence detail": "First PA tract expansions only. PMID 12428212: Family N3 +11 Ala with XLID + IGHD cosegregating in 6 affected males. Carrier females inaffected (1.0). PMID 15800844: Family B +7 Ala CPHD with APH (1.0).  Contractions not scored."
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 0.5,
+        "Citation": "pmid:19654509; pmid:15800844",
+        "Evidence detail": "The + 11 Ala family gives IGHD + ID + mild craniofacial. +7 Ala (3 families) givs normal intelligence but pituitary phenotype can range from IGHDto panhypopituitarism. Since pituitary phenotype is more severe with shorter tract, there is no consistent length-severity gradient."
+      },
+      {
+        "Evidence type": "Segregation",
+        "Score": 0.5,
+        "Citation": "pmid:19654509",
+        "Evidence detail": "LOD 2.68 for the +7 Ala family. Below standard significance of 3"
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 0.5,
+        "Citation": "pmid:12428212; pmid:19654509",
+        "Evidence detail": "Expansion absent from 600 control X chromosomes,197 MR patients, and 100 contorl female chromosomes. Same PCR assay. No statyistical test and affected probands border case-level data."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Biochemical function",
+        "Score": 0.5,
+        "Citation": "pmid:15800844; pmid:17127446",
+        "Evidence detail": "Gene-level. WT SOX3 binds a SOX consensus site and transactivates the Hesx1 promoter and SOCM reporter dose-dependently."
+      },
+      {
+        "Evidence type": "Protein interaction",
+        "Score": 0.5,
+        "Citation": "pmid:17127446",
+        "Evidence detail": "WT SOX3 represses beta-catenin/TCF transcription over 8 fold. 22Ala and 26Ala give <2 fold repression.  Mutant aggregates do not sequester WT SOX3/SOX1/SOX2."
+      },
+      {
+        "Evidence type": "Non-human model organism",
+        "Score": 1,
+        "Citation": "pmid:17127446",
+        "Evidence detail": "Chick neural tube electroporated in ovo and cultured as explants. 26Ala forms cytoplasmic aggregates, nuclear inclusions, and perinuclear aggegates while WT stays nuclear."
+      },
+      {
+        "Evidence type": "Cell culture",
+        "Score": 1,
+        "Citation": "pmid:15800844; pmid:17127446",
+        "Evidence detail": "22Ala from patient in CHO: ~50% of WT transativation, DNA binding intact, mostly excluded from nucleus. 22Ala/26Ala in COS-7, CHO-K1, HEK: cytoplasmic and nuclear aggregates. Length-dependent. Reduced SOCM transactivation."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "FAME2",
+    "Gene": "STARD7",
+    "Locus_ID": "FAME2_STARD7",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/20/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 6,
+        "Citation": "pmid:31664034",
+        "Evidence detail": "22 families verified with RP-PCR"
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 1,
+        "Citation": "pmid:31664034",
+        "Evidence detail": "Clinical anticipation in family 1. SIngle long reads suggest somatic instability. Exact size unknown for most, so length/onset or severity correlation unknown."
+      },
+      {
+        "Evidence type": "Computational",
+        "Score": 0.5,
+        "Citation": "pmid:31664034",
+        "Evidence detail": "Endogenous ATTTT polymorphic in controls but not expanded"
+      },
+      {
+        "Evidence type": "Segregation",
+        "Score": 0,
+        "Citation": "pmid:31664034",
+        "Evidence detail": "No LOD and 158/158 is used for case control"
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 4,
+        "Citation": "pmid:31664034",
+        "Evidence detail": "0/28 unrelated controls from RP-PCR,  0/69 controls from WGS, and 158/158 in affected cases, but cases only came from 22 families."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 0.5,
+        "Citation": "pmid:31664034",
+        "Evidence detail": "STARD7 expressed across brain regions. Patient fibroblasts showed no change in STARD7 mRNA or protein, and no ATTTC/AUUUC-containing reads."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "TOF",
+    "Gene": "TBX1",
+    "Locus_ID": "TOF_TBX1",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/20/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 0.5,
+        "Citation": "pmid:19948535",
+        "Evidence detail": "1 proband with ToF had expansion detected with cloned PCR fragment + Sanger. 22q11.2 deletion and karyotype normal. Inheritance cannot be resolved, as father not tested"
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Biochemical function",
+        "Score": 0.5,
+        "Citation": "pmid:24797903",
+        "Evidence detail": "Gene-level. TBX1 T-box binds a tandem T-site repeat and activates reporters."
+      },
+      {
+        "Evidence type": "Non-patient cells",
+        "Score": 0.5,
+        "Citation": "pmid:19948535",
+        "Evidence detail": "dup 30 construct amplified from patient DNA in JEG3. Almost complete loss of T-box reporter activation with normal mRNA and cytoplasmic + nuclear aggregates on anti-HA IF"
+      },
+      {
+        "Evidence type": "Non-human model organism",
+        "Score": 1,
+        "Citation": "pmid:16141220",
+        "Evidence detail": "Gene level. Tamoxifen-timed TBX1 deletion: E7.5-E8.5 deletion gives persistent truncus arteriosus, thymic aplasia, and cleft palate. Heterozygous E7.5 deletion gives 4th PAA hypoplasia. Null allele."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "FAME6",
+    "Gene": "TNRC6A",
+    "Locus_ID": "FAME6_TNRC6A",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/22/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 1,
+        "Citation": "pmid:29507423",
+        "Evidence detail": "1 family with segregation"
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 2,
+        "Citation": "pmid:29507423",
+        "Evidence detail": "0/1,000 Japanese controls and 0 SAMD12-positive patients had TTTCA expansions. All detected using RP-PCR."
+      }
+    ],
+    "experimental_evidence_details": []
+  },
+  {
+    "Disease_ID": "DBQD2",
+    "Gene": "XYLT1",
+    "Locus_ID": "DBQD2_XYLT1",
+    "Inheritance": "AR",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/22/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 6,
+        "Citation": "pmid:30554721",
+        "Evidence detail": "8 families carry the expanded/methylated allele and have BSS phenotype. Parents evaluated in 6/8 families, and parental segregation is consistent with AR."
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 1,
+        "Citation": "pmid:30554721",
+        "Evidence detail": "Expanded alleles are exon-1 hypermethylated, while normal alleles are unmethylated. Estimated methylation threshold of 216-360 bp. Somatic instability in large alleles. No size/severity correlation."
+      },
+      {
+        "Evidence type": "Case-control data",
+        "Score": 2,
+        "Citation": "pmid:30554721",
+        "Evidence detail": "Exon-1 methylation by MS-PCR with the same array as cases. 0/130 unrelated controls vs methylated allele in 8/10 families. Matching not described and no statistical test."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 1.5,
+        "Citation": "pmid:30554721",
+        "Evidence detail": "Allele-specific silencing. In PMID 30554721, 02-1 fibroblast cDNA expresses only the non-exanded allele. 04-1 RT-PCR and RNA-seq show no exon 1-2 transcript. Hypermethylation scored under “Allele” instead."
+      },
+      {
+        "Evidence type": "Patient cells",
+        "Score": 1,
+        "Citation": "pmid:24581741",
+        "Evidence detail": "Gene-level. LoF in fibroblasts from 2 DBQD2 probands (p.Arg147*, p.Pro93Alafs*69) have reduced XYLT1 cDNA and reduced cellular PG synthesisnbot rescued by 4-MUX. Additionally, they show an altered secreted CSPG profile."
+      },
+      {
+        "Evidence type": "Non-patient cells",
+        "Score": 0.5,
+        "Citation": "pmid:30554721",
+        "Evidence detail": "Control fibroblast line GM08447 shows a transcription start inside XYLT1-238, which places the GGC repeat in the 5'UTR"
+      }
+    ]
+  },
+  {
+    "Disease_ID": "FAME4",
+    "Gene": "YEATS2",
+    "Locus_ID": "FAME4_YEATS2",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/22/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 1,
+        "Citation": "pmid:31539032",
+        "Evidence detail": "1 family with YEATS2 intron 1 (TTTTA)exp(TTTCA)ins seqienced with PacBio SMRT and validated by RP-PCR and LR-PCR. TTTCA segregates with affected family members"
+      },
+      {
+        "Evidence type": "Allele",
+        "Score": 0,
+        "Citation": "pmid:31539032",
+        "Evidence detail": "No correlation between allele size and age of onset (p=0.47)"
+      },
+      {
+        "Evidence type": "Segregation",
+        "Score": 1.5,
+        "Citation": "pmid:22713812",
+        "Evidence detail": "Genome wide linkage in the same family. Max two-point LOD 5.419 at D3S1262."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 0.5,
+        "Citation": "pmid:38128822",
+        "Evidence detail": "Gene-level. Drosophila YEATS2 knockdown changed expression of dopamine-pathway transcripts on genes TH, D2R, and vMAT."
+      },
+      {
+        "Evidence type": "Non-human model organism",
+        "Score": 2,
+        "Citation": "pmid:38128822",
+        "Evidence detail": "dYEATS2 expression in neurons was reduced using two RNAi constructs and two pan-neuronal divers. Prolonged recovery after electric shock and heat in larvae, increased bang-sensitive seizure-like behavior in adults, reduced climbing, and deficits in sociala nd exploratory behavior. Expression evidence scored under “Regulatory Impact”."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "VACERLX",
+    "Gene": "ZIC3",
+    "Locus_ID": "VACTERLX_ZIC3",
+    "Inheritance": "XR",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/28/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 2.5,
+        "Citation": "pmid:20452998; pmid:40585427; pmid:32639022",
+        "Evidence detail": "PMID 20452998: 1 male neonate with VACTERL with dextroposition and persistent LSVC. ZIC3 exon 1 GCCGCC insertion, 10 to 12 Ala. Absent in mother and X linked, so de-novo (1.0). Absent from 336 controls. In PMID 40585427: hemizygous 12 Ala in an adult male proband and in 1 unrelated male reletive (0 points, contradictory). PMID 32639022: OAVS family with disease segregating with intermediate range expansion in males. One additional unrelated OAVS case (1+0.5)."
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Biochemical function",
+        "Score": 0.5,
+        "Citation": "pmid:24123890",
+        "Evidence detail": "Gene-level. WT ZIC3 localizes to the nucleus and transactivates an SV40 luciferase reporter. Zinc-finger LoF variants from heterotaxy-CHD patients disrupt both. Not expansion-specific."
+      }
+    ]
+  },
+  {
+    "Disease_ID": "FRA7A",
+    "Gene": "ZNF713",
+    "Locus_ID": "FRA7A_ZNF713",
+    "Inheritance": "AD",
+    "Curator": "Gabriel Zinser",
+    "Contributors": null,
+    "Date": "10/22/2026",
+    "Description": null,
+    "Source": "criTRia",
+    "SOP_version": "criTRia v0",
+    "Manual_evidence_level": null,
+    "genetic_evidence_details": [
+      {
+        "Evidence type": "Probands",
+        "Score": 2,
+        "Citation": "pmid:25196122",
+        "Evidence detail": "Family 7792 proband had full expansion detected with PCR and Southern blot. De novo expansion from unaffected mother’s premutation allele. FRA7A fragile site in ~30% of low-folate cultured cells, absent in parents (1.5). Family TCAG0070 had 3 siblings with premutation size alleles and partial CpG methylation (0.5)"
+      }
+    ],
+    "experimental_evidence_details": [
+      {
+        "Evidence type": "Regulatory impact",
+        "Score": 1,
+        "Citation": "pmid:25196122",
+        "Evidence detail": "CpG island hypermethylation of expndsed allele in Fam 7792. ZNF713 mRNA reduced to 40.9% in proband LCL. ZNF713 TSS adjacent to repeat with brain-enriched expression."
+      }
+    ]
+  }
+]

@@ -15,7 +15,18 @@ Rscript scripts/02_discordance.R
 echo "== 3. Figures"
 Rscript scripts/03_figures.R
 
-echo "== 4. Sensitivity analysis (exploratory)"
+echo "== 4. Sensitivity analysis (±1 point score perturbation)"
 Rscript scripts/04_sensitivity.R
+
+echo "== 5. Inter-curator agreement"
+# Independent curator (30-locus re-curation sheet) vs the original criTRia curations in STRchive
+mkdir -p data/curators
+curl -sSfL https://raw.githubusercontent.com/dashnowlab/STRchive/refs/heads/main/data/criTRia-curations.json \
+  -o data/curators/STRchive-criTRia-curations.json
+python3 scripts/import_curations.py --sheet 1DF2NPHb-CHq2XrvoyxNU_5yAuHo_szQr7SubEEfddMo \
+  -o data/curators/curations-gabriel.json
+python3 scripts/compare_curators.py --rater gabriel data/curators/curations-gabriel.json \
+  --rater group data/curators/STRchive-criTRia-curations.json -o data/curators/curator-comparison.tsv
+Rscript scripts/05_curator_agreement.R
 
 echo "Done."
