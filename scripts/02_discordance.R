@@ -3,8 +3,8 @@
 # into a wide matrix, flags discordance, and builds the discordant loci table.
 # Run from the repository root (see run_all.sh).
 # Inputs (from scripts/01_download_and_match.py):
-#   paper/supp3_dataset.tsv            criTRia and matched GenCC classifications
-#   paper/supp4_criTRia_curations.tsv  criTRia curations, with Locus_ID
+#   paper/supp3_criTRia_GenCC_classifications.tsv  criTRia and matched GenCC classifications
+#   paper/supp4_criTRia_curations.tsv              criTRia curations, with Locus_ID
 # Outputs:
 #   data/processed/discordance_matrix.tsv
 #   paper/suppX_discordant_loci.tsv    Supplemental File X
@@ -21,7 +21,7 @@ source("scripts/discordance.R")
 critria <- read_tsv("paper/supp4_criTRia_curations.tsv", show_col_types = FALSE)
 
 # criTRia and GenCC classifications for the criTRia-curated loci
-dataset <- read_tsv("paper/supp3_dataset.tsv", show_col_types = FALSE) %>%
+dataset <- read_tsv("paper/supp3_criTRia_GenCC_classifications.tsv", show_col_types = FALSE) %>%
   filter(Locus_ID %in% critria$Locus_ID)
 
 matched_filtered <- dataset %>%

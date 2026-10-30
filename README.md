@@ -15,11 +15,11 @@ Every file in `paper/` goes into the manuscript, and nothing else does.
 | Figure 1 (evidence matrix) | Made by hand: [Google Sheet](https://docs.google.com/spreadsheets/d/1VEuZqvwtQWzVSBc7Aj4FUPQABwyNTCcb8XDNCZ-xoKM/edit?usp=sharing) | – |
 | Figure 2 (criTRia vs GenCC heatmap) | `paper/fig2_heatmap.pdf`, `paper/fig2_heatmap.png` | `scripts/03_figures.R` |
 | Figure 3 (minimum evidence for a new TR locus) | Made by hand | – |
-| Supplemental File 3 (criTRia and GenCC classifications) | `paper/supp3_dataset.tsv` | `scripts/01_download_and_match.py` |
+| Supplemental File 3 (criTRia and GenCC classifications) | `paper/supp3_criTRia_GenCC_classifications.tsv` | `scripts/01_download_and_match.py` |
 | Supplemental File 4 (criTRia curations) | `paper/supp4_criTRia_curations.tsv` | `scripts/01_download_and_match.py` |
 | Supplemental File X (discordant loci) | `paper/suppX_discordant_loci.tsv` | `scripts/02_discordance.R` |
-| Supplemental File X (±1 point sensitivity analysis) | `paper/suppX_sensitivity_analysis.tsv` | `scripts/04_sensitivity.R` |
 | Figure X (inter-curator agreement) | `paper/figX_curator_agreement.pdf`, `paper/figX_curator_agreement.png` | `scripts/05_curator_agreement.R` |
+| Supplemental File X (inter-curator comparison, one row per locus) | `paper/suppX_curator_comparison.tsv` | `scripts/05_curator_agreement.R` |
 
 Supplemental Files 1 (SOP) and 2 (LLM prompt) are not kept in this repository.
 
@@ -44,7 +44,7 @@ scripts/
   04_sensitivity.R           ±1 point score-perturbation sensitivity analysis
   import_curations.py        import curations from a curator's Google Sheet into criTRia-curations JSON
   compare_curators.py        one row per locus completed by two curators: scores, classifications, citations
-  05_curator_agreement.R     inter-curator agreement statistics and Figure X
+  05_curator_agreement.R     inter-curator agreement statistics, Figure X and the per-locus comparison table
   discordance.R              discordance flags, shared by 02 and 03
 data/
   raw/          downloaded inputs (dated GenCC snapshot)
@@ -66,7 +66,7 @@ exploratory/    outputs not used in the manuscript
 
 A GenCC classification is assigned to a locus only when its disease ID (MONDO, OMIM or Orphanet) is one of the IDs listed for that locus in STRchive, or one accepted after manual review (`EXTRA_DISEASE_IDS` in `scripts/01_download_and_match.py`). If a group has several matching records, the most recent curation is kept; for records curated on the same date, Refuted or Disputed takes precedence, then the strongest classification. `Refuted` and `Disputed` are reported as `Contradictory`.
 
-`paper/supp3_dataset.tsv` has one row per locus and group: `Locus_ID`, `Group`, `categorical_score`, and for GenCC rows the `Submitter`, matched `Disease_ID` and `Disease_Name`, and `Curation_Date` of the record used. Every GenCC record for each locus gene is listed in `data/processed/gene_disease_matches.tsv` with `status` set to `match`, `excluded` (listed in `EXCLUDED_DISEASE_IDS`) or `disease_mismatch`, so mismatches can be reviewed.
+`paper/supp3_criTRia_GenCC_classifications.tsv` has one row per locus and group: `Locus_ID`, `Group`, `categorical_score`, and for GenCC rows the `Submitter`, matched `Disease_ID` and `Disease_Name`, and `Curation_Date` of the record used. Every GenCC record for each locus gene is listed in `data/processed/gene_disease_matches.tsv` with `status` set to `match`, `excluded` (listed in `EXCLUDED_DISEASE_IDS`) or `disease_mismatch`, so mismatches can be reviewed.
 
 ### Discordance
 
