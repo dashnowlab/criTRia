@@ -209,8 +209,7 @@ supp <- bind_cols(
   tibble(
     Score_difference = col(rater_a, "total_score") - col(rater_b, "total_score"),
     Same_classification = merge_contradictory(col(rater_a, "classification_final")) ==
-      merge_contradictory(col(rater_b, "classification_final")),
-    Shared_citations = data$shared_citations
+      merge_contradictory(col(rater_b, "classification_final"))
   )
 )
 write_tsv(supp, supp_file, na = "")
