@@ -2,9 +2,9 @@
 """Build the criTRia vs GenCC dataset (Supplemental File 3) from GenCC and the criTRia curations.
 
 Run from the repository root (see run_all.sh). Outputs:
-  paper/supp3_dataset.tsv                   Supplemental File 3
-  paper/supp4_criTRia_curations.tsv         Supplemental File 4
-  data/processed/gene_disease_matches.tsv   every GenCC record checked, with match status
+  paper/supp3_criTRia_GenCC_classifications.tsv  Supplemental File 3
+  paper/supp4_criTRia_curations.tsv              Supplemental File 4
+  data/processed/gene_disease_matches.tsv        every GenCC record checked, with match status
 
 For every non-provisional STRchive locus (plus any criTRia curation that is not
 a STRchive locus), pull the gene-disease classifications for that gene from the GenCC
@@ -370,8 +370,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--output",
-        default="paper/supp3_dataset.tsv",
-        help="Output TSV path (default: paper/supp3_dataset.tsv).",
+        default="paper/supp3_criTRia_GenCC_classifications.tsv",
+        help="Output TSV path (default: paper/supp3_criTRia_GenCC_classifications.tsv).",
     )
     parser.add_argument(
         "--report",

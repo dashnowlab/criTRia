@@ -10,6 +10,8 @@
 #     median and maximum absolute difference, and proportion of loci within 1.5 points.
 #
 # Usage: Rscript scripts/05_curator_agreement.R [comparison.tsv] [rater_a] [rater_b] [out.tsv] [figure_prefix] [label_a] [label_b]
+#        [supp.tsv] [prefix_a] [prefix_b]
+# The per-locus table (raters described by role) is written to <supp.tsv>, by default paper/suppX_curator_comparison.tsv.
 # The figure (A: total score per locus; B: agreement estimates) is written to <figure_prefix>.pdf/png.
 
 suppressPackageStartupMessages({
@@ -188,6 +190,31 @@ cat("\n")
 print(as.data.frame(results), row.names = FALSE)
 write_tsv(results, out_file)
 cat("\nWrote", out_file, "\n")
+
+# ---- Per-locus supplemental table ---------------------------------------------------------------
+# One row per analysed locus, with raters described by role rather than name. Same_classification
+# uses the primary scale (Disputed and Refuted merged as Contradictory).
+supp_file <- if (length(args) >= 8) args[8] else "paper/suppX_curator_comparison.tsv"
+prefix_a <- if (length(args) >= 9) args[9] else "Independent"
+prefix_b <- if (length(args) >= 10) args[10] else "Original"
+rater_columns <- function(rater, prefix) {
+  setNames(tibble(col(rater, "total_score"), col(rater, "genetic_score"), col(rater, "experimental_score"),
+                  col(rater, "classification_final"), col(rater, "citations")),
+           paste0(prefix, c("_total_score", "_genetic_score", "_experimental_score", "_classification", "_citations")))
+}
+supp <- bind_cols(
+  data %>% select(Locus_ID, Gene, Disease_ID),
+  rater_columns(rater_a, prefix_a),
+  rater_columns(rater_b, prefix_b),
+  tibble(
+    Score_difference = col(rater_a, "total_score") - col(rater_b, "total_score"),
+    Same_classification = merge_contradictory(col(rater_a, "classification_final")) ==
+      merge_contradictory(col(rater_b, "classification_final")),
+    Shared_citations = data$shared_citations
+  )
+)
+write_tsv(supp, supp_file, na = "")
+cat("Wrote", supp_file, "\n")
 
 # ---- Figures ----------------------------------------------------------------------------------
 suppressPackageStartupMessages({
