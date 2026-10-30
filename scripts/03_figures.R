@@ -1,7 +1,7 @@
 # 03_figures.R
 # Figures comparing criTRia and GenCC classifications.
 # Run from the repository root (see run_all.sh).
-# Input:  paper/supp3_dataset.tsv (from scripts/01_download_and_match.py)
+# Input:  paper/supp3_criTRia_GenCC_classifications.tsv (from scripts/01_download_and_match.py)
 # Paper:  paper/fig2_heatmap.pdf, paper/fig2_heatmap.png (Figure 2)
 # Not in the paper (exploratory/): jitter_plot.pdf, criTRia_vs_genecc_barplot.pdf,
 #   criTRia_scoring_barplot.pdf, upset_plot.pdf, tier_hierarchy.pdf/.png
@@ -16,7 +16,7 @@ library(cowplot)
 theme_set(theme_cowplot()) # Sets the default for subsequent plots 
 
 ##read and prep data
-data <- read_tsv("paper/supp3_dataset.tsv", show_col_types = FALSE)
+data <- read_tsv("paper/supp3_criTRia_GenCC_classifications.tsv", show_col_types = FALSE)
 
 # Set factor levels
 data$categorical_score <- factor(data$categorical_score,levels = c("Contradictory","Limited","Moderate","Strong","Supportive","Definitive","No Known"),ordered = TRUE)
@@ -114,7 +114,7 @@ table(subset(data, Group == "criTRia")$categorical_score)
 ##UpSet Plot
 library(UpSetR)
 library(data.table)
-dt <- fread("paper/supp3_dataset.tsv")
+dt <- fread("paper/supp3_criTRia_GenCC_classifications.tsv")
 # Make sure column names are consistent
 setnames(
   dt, 
