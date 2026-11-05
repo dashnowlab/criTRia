@@ -110,7 +110,7 @@ for (i in 1:nrow(conflict_loci_df)) {
     rationale <- "DMD loss-of-function SNVs/deletions are Definitive causes of Duchenne/Becker muscular dystrophy in GenCC, but the specific intronic GAA repeat expansion is Refuted / Contradictory due to high allele frequency in healthy population controls."
   } else if (loc == "CPEO_POLG") {
     scenario <- "Locus vs. Gene Discordance (Coding SNV vs. Disputed Repeat)"
-    rationale <- "POLG point mutations and deletions are Definitive causes of progressive external ophthalmoplegia (CPEO), but evidence for the noncoding/CAG repeat causing CPEO is disputed/lacking locus-specific causality."
+    rationale <- "POLG point mutations and deletions are Definitive causes of progressive external ophthalmoplegia (CPEO), but evidence for the CAG (polyglutamine) repeat causing CPEO is disputed/lacking locus-specific causality."
   } else if (loc == "NME_NAXE") {
     scenario <- "Gene-Level Definitive vs. Single-Patient TR Locus Expansion"
     rationale <- "NAXE coding LoF mutations are Definitive/Strong for autosomal recessive mitochondrial neurometabolic encephalopathy, whereas the biallelic promoter GGGCC expansion has only been reported in a single proband to date, yielding Limited locus evidence in criTRia."
@@ -139,7 +139,7 @@ for (i in 1:nrow(conflict_loci_df)) {
     scenario <- "Recently Identified TR Locus vs. PanelApp Limited"
     rationale <- "GIPC1 5' UTR CGG expansion is Definitively established for OPDM2 with strong cohort and functional rescue data (criTRia: Definitive, Labcorp: Strong), whereas PanelApp assigned Limited."
   } else if (loc == "OPDM4_RILPL1") {
-    scenario <- "Recently Identified TR Locus vs. External Uncurated/Limited"
+    scenario <- "Recently Identified TR Locus vs. Ambry Limited"
     rationale <- "RILPL1 5' UTR CGG expansion is Moderate in criTRia with multiple families and characteristic pathology, but Ambry evaluated it as Limited."
   } else if (loc == "SCA31_BEAN1") {
     scenario <- "Complex Pentanucleotide Insertion vs. Ambry Limited"
