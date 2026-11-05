@@ -4,7 +4,7 @@ ADTKD_MUC1	ClinGen	Definitive	ClinGen	MONDO:0020726	tubulointerstitial kidney di
 ADTKD_MUC1	Labcorp	Limited	Labcorp Genetics (formerly Invitae)	MONDO:0020726	tubulointerstitial kidney disease, autosomal dominant, 2	2022-12-09
 ADTKD_MUC1	Orphanet	Supportive	Orphanet	MONDO:0020726	tubulointerstitial kidney disease, autosomal dominant, 2	2021-09-14
 ADTKD_MUC1	PanelApp	Strong	PanelApp Australia	MONDO:0020726	tubulointerstitial kidney disease, autosomal dominant, 2	2025-01-17
-ALS1_NIPA1	criTRia	Contradictory	criTRia	ALS1	Amyotrophic lateral sclerosis	2025-06-06
+ALS_NIPA1	criTRia	Contradictory	criTRia	ALS	Amyotrophic lateral sclerosis	2025-06-06
 BPES_FOXL2	Ambry	Definitive	Ambry Genetics	MONDO:0007201	blepharophimosis, ptosis, and epicanthus inversus syndrome	2018-07-31
 BPES_FOXL2	G2P	Definitive	G2P	MONDO:0007201	blepharophimosis, ptosis, and epicanthus inversus syndrome	2017-08-27
 BPES_FOXL2	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0007201	blepharophimosis, ptosis, and epicanthus inversus syndrome	2023-02-22
@@ -280,10 +280,10 @@ SCA7_ATXN7	criTRia	Definitive	criTRia	SCA7	Spinocerebellar ataxia type 7	2025-08
 SCA8_ATXN8OS	Ambry	Moderate	Ambry Genetics	MONDO:0012116	spinocerebellar ataxia type 8	2023-07-27
 SCA8_ATXN8OS	Orphanet	Supportive	Orphanet	MONDO:0012116	spinocerebellar ataxia type 8	2021-09-14
 SCA8_ATXN8OS	criTRia	Definitive	criTRia	SCA8	Spinocerebellar ataxia type 8	2025-08-12
-SD5_HOXD13	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0008513	synpolydactyly type 1	2022-09-09
-SD5_HOXD13	Orphanet	Supportive	Orphanet	MONDO:0008513	synpolydactyly type 1	2021-09-14
-SD5_HOXD13	PanelApp	Strong	PanelApp Australia	MONDO:0008513	synpolydactyly type 1	2025-01-17
-SD5_HOXD13	criTRia	Definitive	criTRia	SD5	Syndactyly	2025-08-18
+SPD1_HOXD13	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0008513	synpolydactyly type 1	2022-09-09
+SPD1_HOXD13	Orphanet	Supportive	Orphanet	MONDO:0008513	synpolydactyly type 1	2021-09-14
+SPD1_HOXD13	PanelApp	Strong	PanelApp Australia	MONDO:0008513	synpolydactyly type 1	2025-01-17
+SPD1_HOXD13	criTRia	Definitive	criTRia	SPD1	Synpolydactyly 1	2025-08-18
 TOF_TBX1	Ambry	Definitive	Ambry Genetics	MONDO:0016581	conotruncal heart malformations	2018-08-29
 TOF_TBX1	Labcorp	Strong	Labcorp Genetics (formerly Invitae)	MONDO:0016581	conotruncal heart malformations	2021-08-20
 TOF_TBX1	criTRia	Limited	criTRia	TOF	Tetralogy of Fallot	2025-08-18

@@ -14,14 +14,14 @@ Every file in `paper/` goes into the manuscript, and nothing else does.
 | :--- | :--- | :--- |
 | Figure 1 (evidence matrix) | Made by hand: [Google Sheet](https://docs.google.com/spreadsheets/d/1VEuZqvwtQWzVSBc7Aj4FUPQABwyNTCcb8XDNCZ-xoKM/edit?usp=sharing) | – |
 | Figure 2 (criTRia vs GenCC heatmap) | `paper/fig2_heatmap.pdf`, `paper/fig2_heatmap.png` | `scripts/03_figures.R` |
-| Figure 3 (minimum evidence for a new TR locus) | Made by hand | – |
-| Supplemental File 3 (criTRia and GenCC classifications) | `paper/supp3_criTRia_GenCC_classifications.tsv` | `scripts/01_download_and_match.py` |
+| Figure 3 (inter-curator agreement) | `paper/fig3_curator_agreement.pdf`, `paper/fig3_curator_agreement.png` | `scripts/05_curator_agreement.R` |
+| Figure 4 (minimum evidence for a new TR locus) | Made by hand | – |
 | Supplemental File 4 (criTRia curations) | `paper/supp4_criTRia_curations.tsv` | `scripts/01_download_and_match.py` |
-| Supplemental File X (discordant loci) | `paper/suppX_discordant_loci.tsv` | `scripts/02_discordance.R` |
-| Figure X (inter-curator agreement) | `paper/figX_curator_agreement.pdf`, `paper/figX_curator_agreement.png` | `scripts/05_curator_agreement.R` |
-| Supplemental File X (inter-curator comparison, one row per locus) | `paper/suppX_curator_comparison.tsv` | `scripts/05_curator_agreement.R` |
+| Supplemental File 5 (criTRia and GenCC classifications) | `paper/supp5_criTRia_GenCC_classifications.tsv` | `scripts/01_download_and_match.py` |
+| Supplemental File 6 (inter-curator comparison, one row per locus) | `paper/supp6_curator_comparison.tsv` | `scripts/05_curator_agreement.R` |
+| Supplemental File 7 (discordant loci) | `paper/supp7_discordant_loci.tsv` | `scripts/02_discordance.R` |
 
-Supplemental Files 1 (SOP) and 2 (LLM prompt) are not kept in this repository.
+Supplemental Files 1 (SOP), 2 (differences from the ClinGen framework) and 3 (LLM prompt) are not kept in this repository.
 
 ## Running
 
@@ -44,7 +44,7 @@ scripts/
   04_sensitivity.R           ±1 point score-perturbation sensitivity analysis
   import_curations.py        import curations from a curator's Google Sheet into criTRia-curations JSON
   compare_curators.py        one row per locus completed by two curators: scores, classifications, citations
-  05_curator_agreement.R     inter-curator agreement statistics, Figure X and the per-locus comparison table
+  05_curator_agreement.R     inter-curator agreement statistics, Figure 3 and the per-locus comparison table
   discordance.R              discordance flags, shared by 02 and 03
 data/
   raw/          downloaded inputs (dated GenCC snapshot)
@@ -66,11 +66,11 @@ exploratory/    outputs not used in the manuscript
 
 A GenCC classification is assigned to a locus only when its disease ID (MONDO, OMIM or Orphanet) is one of the IDs listed for that locus in STRchive, or one accepted after manual review (`EXTRA_DISEASE_IDS` in `scripts/01_download_and_match.py`). If a group has several matching records, the most recent curation is kept; for records curated on the same date, Refuted or Disputed takes precedence, then the strongest classification. `Refuted` and `Disputed` are reported as `Contradictory`.
 
-`paper/supp3_criTRia_GenCC_classifications.tsv` has one row per locus and group: `Locus_ID`, `Group`, `categorical_score`, and for GenCC rows the `Submitter`, matched `Disease_ID` and `Disease_Name`, and `Curation_Date` of the record used. Every GenCC record for each locus gene is listed in `data/processed/gene_disease_matches.tsv` with `status` set to `match`, `excluded` (listed in `EXCLUDED_DISEASE_IDS`) or `disease_mismatch`, so mismatches can be reviewed.
+`paper/supp5_criTRia_GenCC_classifications.tsv` has one row per locus and group: `Locus_ID`, `Group`, `categorical_score`, and for GenCC rows the `Submitter`, matched `Disease_ID` and `Disease_Name`, and `Curation_Date` of the record used. Every GenCC record for each locus gene is listed in `data/processed/gene_disease_matches.tsv` with `status` set to `match`, `excluded` (listed in `EXCLUDED_DISEASE_IDS`) or `disease_mismatch`, so mismatches can be reviewed.
 
 ### Discordance
 
-A locus is discordant when one classification is high (Definitive, Strong or Moderate) and another is low (Limited, Contradictory or No Known); Supportive counts as neither. "vs criTRia" means criTRia is on the opposite side from at least one GenCC group, and "within GenCC" means GenCC groups disagree among themselves. Both flags are defined in `scripts/discordance.R` and reported in Supplemental File X. The Conflict column in Figure 2 shows only "vs criTRia", so it flags the same loci as Supplemental File X; disagreement among GenCC groups alone (e.g. ADTKD_MUC1, which criTRia has not curated) is not flagged. The scenario and rationale text in `scripts/02_discordance.R` is written by hand and should be checked when classifications change.
+A locus is discordant when one classification is high (Definitive, Strong or Moderate) and another is low (Limited, Contradictory or No Known); Supportive counts as neither. "vs criTRia" means criTRia is on the opposite side from at least one GenCC group, and "within GenCC" means GenCC groups disagree among themselves. Both flags are defined in `scripts/discordance.R` and reported in Supplemental File 7. The Conflict column in Figure 2 shows only "vs criTRia", so it flags the same loci as Supplemental File 7; disagreement among GenCC groups alone (e.g. ADTKD_MUC1, which criTRia has not curated) is not flagged. The scenario and rationale text in `scripts/02_discordance.R` is written by hand and should be checked when classifications change.
 
 ### Manually reviewed comparisons not matched
 
@@ -79,7 +79,7 @@ GenCC classifications for a locus gene that were reviewed by hand and deliberate
 | Locus | GenCC disease | Groups | Reason not matched |
 | :--- | :--- | :--- | :--- |
 | FRA2A_AFF3 | KINSSHIP syndrome (MONDO:0851095, OMIM:619297) | G2P, Labcorp, PanelApp (all Strong) | KINSSHIP is caused by de novo AFF3 degron variants that increase AFF3 and has a distinct multisystem phenotype (horseshoe kidney, mesomelic dysplasia, seizures, hypertrichosis, pulmonary involvement; PMID 33961779), whereas FRA2A silences AFF3 and causes intellectual disability. Labcorp's record also cites the FRA2A expansion paper (PMID 24763282) but is excluded on its disease label. |
-| SD5_HOXD13 | Brachydactyly-syndactyly syndrome (MONDO:0012544, OMIM:610713) | G2P (Definitive), Lab MM (Strong), Orphanet (Supportive) | Caused by a contraction of the same HOXD13 polyalanine tract (15 to 8 alanines; PMID 17236141), but a different disease from the synpolydactyly type 1 caused by expansions, which criTRia curated. Treated as a separate locus-disease relationship, as for FMR1 (FXS vs FXTAS/POF1). G2P's record also cites synpolydactyly expansion papers (e.g. PMID 8817328) but is excluded on its disease label. |
+| SPD1_HOXD13 | Brachydactyly-syndactyly syndrome (MONDO:0012544, OMIM:610713) | G2P (Definitive), Lab MM (Strong), Orphanet (Supportive) | Caused by a contraction of the same HOXD13 polyalanine tract (15 to 8 alanines; PMID 17236141), but a different disease from the synpolydactyly type 1 caused by expansions, which criTRia curated. Treated as a separate locus-disease relationship, as for FMR1 (FXS vs FXTAS/POF1). G2P's record also cites synpolydactyly expansion papers (e.g. PMID 8817328) but is excluded on its disease label. |
 
 ### GenCC classifications based only on non-tandem-repeat variants
 

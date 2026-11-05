@@ -3,11 +3,11 @@
 # into a wide matrix, flags discordance, and builds the discordant loci table.
 # Run from the repository root (see run_all.sh).
 # Inputs (from scripts/01_download_and_match.py):
-#   paper/supp3_criTRia_GenCC_classifications.tsv  criTRia and matched GenCC classifications
+#   paper/supp5_criTRia_GenCC_classifications.tsv  criTRia and matched GenCC classifications
 #   paper/supp4_criTRia_curations.tsv              criTRia curations, with Locus_ID
 # Outputs:
 #   data/processed/discordance_matrix.tsv
-#   paper/suppX_discordant_loci.tsv    Supplemental File X
+#   paper/supp7_discordant_loci.tsv    Supplemental File 7
 
 suppressPackageStartupMessages({
   library(readr)
@@ -21,7 +21,7 @@ source("scripts/discordance.R")
 critria <- read_tsv("paper/supp4_criTRia_curations.tsv", show_col_types = FALSE)
 
 # criTRia and GenCC classifications for the criTRia-curated loci
-dataset <- read_tsv("paper/supp3_criTRia_GenCC_classifications.tsv", show_col_types = FALSE) %>%
+dataset <- read_tsv("paper/supp5_criTRia_GenCC_classifications.tsv", show_col_types = FALSE) %>%
   filter(Locus_ID %in% critria$Locus_ID)
 
 matched_filtered <- dataset %>%
@@ -62,7 +62,7 @@ cat(" - Total loci:", nrow(matrix_wide), "\n")
 cat(" - Discordant vs criTRia:", sum(matrix_wide$Conflict_vs_criTRia), "\n")
 cat(" - Discordant within GenCC:", sum(matrix_wide$Conflict_within_GenCC), "\n")
 
-# 4. Build the discordant loci table (Supplemental File X)
+# 4. Build the discordant loci table (Supplemental File 7)
 
 conflict_loci_df <- matrix_wide %>% filter(Conflict_vs_criTRia | Conflict_within_GenCC)
 
@@ -179,8 +179,8 @@ for (i in 1:nrow(conflict_loci_df)) {
 s3b_table <- bind_rows(s3b_list)
 
 # Export the discordant loci table
-write_tsv(s3b_table, "paper/suppX_discordant_loci.tsv")
+write_tsv(s3b_table, "paper/supp7_discordant_loci.tsv")
 
 cat("\nSuccessfully generated:\n")
-cat(" - paper/suppX_discordant_loci.tsv (", nrow(s3b_table), " rows)\n", sep="")
+cat(" - paper/supp7_discordant_loci.tsv (", nrow(s3b_table), " rows)\n", sep="")
 print(s3b_table %>% select(Gene, Locus_ID, Disease_Phenotype, criTRia_Classification, Discordance_Scenario))

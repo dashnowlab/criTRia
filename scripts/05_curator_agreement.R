@@ -11,7 +11,7 @@
 #
 # Usage: Rscript scripts/05_curator_agreement.R [comparison.tsv] [rater_a] [rater_b] [out.tsv] [figure_prefix] [label_a] [label_b]
 #        [supp.tsv] [prefix_a] [prefix_b]
-# The per-locus table (raters described by role) is written to <supp.tsv>, by default paper/suppX_curator_comparison.tsv.
+# The per-locus table (raters described by role) is written to <supp.tsv>, by default paper/supp6_curator_comparison.tsv.
 # The figure (A: total score per locus; B: agreement estimates) is written to <figure_prefix>.pdf/png.
 
 suppressPackageStartupMessages({
@@ -194,7 +194,7 @@ cat("\nWrote", out_file, "\n")
 # ---- Per-locus supplemental table ---------------------------------------------------------------
 # One row per analysed locus, with raters described by role rather than name. Same_classification
 # uses the primary scale (Disputed and Refuted merged as Contradictory).
-supp_file <- if (length(args) >= 8) args[8] else "paper/suppX_curator_comparison.tsv"
+supp_file <- if (length(args) >= 8) args[8] else "paper/supp6_curator_comparison.tsv"
 prefix_a <- if (length(args) >= 9) args[9] else "Independent"
 prefix_b <- if (length(args) >= 10) args[10] else "Original"
 rater_columns <- function(rater, prefix) {
@@ -221,7 +221,7 @@ suppressPackageStartupMessages({
   library(ggrepel)
   library(patchwork)
 })
-fig_prefix <- if (length(args) >= 5) args[5] else "paper/figX_curator_agreement"
+fig_prefix <- if (length(args) >= 5) args[5] else "paper/fig3_curator_agreement"
 # How each rater is described in the figure (roles rather than names)
 label_a <- if (length(args) >= 6) args[6] else "Independent curator"
 label_b <- if (length(args) >= 7) args[7] else "Original curation"

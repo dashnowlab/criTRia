@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Build the criTRia vs GenCC dataset (Supplemental File 3) from GenCC and the criTRia curations.
+"""Build the criTRia vs GenCC dataset (Supplemental File 5) from GenCC and the criTRia curations.
 
 Run from the repository root (see run_all.sh). Outputs:
-  paper/supp3_criTRia_GenCC_classifications.tsv  Supplemental File 3
+  paper/supp5_criTRia_GenCC_classifications.tsv  Supplemental File 5
   paper/supp4_criTRia_curations.tsv              Supplemental File 4
   data/processed/gene_disease_matches.tsv        every GenCC record checked, with match status
 
@@ -365,13 +365,13 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
             "Download GenCC and criTRia classifications and build the criTRia vs "
-            "GenCC dataset (Supplemental File 3)."
+            "GenCC dataset (Supplemental File 5)."
         )
     )
     parser.add_argument(
         "--output",
-        default="paper/supp3_criTRia_GenCC_classifications.tsv",
-        help="Output TSV path (default: paper/supp3_criTRia_GenCC_classifications.tsv).",
+        default="paper/supp5_criTRia_GenCC_classifications.tsv",
+        help="Output TSV path (default: paper/supp5_criTRia_GenCC_classifications.tsv).",
     )
     parser.add_argument(
         "--report",

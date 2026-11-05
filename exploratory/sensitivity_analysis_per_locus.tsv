@@ -27,13 +27,13 @@ OPDM2_GIPC1	GIPC1	OPDM2	15.5	6	4.99	Definitive	14.5	Definitive	16.5	Definitive	F
 HFG_HOXA13-I	HOXA13	HFG-I	3.5	2	3.08	Limited	2.5	Limited	4.5	Limited	FALSE
 HFG_HOXA13-II	HOXA13	HFG-II	5.5	2	1.63	Limited	4.5	Limited	6.5	Limited	FALSE
 HFG_HOXA13-III	HOXA13	HFG-III	4.5	3	7.46	Limited	3.5	Limited	5.5	Limited	FALSE
-SD5_HOXD13	HOXD13	SD5	12.5	3	24.09	Definitive	11.5	Definitive	13.5	Definitive	FALSE
+SPD1_HOXD13	HOXD13	SPD1	12.5	3	24.09	Definitive	11.5	Definitive	13.5	Definitive	FALSE
 HDL2_JPH3	JPH3	HDL2	15	5	23.58	Definitive	14	Definitive	16	Definitive	FALSE
 OPDM1_LRP12	LRP12	OPDM1	12	2	1.92	Strong	11	Moderate	13	Strong	TRUE
 FAME3_MARCHF6	MARCHF6	FAME3	11.5	3	17.33	Definitive	10.5	Moderate	12.5	Definitive	TRUE
 CHNG3_MIR7-2	MIR7-2	CHNG3	13.5	2	NA	Strong	12.5	Strong	14.5	Strong	FALSE
 NME_NAXE	NAXE	NME	5	1	NA	Limited	4	Limited	6	Limited	FALSE
-ALS1_NIPA1	NIPA	ALS1	3	3	2.33	Disputed	2	Disputed	4	Disputed	FALSE
+ALS_NIPA1	NIPA1	ALS	3	3	2.33	Disputed	2	Disputed	4	Disputed	FALSE
 SCA36_NOP56	NOP56	SCA36	13	4	13.75	Definitive	12	Definitive	14	Definitive	FALSE
 NIID_NOTCH2NLC	NOTCH2NLC	NIID	14	8	5.08	Definitive	13	Definitive	15	Definitive	FALSE
 OPML1_NUTM2B-AS1	NUTM2B-AS1	OPML1	9.5	4	5	Moderate	8.5	Moderate	10.5	Moderate	FALSE
