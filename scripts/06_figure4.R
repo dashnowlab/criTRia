@@ -3,24 +3,24 @@ library(grid)
 draw_evidence_table <- function() {
   rows <- data.frame(
     section = rep(
-      c("Genetic/Bioinformatic\nEvidence", "Clinical Evidence", "Other"),
+      c("Genetic/bioinformatic\nevidence", "Clinical evidence", "Other"),
       times = c(11, 1, 2)
     ),
     information = c(
       "Inheritance pattern",
       "Genomic coordinates",
-      "Genomic Feature\n(e.g., exon, intron, UTR)",
-      "Size of Repeat (Case)",
-      "Size of Repeat (Control)",
-      "Proposed Allelic Thresholds",
+      "Genomic feature\n(e.g., exon, intron, UTR)",
+      "Size of repeat (case)",
+      "Size of repeat (control)",
+      "Proposed allelic thresholds",
       "Pathogenic",
       "Alternatives",
       "Flanking",
       "Interruptions",
-      "Methodology of Discovery",
-      "Case History",
+      "Methodology of discovery",
+      "Case history",
       "Ancestry",
-      "Standardized Terminology (such\nas HPO terms)"
+      "Standardized terminology (such\nas HPO terms)"
     ),
     essential = c(
       TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE,
@@ -144,9 +144,9 @@ if (interactive()) {
   draw_evidence_table()
 }
 
-# Export a 300 dpi PNG at the reference aspect ratio.
+# Export a PDF at the reference aspect ratio.
 pdf(
-  "evidence_table.pdf",
+  "paper/fig4_minimum_evidence.pdf",
   width = 1434 / 300,
   height = 999 / 300,
   bg = "white"

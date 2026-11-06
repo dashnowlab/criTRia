@@ -29,4 +29,7 @@ python3 scripts/compare_curators.py --rater gabriel data/curators/curations-gabr
   --rater group data/curators/STRchive-criTRia-curations.json -o data/curators/curator-comparison.tsv
 Rscript scripts/05_curator_agreement.R
 
+echo "== 6. Figure 4"
+Rscript scripts/06_figure4.R
+
 echo "Done."
