@@ -14,7 +14,7 @@ draw_evidence_table <- function() {
       "Size of Repeat (Control)",
       "Proposed Allelic Thresholds",
       "Pathogenic",
-      "Alternates",
+      "Alternatives",
       "Flanking",
       "Interruptions",
       "Methodology of Discovery",
