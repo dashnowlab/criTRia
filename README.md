@@ -15,7 +15,7 @@ Every file in `paper/` goes into the manuscript, and nothing else does.
 | Figure 1 (evidence matrix) | Made by hand: [Google Sheet](https://docs.google.com/spreadsheets/d/1VEuZqvwtQWzVSBc7Aj4FUPQABwyNTCcb8XDNCZ-xoKM/edit?usp=sharing) | – |
 | Figure 2 (criTRia vs GenCC heatmap) | `paper/fig2_heatmap.pdf`, `paper/fig2_heatmap.png` | `scripts/03_figures.R` |
 | Figure 3 (inter-curator agreement) | `paper/fig3_curator_agreement.pdf`, `paper/fig3_curator_agreement.png` | `scripts/05_curator_agreement.R` |
-| Figure 4 (minimum evidence for a new TR locus) | Made by hand | – |
+| Figure 4 (minimum evidence for a new TR locus) | `paper/fig4_minimum_evidence.pdf` | `scripts/06_figure4.R` |
 | Supplemental File 4 (criTRia curations) | `paper/supp4_criTRia_curations.tsv` | `scripts/01_download_and_match.py` |
 | Supplemental File 5 (criTRia and GenCC classifications) | `paper/supp5_criTRia_GenCC_classifications.tsv` | `scripts/01_download_and_match.py` |
 | Supplemental File 6 (inter-curator comparison, one row per locus) | `paper/supp6_curator_comparison.tsv` | `scripts/05_curator_agreement.R` |
@@ -45,6 +45,7 @@ scripts/
   import_curations.py        import curations from a curator's Google Sheet into criTRia-curations JSON
   compare_curators.py        one row per locus completed by two curators: scores, classifications, citations
   05_curator_agreement.R     inter-curator agreement statistics, Figure 3 and the per-locus comparison table
+  06_figure4.R               Figure 4
   discordance.R              discordance flags, shared by 02 and 03
 data/
   raw/          downloaded inputs (dated GenCC snapshot)
