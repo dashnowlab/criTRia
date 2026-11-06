@@ -4,7 +4,7 @@ draw_evidence_table <- function() {
   rows <- data.frame(
     section = rep(
       c("Genetic/bioinformatic\nevidence", "Clinical evidence", "Other"),
-      times = c(10, 2, 2)
+      times = c(11, 1, 2)
     ),
     information = c(
       "Inheritance pattern",
@@ -12,21 +12,21 @@ draw_evidence_table <- function() {
       "Genomic feature\n(e.g., exon, intron, UTR)",
       "Size of repeat (case)",
       "Size of repeat (control)",
+      "Proposed allelic thresholds",
       "Pathogenic",
       "Alternatives",
       "Flanking",
       "Interruptions",
       "Methodology of discovery",
       "Case history",
-      "Proposed allelic thresholds",
       "Ancestry",
       "Standardized terminology (such\nas HPO terms)"
     ),
     essential = c(
-      TRUE, TRUE, FALSE, TRUE, TRUE, TRUE,
-      FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, FALSE, FALSE
+      TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE,
+      FALSE, FALSE, FALSE, TRUE, TRUE, FALSE, FALSE
     ),
-    motif = c(rep(FALSE, 5), rep(TRUE, 4), rep(FALSE, 5)),
+    motif = c(rep(FALSE, 6), rep(TRUE, 4), rep(FALSE, 4)),
     height = c(20, 20, 32, rep(20, 10), 30)
   )
   
