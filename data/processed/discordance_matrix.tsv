@@ -27,13 +27,13 @@ OPDM2_GIPC1	GIPC1	OPDM2	Definitive	Strong	Supportive	Uncurated	Limited	Uncurated
 HFG_HOXA13-I	HOXA13	HFG-I	Limited	Strong	Supportive	Moderate	Strong	Definitive	Definitive	Uncurated	Uncurated	Uncurated	TRUE	FALSE
 HFG_HOXA13-II	HOXA13	HFG-II	Limited	Strong	Supportive	Moderate	Strong	Definitive	Definitive	Uncurated	Uncurated	Uncurated	TRUE	FALSE
 HFG_HOXA13-III	HOXA13	HFG-III	Limited	Strong	Supportive	Moderate	Strong	Definitive	Definitive	Uncurated	Uncurated	Uncurated	TRUE	FALSE
-SD5_HOXD13	HOXD13	SD5	Definitive	Strong	Supportive	Uncurated	Strong	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	FALSE	FALSE
+SPD1_HOXD13	HOXD13	SPD1	Definitive	Strong	Supportive	Uncurated	Strong	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	FALSE	FALSE
 HDL2_JPH3	JPH3	HDL2	Definitive	Strong	Supportive	Definitive	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	FALSE	FALSE
 OPDM1_LRP12	LRP12	OPDM1	Strong	Uncurated	Uncurated	Strong	Uncurated	Uncurated	Moderate	Uncurated	Uncurated	Uncurated	FALSE	FALSE
 FAME3_MARCHF6	MARCHF6	FAME3	Definitive	Uncurated	Supportive	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	FALSE	FALSE
 CHNG3_MIR7-2	MIR7-2	CHNG3	Strong	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	FALSE	FALSE
 NME_NAXE	NAXE	NME	Limited	Uncurated	Uncurated	Uncurated	Strong	Strong	Definitive	Uncurated	Uncurated	Uncurated	TRUE	FALSE
-ALS1_NIPA1	NIPA	ALS1	Contradictory	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	FALSE	FALSE
+ALS_NIPA1	NIPA1	ALS	Contradictory	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	FALSE	FALSE
 SCA36_NOP56	NOP56	SCA36	Definitive	Strong	Supportive	Definitive	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	FALSE	FALSE
 NIID_NOTCH2NLC	NOTCH2NLC	NIID	Definitive	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	FALSE	FALSE
 OPML1_NUTM2B-AS1	NUTM2B-AS1	OPML1	Moderate	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	Uncurated	FALSE	FALSE

@@ -3,7 +3,7 @@
 # classifications change if every total score is one point lower or higher.
 # Run from the repository root (see run_all.sh).
 # Input:   paper/supp4_criTRia_curations.tsv
-# Outputs: paper/suppX_sensitivity_analysis.tsv (Supplemental File X, one row per locus)
+# Outputs: exploratory/sensitivity_analysis_per_locus.tsv (one row per locus)
 #          data/processed/sensitivity_analysis_summary.tsv
 
 suppressPackageStartupMessages({
@@ -123,7 +123,7 @@ summary_df <- bind_rows(
 )
 
 # 5. Output TSV Files
-per_tsv <- "paper/suppX_sensitivity_analysis.tsv"
+per_tsv <- "exploratory/sensitivity_analysis_per_locus.tsv"
 sum_tsv <- "data/processed/sensitivity_analysis_summary.tsv"
 
 write_tsv(per_locus_df, per_tsv)
